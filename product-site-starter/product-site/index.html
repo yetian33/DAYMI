@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DAYMI | Catálogo</title>
+  <meta name="description" content="DAYMI catálogo de produtos — site estático, rápido e responsivo.">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- 预加载主题，避免闪烁 -->
+  <script>
+    (function preloadTheme() {
+      try {
+        const saved = localStorage.getItem('theme') || 'dark';
+        if (saved === 'light') document.documentElement.classList.add('light');
+      } catch (_) { }
+    })();
+  </script>
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- 顶部区域：整条纯白（全宽） -->
+  <section class="top-bar" aria-label="Topo">
+    <div class="container top-bar-inner">
+      <a href="index.html" aria-label="Voltar para a Início">
+        <img src="assets/icons/daymi-3.png" alt="DAYMI" class="top-logo" />
+      </a>
+
+      <button id="toggleThemeTop" class="btn icon-toggle" aria-label="Alternar tema">
+        <span class="icon sun" aria-hidden="true">☀️</span>
+        <span class="icon moon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- Header：保留（CSS 已整体隐藏，不占位），可后续再用 -->
+  <header class="container header">
+    <h1 class="logo-wrapper">
+      <a href="index.html" class="logo-link">
+        <img src="assets/icons/daymi-3.png" alt="Logo da empresa" class="logo-img logo-anim" />
+      </a>
+    </h1>
+
+    <div class="header-actions">
+      <button id="toggleTheme" class="btn icon-toggle" aria-label="Alternar tema">
+        <span class="icon sun" aria-hidden="true">☀️</span>
+        <span class="icon moon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 品牌标语区域（位于顶栏与 Hero 之间） -->
+  <section class="brand-banner" aria-label="Mensagem da marca">
+    <div class="container">
+      <h2 class="brand-line">A INOVAÇÃO LIDERA O FUTURO</h2>
+      <p class="brand-sub">Vasos e enfeites que trazem beleza, inovação e sofisticação para sua casa.</p>
+    </div>
+  </section>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-media" id="heroMedia" aria-hidden="true"></div>
+    <div class="hero-content container">
+      <h2 class="hero-title" id="heroTitle">DA YMI 新品 · 设计花器</h2>
+      <p class="hero-sub">O diálogo entre modernidade e natureza ilumina o aconchego do espaço</p>
+      <div class="hero-cta">
+        <a id="heroLink" href="product.html" class="btn-cta">Verifique Os Detalhes</a>
+      </div>
+    </div>
+    <!-- 轮播控件 -->
+    <div class="hero-controls" aria-label="Controle do carrossel">
+      <button class="hero-prev" id="heroPrev" aria-label="Anterior">‹</button>
+      <div class="hero-dots" id="heroDots" role="tablist" aria-label="Slides"></div>
+      <button class="hero-next" id="heroNext" aria-label="Próximo">›</button>
+    </div>
+  </section>
+
+  <!-- 🔎 搜索/筛选区 -->
+  <section class="filters container" role="search" aria-label="Pesquisa e filtros">
+    <div class="filters-row">
+      <div class="search-wrapper">
+        <input id="searchInput" type="search" placeholder="Pesquisa por nome, código, código de barras ou referência"
+          aria-label="Pesquisar produtos" autocomplete="off" />
+        <button id="clearInputBtn" class="btn" aria-label="Apagar texto">×</button>
+      </div>
+
+      <select id="categorySelect" aria-label="Filtrar por categoria">
+        <option value="">Todas as categorias</option>
+      </select>
+
+      <button id="searchBtn" class="btn" aria-label="Limpar pesquisa">Limpar</button>
+    </div>
+    <div id="categoryPills" class="pills" aria-label="Categorias rápidas"></div>
+  </section>
+
+
+
+  <!-- 产品网格 + 分页 -->
+  <main class="container">
+    <!-- 产品总数统计 -->
+    <div id="productCount" class="product-count"></div>
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <nav id="pagination" class="pagination" aria-label="Paginação"></nav>
+  </main>
+
+  <!-- 联系方式 -->
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="contact-title">Dúvidas? Entre em contato com o vendedor</h2>
+
+      <div class="contact-info">
+        <img src="assets/icons/daymi-1.png" alt="Logo da empresa" class="contact-logo" />
+        <div class="contact-lines">
+          <p class="contact-name"><strong>Minha Empresa LTDA</strong></p>
+
+          <p>
+            <a href="mailto:contato@empresa.com" target="_blank" rel="noopener">
+              <img src="assets/icons/email.png" alt="Email" class="icon-inline" />
+            </a>
+            Email:
+            <a href="mailto:contato@empresa.com">contato@empresa.com</a>
+          </p>
+
+          <p>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">
+              <img src="assets/icons/whatsapp.png" alt="WhatsApp" class="icon-inline" />
+            </a>
+            WhatsApp:
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">+55 (11) 99999-9999</a>
+          </p>
+
+          <p>
+            <a href="tel:+551133334444">
+              <img src="assets/icons/telephone.png" alt="Telefone" class="icon-inline" />
+            </a>
+            Telefone:
+            <a href="tel:+551133334444">+55 (11) 3333-4444</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="social">
+        <p class="social-title">Redes Sociais</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/suaempresa" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="assets/icons/Facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/suaempresa" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/icons/Instagram.png" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container footer">
+    <div class="footer-row">
+      <small>© <span id="year"></span> DAYMI</small>
+    </div>
+  </footer>
+
+  <!-- 预览对话框（Alt+点击卡片触发） -->
+  <dialog id="productDialog" class="dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Fechar">✕</button>
+    <div class="dialog-body">
+      <img id="dialogImage" alt="" />
+      <div class="dialog-info">
+        <h2 id="dialogTitle">—</h2>
+        <p id="dialogDesc" class="muted"></p>
+        <p class="muted"><span id="dialogCategory"></span></p>
+        <p><a class="btn-cta" id="heroLink2" href="product.html">查看详情</a></p>
+      </div>
+    </div>
+  </dialog>
+</body>
+
+</html>

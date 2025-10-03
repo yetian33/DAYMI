@@ -1,0 +1,3392 @@
+{
+  "products": [
+    {
+      "id": "XWL0004-B",
+      "title": "VASO DECORATIVO VÊNUS",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0004-2.png",
+      "description": "",
+      "images": [
+        "assets/images/produtos/XWL0004/XWL0004.jpg",
+        "assets/images/produtos/XWL0004/XWL0004-2.jpg",
+        "assets/images/produtos/XWL0004/XWL0004-6.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0004-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0004-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0004-B_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "155mm(C)×70mm(L)x200mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,55kg"
+      },
+      "código": "XWL0004-B"
+    },
+    {
+      "id": "XWL0004-P",
+      "title": "VASO DECORATIVO VÊNUS",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0004-1.png",
+      "description": "",
+      "images": [
+        "assets/images/produtos/XWL0004/XWL0004-4.jpg",
+        "assets/images/produtos/XWL0004/XWL0004-3.jpg",
+        "assets/images/produtos/XWL0004/XWL0004-7.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0004-2.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0004-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0004-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": "155mm(C)×70mm(L)x200mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,55kg"
+      },
+      "código": "XWL0004-P"
+    },
+    {
+      "id": "XWL0006-B",
+      "title": "VASO DECORATIVO AFETO",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0006-1.png",
+      "images": [
+        "assets/images/produtos/XWL0006/XWL0006-1.jpg",
+        "assets/images/produtos/XWL0006/XWL0006-10.jpg",
+        "assets/images/produtos/XWL0006/XWL0006-2.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0006-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0006-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0006-B_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "155mm(C)×100mm(L)x180mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0006-B"
+    },
+    {
+      "id": "XWL0006-P",
+      "title": "VASO DECORATIVO AFETO",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0006-2.png",
+      "images": [
+        "assets/images/produtos/XWL0006/XWL0006-7.jpg",
+        "assets/images/produtos/XWL0006/XWL0006-3.jpg",
+        "assets/images/produtos/XWL0006/XWL0006-4.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0006-2.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0006-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0006-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": "155mm(C)×100mm(L)x180mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0006-P"
+    },
+    {
+      "id": "XWL0007-B",
+      "title": "VASO DECORATIVO TORRE",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0007-1.png",
+      "images": [
+        "assets/images/produtos/XWL0007/XWL0007-5.jpg",
+        "assets/images/produtos/XWL0007/XWL0007-2.jpg",
+        "assets/images/produtos/XWL0007/XWL0007-3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0007-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0007-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0007-B_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "130mm(C)×130mm(L)x230mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "1,10kg"
+      },
+      "código": "XWL0007-B"
+    },
+    {
+      "id": "XWL0007-P",
+      "title": "VASO DECORATIVO TORRE",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0007-2.png",
+      "images": [
+        "assets/images/produtos/XWL0007/XWL0007-9.jpg",
+        "assets/images/produtos/XWL0007/XWL0007-1.jpg",
+        "assets/images/produtos/XWL0007/XWL0007-8.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0007-2.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0007-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0007-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": "130mm(C)×130mm(L)x230mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "1,10kg"
+      },
+      "código": "XWL0007-P"
+    },
+    {
+      "id": "XWL0008-B",
+      "title": "ENFEITE MELODIA FLORAL",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0008-2.png",
+      "images": [
+        "assets/images/produtos/XWL0008/XWL0008.jpg",
+        "assets/images/produtos/XWL0008/XWL0008-4.jpg",
+        "assets/images/produtos/XWL0008/XWL0008-2.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0008-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0008-8.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0008-B_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "160mm(C)×160mm(L)x60mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0008-B"
+    },
+    {
+      "id": "XWL0008-R",
+      "title": "ENFEITE MELODIA FLORAL",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0008-1.png",
+      "images": [
+        "assets/images/produtos/XWL0008/XWL0008-1.jpg",
+        "assets/images/produtos/XWL0008/XWL0008-3.jpg",
+        "assets/images/produtos/XWL0008/XWL0008-5.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0008-2.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0008-8.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0008-R_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Rosa",
+        "Dimensões": "160mm(C)×160mm(L)x60mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0008-R"
+    },
+    {
+      "id": "XWL0009",
+      "title": "ENFEITE FOLHA DA SORTE",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0009.png",
+      "images": [
+        "assets/images/produtos/XWL0009/XWL0009.jpg",
+        "assets/images/produtos/XWL0009/XWL0009-2.jpg",
+        "assets/images/produtos/XWL0009/XWL0009-8.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0009-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0009-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0009_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "195mm(C)×90mm(L)x23mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,20kg"
+      },
+      "código": "XWL0009"
+    },
+    {
+      "id": "XWL0010",
+      "title": "ENFEITE ABACAXI DOURADO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0010.png",
+      "images": [
+        "assets/images/produtos/XWL0010/XWL0010.jpg",
+        "assets/images/produtos/XWL0010/XWL0010-8.jpg",
+        "assets/images/produtos/XWL0010/XWL0010-9.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0010-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0010-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0010_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "195mm(C)×125mm(L)x30mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0010"
+    },
+    {
+      "id": "XWL0011",
+      "title": "BANDEJA PÁSSAROS DOURADO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0011-2.png",
+      "images": [
+        "assets/images/produtos/XWL0011/XWL0011-2.jpg",
+        "assets/images/produtos/XWL0011/XWL0011-7.jpg",
+        "assets/images/produtos/XWL0011/XWL0011-4.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0011-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0011-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0011_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "245mm(C)×115mm(L)x55mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0011"
+    },
+    {
+      "id": "XWL0012",
+      "title": "BANDEJA PÁSSAROS DOURADO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0012-1.png",
+      "images": [
+        "assets/images/produtos/XWL0012/XWL0012.jpg",
+        "assets/images/produtos/XWL0012/XWL0012-6.jpg",
+        "assets/images/produtos/XWL0012/XWL0012-8.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0012-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0012-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0012_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "210mm(C)×85mm(L)x55mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,25kg"
+      },
+      "código": "XWL0012"
+    },
+    {
+      "id": "XWL0013",
+      "title": "BANDEJA BEIJO DE OURO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0013.png",
+      "images": [
+        "assets/images/produtos/XWL0013/XWL0013-5.jpg",
+        "assets/images/produtos/XWL0013/XWL0013-8.jpg",
+        "assets/images/produtos/XWL0013/XWL0013-9.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0013-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0013-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0013_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "133mm(C)×133mm(L)x55mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0013"
+    },
+    {
+      "id": "XWL0014",
+      "title": "MINI PORTA JOIAS ",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0014.png",
+      "images": [
+        "assets/images/produtos/XWL0014/XWL0014.jpg",
+        "assets/images/produtos/XWL0014/XWL0014-3.jpg",
+        "assets/images/produtos/XWL0014/XWL0014-6.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0014-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0014-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0014_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "65mm(C)×65mm(L)x70mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,10kg"
+      },
+      "código": "XWL0014"
+    },
+    {
+      "id": "XWL0015-A",
+      "title": "PORTA JOIAS LHAMA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0015-3.png",
+      "images": [
+        "assets/images/produtos/XWL0015/8.png",
+        "assets/images/produtos/XWL0015/9.png",
+        "assets/images/produtos/XWL0015/10.png",
+        "assets/images/photos实拍水印/watermarked_XWL0015-4.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0015-15.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0015-A_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "90mm(C)×90mm(L)x120mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,20kg"
+      },
+      "código": "XWL0015-A"
+    },
+    {
+      "id": "XWL0015-B",
+      "title": "PORTA JOIAS CERVO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0015-4.png",
+      "images": [
+        "assets/images/produtos/XWL0015/1.png",
+        "assets/images/produtos/XWL0015/2.png",
+        "assets/images/produtos/XWL0015/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0015-2.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0015-14.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0015-B_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "90mm(C)×90mm(L)x120mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,20kg"
+      },
+      "código": "XWL0015-B"
+    },
+    {
+      "id": "XWL0015-C",
+      "title": "PORTA JOIAS RAPOSA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0015-1.png",
+      "images": [
+        "assets/images/produtos/XWL0015/11.png",
+        "assets/images/produtos/XWL0015/12.png",
+        "assets/images/produtos/XWL0015/13.png",
+        "assets/images/photos实拍水印/watermarked_XWL0015-5.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0015-13.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0015-C_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "90mm(C)×90mm(L)x120mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,20kg"
+      },
+      "código": "XWL0015-C"
+    },
+    {
+      "id": "XWL0015-D",
+      "title": "PORTA JOIAS ELEFANTE",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0015-2.png",
+      "images": [
+        "assets/images/produtos/XWL0015/4.png",
+        "assets/images/produtos/XWL0015/5.png",
+        "assets/images/produtos/XWL0015/6.png",
+        "assets/images/photos实拍水印/watermarked_XWL0015-3.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0015-16.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0015-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "90mm(C)×90mm(L)x120mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,20kg"
+      },
+      "código": "XWL0015-D"
+    },
+    {
+      "id": "XWL0016",
+      "title": "PORTA JOIAS GRADEADO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0016.png",
+      "images": [
+        "assets/images/produtos/XWL0016/XWL0016-8.jpg",
+        "assets/images/produtos/XWL0016/XWL0016-2.jpg",
+        "assets/images/produtos/XWL0016/XWL0016-3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0016-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0016-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0016_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "75mm(C)×60mm(L)x90mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,15kg"
+      },
+      "código": "XWL0016"
+    },
+    {
+      "id": "XWL0017",
+      "title": "PORTA JOIAS URSO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0017.png",
+      "images": [
+        "assets/images/produtos/XWL0017/XWL0017-2.jpg",
+        "assets/images/produtos/XWL0017/XWL0017-3.jpg",
+        "assets/images/produtos/XWL0017/XWL0017-5.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0017.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0017-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0017_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "70mm(C)×70mm(L)x85mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,15kg"
+      },
+      "código": "XWL0017"
+    },
+    {
+      "id": "XWL0018",
+      "title": "PORTA JOIAS ESTRIADO VERTICAL",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0018.png",
+      "images": [
+        "assets/images/produtos/XWL0018/XWL0018.jpg",
+        "assets/images/produtos/XWL0018/XWL0018-7.jpg",
+        "assets/images/produtos/XWL0018/XWL0018-9.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0018.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0018-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0018_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "70mm(C)×70mm(L)x80mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,20kg"
+      },
+      "código": "XWL0018"
+    },
+    {
+      "id": "XWL0019",
+      "title": "PORTA JOIAS RELEVO EM BOLINHAS",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0019.png",
+      "images": [
+        "assets/images/produtos/XWL0019/1.png",
+        "assets/images/produtos/XWL0019/2.png",
+        "assets/images/produtos/XWL0019/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0019.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0019-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0019_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "85mm(C)×85mm(L)x95mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,20kg"
+      },
+      "código": "XWL0019"
+    },
+    {
+      "id": "XWL0020",
+      "title": "PORTA JOIAS ESTRIADO SUAVE",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0020.png",
+      "images": [
+        "assets/images/produtos/XWL0020/1.png",
+        "assets/images/produtos/XWL0020/2.png",
+        "assets/images/produtos/XWL0020/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0020.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0018-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0020_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "85mm(C)×85mm(L)x95mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,20kg"
+      },
+      "código": "XWL0020"
+    },
+    {
+      "id": "XWL0021",
+      "title": "VASO MÃO NO ROSTO",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0021-1.png",
+      "images": [
+        "assets/images/produtos/XWL0021/2.jpg",
+        "assets/images/produtos/XWL0021/3.jpg",
+        "assets/images/produtos/XWL0021/4.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0021-B.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0021-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0021_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "190mm(C)×60mm(L)x245mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,85kg"
+      },
+      "código": "XWL0021"
+    },
+    {
+      "id": "XWL0022",
+      "title": "VASO MÃO NO ROSTO",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0022.png",
+      "images": [
+        "assets/images/produtos/XWL0022/1-4.png",
+        "assets/images/produtos/XWL0022/1-5.png",
+        "assets/images/produtos/XWL0022/1-6.png",
+        "assets/images/photos实拍水印/watermarked_XWL0022-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0021-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0022_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": "190mm(C)×60mm(L)x245mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,85kg"
+      },
+      "código": "XWL0022"
+    },
+    {
+      "id": "XWL0023",
+      "title": "VASO ESTÁTUA PENSADOR",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0023-1.png",
+      "images": [
+        "assets/images/produtos/XWL0023/1.jpg",
+        "assets/images/produtos/XWL0023/2.jpg",
+        "assets/images/produtos/XWL0023/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0023-1.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0023-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0023_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "165mm(C)×55mm(L)x230mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0023"
+    },
+    {
+      "id": "XWL0024",
+      "title": "VASO ESTÁTUA PENSADOR",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0024.png",
+      "images": [
+        "assets/images/produtos/XWL0024/1.jpg",
+        "assets/images/produtos/XWL0024/2.jpg",
+        "assets/images/produtos/XWL0024/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0024.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0023-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0024_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": "165mm(C)×55mm(L)x230mm(A)",
+        "Material": "Cerâmica",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0024"
+    },
+    {
+      "id": "XWL0025",
+      "title": "ESTÁTUA PENSADOR",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0025-1.png",
+      "images": [
+        "assets/images/produtos/XWL0025/1.jpg",
+        "assets/images/produtos/XWL0025/2.jpg",
+        "assets/images/produtos/XWL0025/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0025.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0030-10.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0025_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": "60mm(C)×55mm(L)x125mm(A)",
+        "Material": "Resina",
+        "Peso": "0,11kg"
+      },
+      "código": "XWL0025"
+    },
+    {
+      "id": "XWL0026",
+      "title": "ESTÁTUA PENSADOR",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0026-1.png",
+      "images": [
+        "assets/images/produtos/XWL0026/1.jpg",
+        "assets/images/produtos/XWL0026/2.jpg",
+        "assets/images/produtos/XWL0026/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0026.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0030-10.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0026_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": "60mm(C)×55mm(L)x125mm(A)",
+        "Material": "Resina",
+        "Peso": "0,12kg"
+      },
+      "código": "XWL0026"
+    },
+    {
+      "id": "XWL0027",
+      "title": "ESTÁTUA PENSADOR",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0027-1.png",
+      "images": [
+        "assets/images/produtos/XWL0027/1.jpg",
+        "assets/images/produtos/XWL0027/2.jpg",
+        "assets/images/produtos/XWL0027/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0027.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0027-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0027_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": "60mm(C)×50mm(L)x125mm(A)",
+        "Material": "Resina",
+        "Peso": "0,13kg"
+      },
+      "código": "XWL0027"
+    },
+    {
+      "id": "XWL0028",
+      "title": "ESTÁTUA PENSADOR",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0028-1.png",
+      "images": [
+        "assets/images/produtos/XWL0028/1.jpg",
+        "assets/images/produtos/XWL0028/2.jpg",
+        "assets/images/produtos/XWL0028/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0028.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0030-10.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0028_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Arenito",
+        "Dimensões": "60mm(C)×55mm(L)x125mm(A)",
+        "Material": "Resina",
+        "Peso": "0,11kg"
+      },
+      "código": "XWL0028"
+    },
+    {
+      "id": "XWL0029",
+      "title": "ESTÁTUA PENSADOR",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0029-1.png",
+      "images": [
+        "assets/images/produtos/XWL0029/1.jpg",
+        "assets/images/produtos/XWL0029/2.jpg",
+        "assets/images/produtos/XWL0029/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0029.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0029-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0029_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": "60mm(C)×50mm(L)x125mm(A)",
+        "Material": "Resina",
+        "Peso": "0,12kg"
+      },
+      "código": "XWL0029"
+    },
+    {
+      "id": "XWL0030",
+      "title": "TRIO PENSADORES",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0030-1.jpg",
+      "images": [
+        "assets/images/produtos/XWL0030/1.jpg",
+        "assets/images/produtos/XWL0030/2.jpg",
+        "assets/images/produtos/XWL0030/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0030.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0030-11.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0030_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "60mm(C)×55mm(L)x125mm(A)\n60mm(C)×50mm(L)x125mm(A)\n70mm(C)×55mm(L)x120mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0030"
+    },
+    {
+      "id": "XWL0031",
+      "title": "TRIO PENSADORES",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0031-1.jpg",
+      "images": [
+        "assets/images/produtos/XWL0031/1.jpg",
+        "assets/images/produtos/XWL0031/2.jpg",
+        "assets/images/produtos/XWL0031/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0031.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0030-11.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0031_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "60mm(C)×55mm(L)x125mm(A)\n60mm(C)×50mm(L)x125mm(A)\n70mm(C)×55mm(L)x120mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0031"
+    },
+    {
+      "id": "XWL0032",
+      "title": "TRIO PENSADORES",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0032.jpg",
+      "images": [
+        "assets/images/produtos/XWL0032/1.jpg",
+        "assets/images/produtos/XWL0032/2.jpg",
+        "assets/images/produtos/XWL0032/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0032.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0030-11.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0032_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": [
+          "60mm(C)×55mm(L)x125mm(A)\n60mm(C)×50mm(L)x125mm(A)\n70mm(C)×55mm(L)x120mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0032"
+    },
+    {
+      "id": "XWL0033",
+      "title": "TRIO PENSADORES",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0033-1.jpg",
+      "images": [
+        "assets/images/produtos/XWL0033/1.jpg",
+        "assets/images/produtos/XWL0033/2.jpg",
+        "assets/images/produtos/XWL0033/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0033.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0030-11.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0033_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Arenito",
+        "Dimensões": [
+          "60mm(C)×55mm(L)x125mm(A)\n60mm(C)×50mm(L)x125mm(A)\n70mm(C)×55mm(L)x120mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0033"
+    },
+    {
+      "id": "XWL0034",
+      "title": "TRIO PENSADORES",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0034-1.jpg",
+      "images": [
+        "assets/images/produtos/XWL0034/1.jpg",
+        "assets/images/produtos/XWL0034/2.jpg",
+        "assets/images/produtos/XWL0034/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0034.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0030-11.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0034_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "60mm(C)×55mm(L)x125mm(A)\n60mm(C)×50mm(L)x125mm(A)\n70mm(C)×55mm(L)x120mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0034"
+    },
+    {
+      "id": "XWL0035",
+      "title": "BAILARINA POSE ALONGADA",
+      "category": "ENFEITES / BAILARINA",
+      "image": "assets/images/白底水印/watermarked_XWL0035-1.png",
+      "images": [
+        "assets/images/produtos/XWL0035/1.jpg",
+        "assets/images/produtos/XWL0035/2.jpg",
+        "assets/images/produtos/XWL0035/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0035.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0035-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0035_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "100mm(C)×125mm(L)x265mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0035"
+    },
+    {
+      "id": "XWL0036",
+      "title": "BAILARINA SENTADA",
+      "category": "ENFEITES / BAILARINA",
+      "image": "assets/images/白底水印/watermarked_XWL0036-1.png",
+      "images": [
+        "assets/images/produtos/XWL0036/1.jpg",
+        "assets/images/produtos/XWL0036/2.jpg",
+        "assets/images/produtos/XWL0036/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0036.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0036-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0036_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "140mm(C)×220mm(L)x145mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0036"
+    },
+    {
+      "id": "XWL0037",
+      "title": "BAILARINA DANÇA ARABESQUE",
+      "category": "ENFEITES / BAILARINA",
+      "image": "assets/images/白底水印/watermarked_XWL0037-1.png",
+      "images": [
+        "assets/images/produtos/XWL0037/1.jpg",
+        "assets/images/produtos/XWL0037/2.jpg",
+        "assets/images/produtos/XWL0037/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0037.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0037-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0037_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "110mm(C)×95mm(L)x370mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,55kg"
+      },
+      "código": "XWL0037"
+    },
+    {
+      "id": "XWL0038",
+      "title": "BAILARINA ARABESQUE EM RELEVÉ",
+      "category": "ENFEITES / BAILARINA",
+      "image": "assets/images/白底水印/watermarked_XWL0038-1.png",
+      "images": [
+        "assets/images/produtos/XWL0038/1.jpg",
+        "assets/images/produtos/XWL0038/2.jpg",
+        "assets/images/produtos/XWL0038/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0038.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0038-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0038_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "110mm(C)×105mm(L)x375mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,60kg"
+      },
+      "código": "XWL0038"
+    },
+    {
+      "id": "XWL0039",
+      "title": "PAR EXTREMIDADES DE LIVRO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0039-1.png",
+      "images": [
+        "assets/images/produtos/XWL0039/1.jpg",
+        "assets/images/produtos/XWL0039/2.jpg",
+        "assets/images/produtos/XWL0039/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0039.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0039-2.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0039_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "320mm(C)×90mm(L)x165mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "1,30kg"
+      },
+      "código": "XWL0039"
+    },
+    {
+      "id": "XWL0040",
+      "title": "TOURO FORÇA E LEVEZA",
+      "category": "ENFEITES / ANIMAL",
+      "image": "assets/images/白底水印/watermarked_XWL0040-1.png",
+      "images": [
+        "assets/images/produtos/XWL0040/1.jpg",
+        "assets/images/produtos/XWL0040/2.jpg",
+        "assets/images/produtos/XWL0040/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0040.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0040-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0040_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "215mm(C)×70mm(L)x200mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0040"
+    },
+    {
+      "id": "XWL0041",
+      "title": "TOURO DE ATAQUE",
+      "category": "ENFEITES / ANIMAL",
+      "image": "assets/images/白底水印/watermarked_XWL0041.jpg",
+      "images": [
+        "assets/images/produtos/XWL0041/1.jpg",
+        "assets/images/produtos/XWL0041/2.jpg",
+        "assets/images/produtos/XWL0041/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0041.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0041-7.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0041_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "260mm(C)×80mm(L)x155mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0041"
+    },
+    {
+      "id": "XWL0042",
+      "title": "PAR CASAL COELHO",
+      "category": "ENFEITES / ANIMAL",
+      "image": "assets/images/白底水印/watermarked_XWL0042-24.jpg",
+      "images": [
+        "assets/images/produtos/XWL0042/1.jpg",
+        "assets/images/produtos/XWL0042/2.jpg",
+        "assets/images/produtos/XWL0042/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0042.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0042-9.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0042_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Marrom bege",
+        "Dimensões": [
+          "80mm(C)×60mm(L)x210mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0042"
+    },
+    {
+      "id": "XWL0043",
+      "title": "PAR CERVO SORTE E PROSPERIDADE",
+      "category": "ENFEITES / ANIMAL",
+      "image": "assets/images/白底水印/watermarked_XWL0043-14.png",
+      "images": [
+        "assets/images/produtos/XWL0043/1.jpg",
+        "assets/images/produtos/XWL0043/2.png",
+        "assets/images/produtos/XWL0043/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0043.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0043-23.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0043_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "100mm(C)×40mm(L)x105mm(A)+105mm(C)×35mm(L)x155mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,25kg"
+      },
+      "código": "XWL0043"
+    },
+    {
+      "id": "XWL0044",
+      "title": "ESCULTURA PROMESSA DE AMOR",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0044.png",
+      "images": [
+        "assets/images/produtos/XWL0044/1.jpg",
+        "assets/images/produtos/XWL0044/2.jpg",
+        "assets/images/produtos/XWL0044/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0044.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0044-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0044_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "70mm(C)×115mm(L)x280mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,55kg"
+      },
+      "código": "XWL0044"
+    },
+    {
+      "id": "XWL0045",
+      "title": "ESCULTURA CHAMA INFINITA BASE CRISTAL",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0045.png",
+      "images": [
+        "assets/images/produtos/XWL0045/1.jpg",
+        "assets/images/produtos/XWL0045/2.jpg",
+        "assets/images/produtos/XWL0045/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0045.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0045-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0045_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "70mm(C)×70mm(L)x265mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,55kg"
+      },
+      "código": "XWL0045"
+    },
+    {
+      "id": "XWL0046",
+      "title": "ESCULTURA PENSADOR EUROPEU",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0046.png",
+      "images": [
+        "assets/images/produtos/XWL0046/1.jpg",
+        "assets/images/produtos/XWL0046/2.jpg",
+        "assets/images/produtos/XWL0046/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0046.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0046-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0046_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "95mm(C)×130mm(L)x245mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0046"
+    },
+    {
+      "id": "XWL0047",
+      "title": "TRIO DE ASTRONAUTA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0047-17.png",
+      "images": [
+        "assets/images/produtos/XWL0047/1.jpg",
+        "assets/images/produtos/XWL0047/2.jpg",
+        "assets/images/produtos/XWL0047/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0047.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0047-19.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0047_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "75mm(C)×75mm(L)x150mm(A)\n95mm(C)×90mm(L)x145mm(A)\n130mm(C)×90mm(L)x245mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,95kg"
+      },
+      "código": "XWL0047"
+    },
+    {
+      "id": "XWL0048",
+      "title": "ENFEITE PENSANTE BRAÇOS APOIADO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0048.png",
+      "images": [
+        "assets/images/produtos/XWL0048/1.jpg",
+        "assets/images/produtos/XWL0048/2.jpg",
+        "assets/images/produtos/XWL0048/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0048.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0048-2.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0048_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "140mm(C)×100mm(L)x220mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0048"
+    },
+    {
+      "id": "XWL0049",
+      "title": "ENFEITE PENSANTE QUEIXO APOIADO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0049.png",
+      "images": [
+        "assets/images/produtos/XWL0049/1.jpg",
+        "assets/images/produtos/XWL0049/2.jpg",
+        "assets/images/produtos/XWL0049/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0049.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0049-2.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0049_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "110mm(C)×95mm(L)x230mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0049"
+    },
+    {
+      "id": "XWL0050",
+      "title": "ENFEITE PENSANTE CONTEMPLATIVA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0050.jpg",
+      "images": [
+        "assets/images/produtos/XWL0050/1.jpg",
+        "assets/images/produtos/XWL0050/2.jpg",
+        "assets/images/produtos/XWL0050/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0050.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0050-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0050_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "120mm(C)×100mm(L)x235mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,50kg"
+      },
+      "código": "XWL0050"
+    },
+    {
+      "id": "XWL0051",
+      "title": "ESTÁTUA BEIJO ALMA GÊMEA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0051.png",
+      "images": [
+        "assets/images/produtos/XWL0051/1.jpg",
+        "assets/images/produtos/XWL0051/2.jpg",
+        "assets/images/produtos/XWL0051/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0051.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0052-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0051_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Champanhe",
+        "Dimensões": [
+          "145mm(C)×70mm(L)x260mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0051"
+    },
+    {
+      "id": "XWL0052",
+      "title": "ESTÁTUA BEIJO ALMA GÊMEA",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0052.png",
+      "images": [
+        "assets/images/produtos/XWL0052/1.jpg",
+        "assets/images/produtos/XWL0052/2.jpg",
+        "assets/images/produtos/XWL0052/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0052.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0052-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0052_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "145mm(C)×70mm(L)x260mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0052"
+    },
+    {
+      "id": "XWL0053",
+      "title": "DECORAÇÃO OLHO GREGO",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0053.png",
+      "images": [
+        "assets/images/produtos/XWL0053/1.jpg",
+        "assets/images/produtos/XWL0053/2.jpg",
+        "assets/images/produtos/XWL0053/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0053.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0053-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0053_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "175mm(C)×40mm(L)x245mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,25kg"
+      },
+      "código": "XWL0053"
+    },
+    {
+      "id": "XWL0054",
+      "title": "DECORAÇÃO CIRCULOS EM HARMONIA",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0054.png",
+      "images": [
+        "assets/images/produtos/XWL0054/1.jpg",
+        "assets/images/produtos/XWL0054/2.jpg",
+        "assets/images/produtos/XWL0054/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0054.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0054-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0054_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "150mm(C)×40mm(L)x290mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0054"
+    },
+    {
+      "id": "XWL0055",
+      "title": "DECORAÇÃO OLHO DO TEMPO",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0055.png",
+      "images": [
+        "assets/images/produtos/XWL0055/1.jpg",
+        "assets/images/produtos/XWL0055/2.jpg",
+        "assets/images/produtos/XWL0055/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0055.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0055-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0055_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "150mm(C)×40mm(L)x270mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0055"
+    },
+    {
+      "id": "XWL0056",
+      "title": "DECORAÇÃO GIRASSOL OURIÇO",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0056.png",
+      "images": [
+        "assets/images/produtos/XWL0056/1.jpg",
+        "assets/images/produtos/XWL0056/2.jpg",
+        "assets/images/produtos/XWL0056/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0056.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0056-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0056_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "180mm(C)×55mm(L)x265mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0056"
+    },
+    {
+      "id": "XWL0057",
+      "title": "BANDEJA MÉDIA ABACAXI",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0057.png",
+      "images": [
+        "assets/images/produtos/XWL0057/1.jpg",
+        "assets/images/produtos/XWL0057/2.jpg",
+        "assets/images/produtos/XWL0057/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0057.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0057-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0057_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "300mm(C)×185mm(L)x30mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0057"
+    },
+    {
+      "id": "XWL0058",
+      "title": "BANDEJA GRANDE ABACAXI",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0058.png",
+      "images": [
+        "assets/images/produtos/XWL0058/1.jpg",
+        "assets/images/produtos/XWL0058/2.jpg",
+        "assets/images/produtos/XWL0058/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0058.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0058-2.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0058_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "355mm(C)×215mm(L)x35mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0058"
+    },
+    {
+      "id": "XWL0059",
+      "title": "BANDEJA MÉDIO FOLHA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0059.png",
+      "images": [
+        "assets/images/produtos/XWL0059/1.jpg",
+        "assets/images/produtos/XWL0059/2.jpg",
+        "assets/images/produtos/XWL0059/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0059.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0059-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0059_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "405mm(C)×145mm(L)x25mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,25kg"
+      },
+      "código": "XWL0059"
+    },
+    {
+      "id": "XWL0060",
+      "title": "BANDEJA GRANDE FOLHA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0060.png",
+      "images": [
+        "assets/images/produtos/XWL0060/1.jpg",
+        "assets/images/produtos/XWL0060/2.jpg",
+        "assets/images/produtos/XWL0060/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0060.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0060-1.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0060_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "590mm(C)×215mm(L)x25mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,50kg"
+      },
+      "código": "XWL0060"
+    },
+    {
+      "id": "XWL0061",
+      "title": "ENFEITE PENSANTE BRAÇOS APOIADO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0061.png",
+      "images": [
+        "assets/images/produtos/XWL0061/1.jpg",
+        "assets/images/produtos/XWL0061/2.jpg",
+        "assets/images/produtos/XWL0061/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0061.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0061-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0061_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": [
+          "150mm(C)×90mm(L)x220mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0061"
+    },
+    {
+      "id": "XWL0062",
+      "title": "ENFEITE PENSANTE QUEIXO APOIADO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0062.png",
+      "images": [
+        "assets/images/produtos/XWL0062/1.jpg",
+        "assets/images/produtos/XWL0062/2.jpg",
+        "assets/images/produtos/XWL0062/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0062.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0062-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0062_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": [
+          "115mm(C)×90mm(L)x240mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0062"
+    },
+    {
+      "id": "XWL0063",
+      "title": "ENFEITE PENSANTE CONTEMPLATIVA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0063.png",
+      "images": [
+        "assets/images/produtos/XWL0063/1.jpg",
+        "assets/images/produtos/XWL0063/2.jpg",
+        "assets/images/produtos/XWL0063/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0063.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0063-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0063_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": [
+          "125mm(C)×100mm(L)x225mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0063"
+    },
+    {
+      "id": "XWL0064",
+      "title": "TRIO NOTA MUSICAL",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0064-12.png",
+      "images": [
+        "assets/images/produtos/XWL0064/1.jpg",
+        "assets/images/produtos/XWL0064/2.jpg",
+        "assets/images/produtos/XWL0064/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0064.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0064-34.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0064_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "60mm(C)×40mm(L)x150mm(A)\n55mm(C)×40mm(L)x130mm(A)\n60mm(C)×40mm(L)x175mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0064"
+    },
+    {
+      "id": "XWL0065",
+      "title": "PAR CERVO COM ESFERA CRISTAL",
+      "category": "ENFEITES / ANIMAL",
+      "image": "assets/images/白底水印/watermarked_XWL0065-1.png",
+      "images": [
+        "assets/images/produtos/XWL0065/1.jpg",
+        "assets/images/produtos/XWL0065/2.jpg",
+        "assets/images/produtos/XWL0065/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0065.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0065-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0065_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "155mm(C)×50mm(L)x260mm(A)\n170mm(C)×70mm(L)x160mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "1,20kg"
+      },
+      "código": "XWL0065"
+    },
+    {
+      "id": "XWL0066",
+      "title": "ESCULTURA BALÃO CACHORRO",
+      "category": "ENFEITES / ANIMAL",
+      "image": "assets/images/白底水印/watermarked_XWL0066.png",
+      "images": [
+        "assets/images/produtos/XWL0066/1.jpg",
+        "assets/images/produtos/XWL0066/2.jpg",
+        "assets/images/produtos/XWL0066/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0066.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0067-7.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0066_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "210mm(C)×70mm(L)x180mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0066"
+    },
+    {
+      "id": "XWL0067",
+      "title": "ESCULTURA BALÃO CACHORRO",
+      "category": "ENFEITES / ANIMAL",
+      "image": "assets/images/白底水印/watermarked_XWL0067.png",
+      "images": [
+        "assets/images/produtos/XWL0067/1.jpg",
+        "assets/images/produtos/XWL0067/2.jpg",
+        "assets/images/produtos/XWL0067/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0067.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0067-7.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0067_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": [
+          "210mm(C)×70mm(L)x180mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0067"
+    },
+    {
+      "id": "XWL0076",
+      "title": "BANDEJA ESPELHADA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0076-33.png",
+      "images": [
+        "assets/images/produtos/XWL0076/1.png",
+        "assets/images/produtos/XWL0076/2.png",
+        "assets/images/produtos/XWL0076/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0076.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0076.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0076_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "450mm(C)×200mm(L)x20mm(A)"
+        ],
+        "Material": "Vidro",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0076"
+    },
+    {
+      "id": "XWL0077",
+      "title": "BANDEJA ESPELHADA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0077-34.png",
+      "images": [
+        "assets/images/produtos/XWL0077/1.png",
+        "assets/images/produtos/XWL0077/2.png",
+        "assets/images/produtos/XWL0077/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0077.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0077.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0077_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "400mm(C)×195mm(L)x15mm(A)"
+        ],
+        "Material": "Vidro",
+        "Peso": "0,50kg"
+      },
+      "código": "XWL0077"
+    },
+    {
+      "id": "XWL0078",
+      "title": "BANDEJA ESPELHADA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0078-34.png",
+      "images": [
+        "assets/images/produtos/XWL0078/1.png",
+        "assets/images/produtos/XWL0078/2.png",
+        "assets/images/produtos/XWL0078/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0078.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0078.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0078_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "245mm(C)×150mm(L)x15mm(A)"
+        ],
+        "Material": "Vidro",
+        "Peso": "0,25kg"
+      },
+      "código": "XWL0078"
+    },
+    {
+      "id": "XWL0079",
+      "title": "BANDEJA ESPELHADA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0079-33.png",
+      "images": [
+        "assets/images/produtos/XWL0079/1.jpg",
+        "assets/images/produtos/XWL0079/2.png",
+        "assets/images/produtos/XWL0079/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0079.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0079.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0079_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "300mm(C)×100mm(L)x15mm(A)"
+        ],
+        "Material": "Vidro",
+        "Peso": "0,20kg"
+      },
+      "código": "XWL0079"
+    },
+    {
+      "id": "XWL0080",
+      "title": "BANDEJA ESPELHADA REDONDA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0080.png",
+      "images": [
+        "assets/images/produtos/XWL0080/1.jpg",
+        "assets/images/produtos/XWL0080/2.jpg",
+        "assets/images/produtos/XWL0080/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0080.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0080-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0080_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "350mm(C)×350mm(L)x20mm(A)"
+        ],
+        "Material": "Vidro",
+        "Peso": "0,65kg"
+      },
+      "código": "XWL0080"
+    },
+    {
+      "id": "XWL0081",
+      "title": "BANDEJA CORAÇÃO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0081-7.png",
+      "images": [
+        "assets/images/produtos/XWL0081/1.jpg",
+        "assets/images/produtos/XWL0081/2.jpg",
+        "assets/images/produtos/XWL0081/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0081.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0081-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0081_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "330mm(C)×310mm(L)x20mm(A)"
+        ],
+        "Material": "Vidro",
+        "Peso": "0,55kg"
+      },
+      "código": "XWL0081"
+    },
+    {
+      "id": "XWL0082",
+      "title": "BANDEJA CORAÇÃO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0082.png",
+      "images": [
+        "assets/images/produtos/XWL0082/1.jpg",
+        "assets/images/produtos/XWL0082/2.jpg",
+        "assets/images/produtos/XWL0082/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0082.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0082.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0082_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "255mm(C)×240mm(L)x15mm(A)"
+        ],
+        "Material": "Vidro",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0082"
+    },
+    {
+      "id": "XWL0083",
+      "title": "BANDEJA ESPELHADA QUADRADA",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0083.jpg",
+      "images": [
+        "assets/images/produtos/XWL0083/1.jpg",
+        "assets/images/produtos/XWL0083/2.jpg",
+        "assets/images/produtos/XWL0083/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0083.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0083-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0083_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "290mm(C)×290mm(L)x20mm(A)"
+        ],
+        "Material": "Vidro",
+        "Peso": "0,60kg"
+      },
+      "código": "XWL0083"
+    },
+    {
+      "id": "XWL0084",
+      "title": "Enfeite Desejo de Luz do Coração",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0084.png",
+      "images": [
+        "assets/images/produtos/XWL0084/1.jpg",
+        "assets/images/produtos/XWL0084/2.jpg",
+        "assets/images/produtos/XWL0084/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0084.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0084-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0084_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "160mm(C)×50mm(L)x170mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0084"
+    },
+    {
+      "id": "XWL0085",
+      "title": "Enfeite Fonte de Luz Estelar",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0085.png",
+      "images": [
+        "assets/images/produtos/XWL0085/1.jpg",
+        "assets/images/produtos/XWL0085/2.jpg",
+        "assets/images/produtos/XWL0085/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0085.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0085-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0085_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "145mm(C)×130mm(L)x230mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,95kg"
+      },
+      "código": "XWL0085"
+    },
+    {
+      "id": "XWL0086",
+      "title": "Enfeite Dança do Vento e da Água",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0086.png",
+      "images": [
+        "assets/images/produtos/XWL0086/1.jpg",
+        "assets/images/produtos/XWL0086/2.jpg",
+        "assets/images/produtos/XWL0086/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0086.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0086-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0086_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "115mm(C)×100mm(L)x390mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,65kg"
+      },
+      "código": "XWL0086"
+    },
+    {
+      "id": "XWL0087",
+      "title": "ENFEITE FLOR MÍSTICA ",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0087.png",
+      "images": [
+        "assets/images/produtos/XWL0087/1.jpg",
+        "assets/images/produtos/XWL0087/2.jpg",
+        "assets/images/produtos/XWL0087/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0087.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0087-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0087_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "220mm(C)×80mm(L)x340mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,75kg"
+      },
+      "código": "XWL0087"
+    },
+    {
+      "id": "XWL0088",
+      "title": "ENFEITE SOL CINTILAR",
+      "category": "ENFEITES / ABSTRATAS",
+      "image": "assets/images/白底水印/watermarked_XWL0088.png",
+      "images": [
+        "assets/images/produtos/XWL0088/1.jpg",
+        "assets/images/produtos/XWL0088/2.jpg",
+        "assets/images/produtos/XWL0088/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0088.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0088-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0088_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "270mm(C)×80mm(L)x360mm(A)"
+        ],
+        "Material": "Metal",
+        "Peso": "0,65kg"
+      },
+      "código": "XWL0088"
+    },
+    {
+      "id": "XWL0089-P",
+      "title": "DECORAÇÃO DANÇA TANGO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0089.jpg",
+      "images": [
+        "assets/images/produtos/XWL0089/5.jpg",
+        "assets/images/produtos/XWL0089/6.jpg",
+        "assets/images/produtos/XWL0089/7.jpg",
+        "assets/images/photos实拍水印/watermarked_xwl0089-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0089-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0089-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "185mm(C)×50mm(L)x275mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,75kg"
+      },
+      "código": "XWL0089-P"
+    },
+    {
+      "id": "XWL0089-D",
+      "title": "DECORAÇÃO DANÇA TANGO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0089-1.png",
+      "images": [
+        "assets/images/produtos/XWL0089/1.jpg",
+        "assets/images/produtos/XWL0089/2.jpg",
+        "assets/images/produtos/XWL0089/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0089-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0089-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0089-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "185mm(C)×50mm(L)x275mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,75kg"
+      },
+      "código": "XWL0089-D"
+    },
+    {
+      "id": "XWL0090-P",
+      "title": "DECORAÇÃO AMOR EM MOVIMENTO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0090.jpg",
+      "images": [
+        "assets/images/produtos/XWL0090/5.jpg",
+        "assets/images/produtos/XWL0090/6.jpg",
+        "assets/images/produtos/XWL0090/7.jpg",
+        "assets/images/photos实拍水印/watermarked_xwl0090-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0090-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0090-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "155mm(C)×50mm(L)x260mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0090-P"
+    },
+    {
+      "id": "XWL0090-D",
+      "title": "DECORAÇÃO AMOR EM MOVIMENTO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0090-1.png",
+      "images": [
+        "assets/images/produtos/XWL0090/1.jpg",
+        "assets/images/produtos/XWL0090/2.jpg",
+        "assets/images/produtos/XWL0090/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0090-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0090-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0090-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "155mm(C)×50mm(L)x260mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0090-D"
+    },
+    {
+      "id": "XWL0091-P",
+      "title": "ENFEITE MELODIA SERENA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0091.png",
+      "images": [
+        "assets/images/produtos/XWL0091/5.jpg",
+        "assets/images/produtos/XWL0091/6.jpg",
+        "assets/images/produtos/XWL0091/7.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0091-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0091-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0091-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "60mm(C)×70mm(L)x285mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,50kg"
+      },
+      "código": "XWL0091-P"
+    },
+    {
+      "id": "XWL0091-D",
+      "title": "ENFEITE MELODIA SERENA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0091-1.png",
+      "images": [
+        "assets/images/produtos/XWL0091/1.jpg",
+        "assets/images/produtos/XWL0091/2.jpg",
+        "assets/images/produtos/XWL0091/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0091-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0091-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0091-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "60mm(C)×70mm(L)x285mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,50kg"
+      },
+      "código": "XWL0091-D"
+    },
+    {
+      "id": "XWL0092-P",
+      "title": "ENFEITE VOZ DA ALMA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0092.png",
+      "images": [
+        "assets/images/produtos/XWL0092/1.jpg",
+        "assets/images/produtos/XWL0092/2.jpg",
+        "assets/images/produtos/XWL0092/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0092-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0092-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0092-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "90mm(C)×60mm(L)x270mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0092-P"
+    },
+    {
+      "id": "XWL0092-D",
+      "title": "ENFEITE VOZ DA ALMA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0092-1.png",
+      "images": [
+        "assets/images/produtos/XWL0092/5.png",
+        "assets/images/produtos/XWL0092/6.png",
+        "assets/images/produtos/XWL0092/7.png",
+        "assets/images/photos实拍水印/watermarked_XWL0092-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0092-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0092-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "90mm(C)×60mm(L)x270mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0092-D"
+    },
+    {
+      "id": "XWL0093-P",
+      "title": "ENFEITE GUITARRISTA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0093.png",
+      "images": [
+        "assets/images/produtos/XWL0093/1.jpg",
+        "assets/images/produtos/XWL0093/2.jpg",
+        "assets/images/produtos/XWL0093/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0093-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0093-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0093-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "80mm(C)×60mm(L)x265mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,50kg"
+      },
+      "código": "XWL0093-P"
+    },
+    {
+      "id": "XWL0093-D",
+      "title": "ENFEITE GUITARRISTA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0093-1.png",
+      "images": [
+        "assets/images/produtos/XWL0093/4.png",
+        "assets/images/produtos/XWL0093/5.png",
+        "assets/images/produtos/XWL0093/7.png",
+        "assets/images/photos实拍水印/watermarked_XWL0093-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0093-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0093-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "80mm(C)×60mm(L)x265mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,50kg"
+      },
+      "código": "XWL0093-D"
+    },
+    {
+      "id": "XWL0094-P",
+      "title": "ENFEITE NOITE DE JAZZ",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0094.png",
+      "images": [
+        "assets/images/produtos/XWL0094/1.jpg",
+        "assets/images/produtos/XWL0094/2.jpg",
+        "assets/images/produtos/XWL0094/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0094-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0094-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0094-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "65mm(C)×65mm(L)x280mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0094-P"
+    },
+    {
+      "id": "XWL0094-D",
+      "title": "ENFEITE NOITE DE JAZZ",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0094-1.png",
+      "images": [
+        "assets/images/produtos/XWL0094/5.png",
+        "assets/images/produtos/XWL0094/6.png",
+        "assets/images/produtos/XWL0094/7.png",
+        "assets/images/photos实拍水印/watermarked_XWL0094-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0094-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0094-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "65mm(C)×65mm(L)x280mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0094-D"
+    },
+    {
+      "id": "XWL0095-P",
+      "title": "ENFEITE GOLFE PERFEITO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0095.png",
+      "images": [
+        "assets/images/produtos/XWL0095/1.jpg",
+        "assets/images/produtos/XWL0095/2.jpg",
+        "assets/images/produtos/XWL0095/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0095-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0095-7.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0095-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "75mm(C)×100mm(L)x280mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,55kg"
+      },
+      "código": "XWL0095-P"
+    },
+    {
+      "id": "XWL0095-D",
+      "title": "ENFEITE GOLFE PERFEITO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0095-8.png",
+      "images": [
+        "assets/images/produtos/XWL0095/5.png",
+        "assets/images/produtos/XWL0095/6.png",
+        "assets/images/produtos/XWL0095/7.png",
+        "assets/images/photos实拍水印/watermarked_XWL0095-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0095-7.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0095-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "75mm(C)×100mm(L)x280mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,55kg"
+      },
+      "código": "XWL0095-D"
+    },
+    {
+      "id": "XWL0096-P",
+      "title": "ENFEITE CONCENTRAÇÃO SILENCIOSA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0096.png",
+      "images": [
+        "assets/images/produtos/XWL0096/1.jpg",
+        "assets/images/produtos/XWL0096/2.jpg",
+        "assets/images/produtos/XWL0096/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0096-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0096-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0096-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "55mm(C)×125mm(L)x250mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0096-P"
+    },
+    {
+     "id": "XWL0096-D",
+      "title": "ENFEITE CONCENTRAÇÃO SILENCIOSA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0096-1.png",
+      "images": [
+        "assets/images/produtos/XWL0096/5.png",
+        "assets/images/produtos/XWL0096/6.png",
+        "assets/images/produtos/XWL0096/7.png",
+        "assets/images/photos实拍水印/watermarked_XWL0096-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0096-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0096-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "55mm(C)×125mm(L)x250mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,35kg"
+      },
+      "código": "XWL0096-D"
+    },
+    {
+      "id": "XWL0097-P",
+      "title": "ENFEITE HOMEM GOFISTA ",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0097.png",
+      "images": [
+        "assets/images/produtos/XWL0097/1.jpg",
+        "assets/images/produtos/XWL0097/2.jpg",
+        "assets/images/produtos/XWL0097/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0097-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0097-7.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0097-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "170mm(C)×55mm(L)x220mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0097-P"
+    },
+    {
+      "id": "XWL0097-D",
+      "title": "ENFEITE HOMEM GOFISTA ",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0097-1.png",
+      "images": [
+        "assets/images/produtos/XWL0097/5.png",
+        "assets/images/produtos/XWL0097/6.png",
+        "assets/images/produtos/XWL0097/7.png",
+        "assets/images/photos实拍水印/watermarked_XWL0097-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0097-7.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0097-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "170mm(C)×55mm(L)x220mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0097-D"
+    },
+    {
+      "id": "XWL0098-P",
+      "title": "ENFEITE TAEKWONDO",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0098.png",
+      "images": [
+        "assets/images/produtos/XWL0098/1.jpg",
+        "assets/images/produtos/XWL0098/2.jpg",
+        "assets/images/produtos/XWL0098/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0098-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0098-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0098-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "160mm(C)×75mm(L)x250mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0098-p"
+    },
+    {
+      "id": "XWL0098-D",
+      "title": "ENFEITE TAEKWONDO",
+      "category": "ENFEITES / FUNCIONAL",
+      "image": "assets/images/白底水印/watermarked_XWL0098-1.png",
+      "images": [
+        "assets/images/produtos/XWL0098/5.png",
+        "assets/images/produtos/XWL0098/6.png",
+        "assets/images/produtos/XWL0098/7.png",
+        "assets/images/photos实拍水印/watermarked_XWL0098-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0098-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0098-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "160mm(C)×75mm(L)x250mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0098-D"
+    },
+    {
+      "id": "XWL0099-P",
+      "title": "ENFEITE PING PONG",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0099.png",
+      "images": [
+        "assets/images/produtos/XWL0099/1.jpg",
+        "assets/images/produtos/XWL0099/2.jpg",
+        "assets/images/produtos/XWL0099/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0099-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0099-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0099-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "130mm(C)×50mm(L)x240mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0099-P"
+    },
+    {
+      "id": "XWL0099-D",
+      "title": "ENFEITE PING PONG",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0099-1.png",
+      "images": [
+        "assets/images/produtos/XWL0099/1.png",
+        "assets/images/produtos/XWL0099/2.png",
+        "assets/images/produtos/XWL0099/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0099-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0099-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0099-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "130mm(C)×50mm(L)x240mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0099-D"
+    },
+    {
+      "id": "XWL0100-P",
+      "title": "ENFEITE ATIRADOR ESPORTISTA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0100.png",
+      "images": [
+        "assets/images/produtos/XWL0100/1.jpg",
+        "assets/images/produtos/XWL0100/2.jpg",
+        "assets/images/produtos/XWL0100/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0100-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0100-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0100-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "45mm(C)×120mm(L)x245mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,25kg"
+      },
+      "código": "XWL0100-P"
+    },
+    {
+      "id": "XWL0100-D",
+      "title": "ENFEITE ATIRADOR ESPORTISTA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0100-1.png",
+      "images": [
+        "assets/images/produtos/XWL0100/1.png",
+        "assets/images/produtos/XWL0100/2.png",
+        "assets/images/produtos/XWL0100/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0100-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0100-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0100-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "45mm(C)×120mm(L)x245mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,25kg"
+      },
+      "código": "XWL0100-D"
+    },
+    {
+      "id": "XWL0101-P",
+      "title": "ENFEITE TENISTA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0101.png",
+      "images": [
+        "assets/images/produtos/XWL0101/1.jpg",
+        "assets/images/produtos/XWL0101/2.jpg",
+        "assets/images/produtos/XWL0101/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0101-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0101-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0101-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "110mm(C)×50mm(L)x230mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0101-P"
+    },
+    {
+     "id": "XWL0101-D",
+      "title": "ENFEITE TENISTA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0101-1.png",
+      "images": [
+        "assets/images/produtos/XWL0101/1.png",
+        "assets/images/produtos/XWL0101/2.png",
+        "assets/images/produtos/XWL0101/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0101-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0101-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0101-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "110mm(C)×50mm(L)x230mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0101-D"
+    },
+    {
+      "id": "XWL0102-P",
+      "title": "ENFEITE JOGADOR DE FUTEBOL",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0102.png",
+      "images": [
+        "assets/images/produtos/XWL0102/1.jpg",
+        "assets/images/produtos/XWL0102/2.jpg",
+        "assets/images/produtos/XWL0102/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0102-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0102-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0102-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "150mm(C)×115mm(L)x250mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0102-P"
+    },
+    {
+      "id": "XWL0102-D",
+      "title": "ENFEITE JOGADOR DE FUTEBOL",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0102-1.png",
+      "images": [
+        "assets/images/produtos/XWL0102/1.png",
+        "assets/images/produtos/XWL0102/2.png",
+        "assets/images/produtos/XWL0102/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0102-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0102-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0102-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "150mm(C)×115mm(L)x250mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,30kg"
+      },
+      "código": "XWL0102-D"
+    },
+    {
+      "id": "XWL0103-P",
+      "title": "ENFEITE CICLISTA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0103.png",
+      "images": [
+        "assets/images/produtos/XWL0103/1.jpg",
+        "assets/images/produtos/XWL0103/2.jpg",
+        "assets/images/produtos/XWL0103/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0103-P.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0103-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0103-P_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Prata",
+        "Dimensões": [
+          "200mm(C)×40mm(L)x170mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0103-P"
+    },
+    {
+      "id": "XWL0103-D",
+      "title": "ENFEITE CICLISTA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0103-1.png",
+      "images": [
+        "assets/images/produtos/XWL0103/1.png",
+        "assets/images/produtos/XWL0103/2.png",
+        "assets/images/produtos/XWL0103/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0103-D.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0103-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0103-D_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "200mm(C)×40mm(L)x170mm(A)"
+        ],
+        "Material": "Resina",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0103-D"
+    },
+    {
+      "id": "XWL0104",
+      "title": "PAR VASO CONEXÃO DE CORAÇÃO",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0104-7.png",
+      "images": [
+        "assets/images/produtos/XWL0104/1.png",
+        "assets/images/produtos/XWL0104/1.jpg",
+        "assets/images/produtos/XWL0104/2.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0104.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0104-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0104_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "100mm(C)×60mm(L)x190mm(A)\n120mm(C)×75mm(L)x245mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0104"
+    },
+    {
+      "id": "XWL0105",
+      "title": "PAR VASO CONEXÃO DE CORAÇÃO",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0105.png",
+      "images": [
+        "assets/images/produtos/XWL0105/3.jpg",
+        "assets/images/produtos/XWL0105/1.jpg",
+        "assets/images/produtos/XWL0105/2.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0105.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0104-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0105_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Preto",
+        "Dimensões": [
+          "100mm(C)×60mm(L)x190mm(A)\n120mm(C)×75mm(L)x245mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0105"
+    },
+    {
+      "id": "XWL0106",
+      "title": "VASO GALOURO CIRCULAR",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0106.png",
+      "images": [
+        "assets/images/produtos/XWL0106/3.jpg",
+        "assets/images/produtos/XWL0106/1.jpg",
+        "assets/images/produtos/XWL0106/2.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0106.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0106-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0106_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "160mm(C)×70mm(L)x245mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0106"
+    },
+    {
+    "id": "XWL0107",
+      "title": "VASO GALOURO OVAL",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0107.png",
+      "images": [
+        "assets/images/produtos/XWL0107/3.jpg",
+        "assets/images/produtos/XWL0107/1.jpg",
+        "assets/images/produtos/XWL0107/2.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0107.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0107-14.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0107_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "160mm(C)×70mm(L)x310mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,80kg"
+      },
+      "código": "XWL0107"
+    },
+    {
+      "id": "XWL0108",
+      "title": "TRIO FAMILIA ABSTRATA",
+      "category": "ENFEITES / PERSONAGEM",
+      "image": "assets/images/白底水印/watermarked_XWL0108.jpg",
+      "images": [
+        "assets/images/produtos/XWL0108/1.jpg",
+        "assets/images/produtos/XWL0108/2.jpg",
+        "assets/images/produtos/XWL0108/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0108.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0108.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0108_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Dourado",
+        "Dimensões": [
+          "110mm(C)×60mm(L)x155mm(A)\n65mm(C)×50mm(L)x95mm(A)\n115mm(C)×65mm(L)x180mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,40kg"
+      },
+      "código": "XWL0108"
+    },
+    {
+      "id": "XWL0111",
+      "title": "VASO ECO PERFEITO ALONGADO",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0111.png",
+      "images": [
+        "assets/images/produtos/XWL0111/1.jpg",
+        "assets/images/produtos/XWL0111/2.jpg",
+        "assets/images/produtos/XWL0111/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0111.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0111.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0111_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "190mm(C)×55mm(L)x260mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,75kg"
+      },
+      "código": "XWL0111"
+    },
+    {
+      "id": "XWL0112",
+      "title": "VASO ECO PERFEITO BAIXO E ROBUSTO",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0112.png",
+      "images": [
+        "assets/images/produtos/XWL0112/1.jpg",
+        "assets/images/produtos/XWL0112/2.jpg",
+        "assets/images/produtos/XWL0112/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0112.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0112-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0112_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "195mm(C)×55mm(L)x160mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,65kg"
+      },
+      "código": "XWL0112"
+    },
+    {
+      "id": "XWL0113",
+      "title": "Vaso HALO DE LUZ ALTO",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0113.png",
+      "images": [
+        "assets/images/produtos/XWL0113/1.png",
+        "assets/images/produtos/XWL0113/2.png",
+        "assets/images/produtos/XWL0113/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0113.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0113-1.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0113_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "155mm(C)×80mm(L)x360mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "1,20kg"
+      },
+      "código": "XWL0113"
+    },
+    {
+      "id": "XWL0114",
+      "title": "VASO HALO DE LUZ MEDIO",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0114.png",
+      "images": [
+        "assets/images/produtos/XWL0114/1.png",
+        "assets/images/produtos/XWL0114/2.png",
+        "assets/images/produtos/XWL0114/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0114.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0114-2.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0114_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "165mm(C)×85mm(L)x280mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "1,05kg"
+      },
+      "código": "XWL0114"
+    },
+    {
+      "id": "XWL0115",
+      "title": "VASO HALO DE LUZ BAIXO",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0115-4.png",
+      "images": [
+        "assets/images/produtos/XWL0115/1.png",
+        "assets/images/produtos/XWL0115/2.png",
+        "assets/images/produtos/XWL0115/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0115.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0115-3.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0115_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "220mm(C)×70mm(L)x165mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,85kg"
+      },
+      "código": "XWL0115"
+    },
+    {
+      "id": "XWL0116",
+      "title": "VASO DECORATIVO BOHOCHIC",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0116-10.png",
+      "images": [
+        "assets/images/produtos/XWL0116/1.jpg",
+        "assets/images/produtos/XWL0116/2.jpg",
+        "assets/images/produtos/XWL0116/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0116.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0116-9.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0116_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "235mm(C)×75mm(L)x205mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,80kg"
+      },
+      "código": "XWL0116"
+    },
+    {
+      "id": "XWL0117",
+      "title": "VASO DECORATIVO BOHO COMPACTO",
+      "category": "VASOS / MODERNO",
+      "image": "assets/images/白底水印/watermarked_XWL0117-3.png",
+      "images": [
+        "assets/images/produtos/XWL0117/1.jpg",
+        "assets/images/produtos/XWL0117/2.jpg",
+        "assets/images/produtos/XWL0117/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0117.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0117-2.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0117_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "165mm(C)×55mm(L)x140mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,45kg"
+      },
+      "código": "XWL0117"
+    },
+    {
+      "id": "XWL0118",
+      "title": "VASO DUNA SERENA",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0118.png",
+      "images": [
+        "assets/images/produtos/XWL0118/1.jpg",
+        "assets/images/produtos/XWL0118/2.jpg",
+        "assets/images/produtos/XWL0118/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0118.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0118-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0118_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "230mm(C)×75mm(L)x200mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,80kg"
+      },
+      "código": "XWL0118"
+    },
+    {
+      "id": "XWL0119",
+      "title": "VASO DUNA SERENA COMPACTA",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0119.png",
+      "images": [
+        "assets/images/produtos/XWL0119/1.jpg",
+        "assets/images/produtos/XWL0119/2.jpg",
+        "assets/images/produtos/XWL0119/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0119.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0119-4.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0119_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "215mm(C)×60mm(L)x150mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,60kg"
+      },
+      "código": "XWL0119"
+    },
+    {
+      "id": "XWL0120",
+      "title": "VASO NUVEM SERENA COMPACTA",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0120.png",
+      "images": [
+        "assets/images/produtos/XWL0120/1.jpg",
+        "assets/images/produtos/XWL0120/2.jpg",
+        "assets/images/produtos/XWL0120/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0120.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0120-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0120_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "195mm(C)×75mm(L)x200mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,65kg"
+      },
+      "código": "XWL0120"
+    },
+    {
+      "id": "XWL0121",
+      "title": "VASO NUVEM SERENA",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0121-2.png",
+      "images": [
+        "assets/images/produtos/XWL0121/1.jpg",
+        "assets/images/produtos/XWL0121/2.jpg",
+        "assets/images/produtos/XWL0121/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0121.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0121-1.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0121_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "240mm(C)×105mm(L)x245mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "1,05kg"
+      },
+      "código": "XWL0121"
+    },
+    {
+      "id": "XWL0122",
+      "title": "KIT VASOS REDONDOS",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0122-8.png",
+      "images": [
+        "assets/images/produtos/XWL0122/1.jpg",
+        "assets/images/produtos/XWL0122/3.png",
+        "assets/images/produtos/XWL0122/4.png",
+        "assets/images/photos实拍水印/watermarked_XWL0122.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0122-7.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0122_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "170mm(C)×55mm(L)x220mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "1,20kg"
+      },
+      "código": "XWL0122"
+    },
+    {
+      "id": "XWL0123",
+      "title": "VASO NÓRDICO OVAL",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0123-6.png",
+      "images": [
+        "assets/images/produtos/XWL0123/3.png",
+        "assets/images/produtos/XWL0123/1.png",
+        "assets/images/produtos/XWL0123/2.png",
+        "assets/images/photos实拍水印/watermarked_XWL0123.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0123-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0123_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "145mm(C)×55mm(L)x270mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,80kg"
+      },
+      "código": "XWL0123"
+    },
+    {
+      "id": "XWL0126-B",
+      "title": "VASO SOMBRA ESPIRAL BRANCO COMPACTA",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0126-B.png",
+      "images": [
+        "assets/images/produtos/XWL0126/3.png",
+        "assets/images/produtos/XWL0126/1.png",
+        "assets/images/produtos/XWL0126/2.png",
+        "assets/images/photos实拍水印/watermarked_XWL0126-B.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0126-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0126-B_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "150mm(C)×75mm(L)x235mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,75kg"
+      },
+      "código": "XWL0126-B"
+    },
+    {
+      "id": "XWL0126-M",
+      "title": "VASO SOMBRA ESPIRAL BEGE COMPACTA",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0126-M.png",
+      "images": [
+        "assets/images/produtos/XWL0126/4.png",
+        "assets/images/produtos/XWL0126/5.png",
+        "assets/images/produtos/XWL0126/6.png",
+        "assets/images/photos实拍水印/watermarked_XWL0126-M.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0126-5.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0126-M_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Bege",
+        "Dimensões": [
+          "150mm(C)×75mm(L)x235mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,75kg"
+      },
+      "código": "XWL0126-M"
+    },
+    {
+      "id": "XWL0127-B",
+      "title": "VASO SOMBRA ESPIRAL BRANCO",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0127-B.png",
+      "images": [
+        "assets/images/produtos/XWL0127/1.png",
+        "assets/images/produtos/XWL0127/2.png",
+        "assets/images/produtos/XWL0127/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0127-B.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0127.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0127-B_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "175mm(C)×85mm(L)x270mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,95kg"
+      },
+      "código": "XWL0127-B"
+    },
+    {
+      "id": "XWL0127-M",
+      "title": "VASO SOMBRA ESPIRAL BEGE",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0127-M.png",
+      "images": [
+        "assets/images/produtos/XWL0127/4.png",
+        "assets/images/produtos/XWL0127/5.png",
+        "assets/images/produtos/XWL0127/6.png",
+        "assets/images/photos实拍水印/watermarked_XWL0127-M.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0127.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0127-M_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Bege",
+        "Dimensões": [
+          "175mm(C)×85mm(L)x270mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,95kg"
+      },
+      "código": "XWL0127-M"
+    },
+    {
+      "id": "XWL0128",
+      "title": "CONJUNTO ALMA GÊMEA BOHO",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0128.png",
+      "images": [
+        "assets/images/produtos/XWL0128/1.jpg",
+        "assets/images/produtos/XWL0128/2.jpg",
+        "assets/images/produtos/XWL0128/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0128.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0128-7.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0128_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "100mm(C)×80mm(L)x200mm(A)\n120mm(C)×125mm(L)x210mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,95kg"
+      },
+      "código": "XWL0128"
+    },
+    {
+      "id": "XWL0129",
+      "title": "VASO REFLEXO LONGA",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0129.png",
+      "images": [
+        "assets/images/produtos/XWL0129/1.jpg",
+        "assets/images/produtos/XWL0129/2.jpg",
+        "assets/images/produtos/XWL0129/3.jpg",
+        "assets/images/photos实拍水印/watermarked_XWL0129.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0129-6.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0129_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "180mm(C)×90mm(L)x245mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,70kg"
+      },
+      "código": "XWL0129"
+    },
+    {
+      "id": "XWL0130",
+      "title": "VASO REFLEXO ROBUSTA",
+      "category": "VASOS / DESIGN ESPECIAL",
+      "image": "assets/images/白底水印/watermarked_XWL0130.png",
+      "images": [
+        "assets/images/produtos/XWL0130/1.png",
+        "assets/images/produtos/XWL0130/2.png",
+        "assets/images/produtos/XWL0130/3.png",
+        "assets/images/photos实拍水印/watermarked_XWL0130.JPG",
+        "assets/images/尺寸水印/watermarked_XWL0130-8.png"
+      ],
+      "videos": [
+        "assets/videos/XWL0130_watermarked.mp4"
+      ],
+      "specs": {
+        "Cor": "Branco",
+        "Dimensões": [
+          "190mm(C)×70mm(L)x180mm(A)"
+        ],
+        "Material": "Cerâmica",
+        "Peso": "0,50kg"
+      },
+      "código": "XWL0130"
+    }
+  ]
+}

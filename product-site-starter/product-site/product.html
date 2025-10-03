@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DAYMI | Detalhe do Produto</title>
+  <meta name="description" content="DAYMI — página de detalhes com galeria e especificações" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <script>
+    (function preloadTheme() {
+      try {
+        const saved = localStorage.getItem('theme') || 'dark';
+        if (saved === 'light') document.documentElement.classList.add('light');
+      } catch (_) { }
+    })();
+  </script>
+
+  <!-- 通用逻辑 + 详情逻辑 -->
+  <script src="script.js" defer></script>
+  <script src="detail.js" defer></script>
+
+  <!-- 仅详情页使用的少量内联样式（其余都在 styles.css） -->
+  <style>
+    .detail-wrapper {
+      width: min(1100px, 94%);
+      margin: 0 auto;
+      padding: 1rem 0 2rem;
+    }
+
+    .detail-breadcrumb {
+      color: var(--muted);
+      margin: 1rem 0;
+      font-size: .95rem;
+    }
+
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .detail-gallery {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    .detail-main {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      background: #0003;
+      border-radius: .75rem;
+      border: 1px solid var(--border);
+    }
+
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+      gap: .5rem;
+      margin-top: .6rem;
+    }
+
+    .thumbs img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: .5rem;
+      border: 2px solid transparent;
+      background: #0003;
+    }
+
+    .thumbs img.active {
+      border-color: var(--brand);
+    }
+
+    .detail-info {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    .detail-info h1 {
+      margin: .25rem 0 .4rem;
+      font-size: clamp(1.25rem, 1rem + 1.2vw, 1.8rem);
+    }
+
+    .detail-meta {
+      color: var(--muted);
+      margin-bottom: .75rem;
+    }
+
+    .specs {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: .5rem;
+    }
+
+    .specs th,
+    .specs td {
+      border-bottom: 1px dashed var(--border);
+      padding: .5rem .25rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: .2rem .5rem;
+      border: 1px solid var(--border);
+      border-radius: .5rem;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .95rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 860px) {
+      .detail-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部区域：Logo 左，主题切换按钮右（新增，与首页一致） -->
+  <!-- 顶部区域：整条纯白（全宽） -->
+  <section class="top-bar" aria-label="Topo">
+    <div class="container top-bar-inner">
+      <a href="index.html" aria-label="Voltar para a Início">
+        <img src="assets/icons/daymi-3.png" alt="DAYMI" class="top-logo" />
+      </a>
+
+      <button id="toggleThemeTop" class="btn icon-toggle" aria-label="Alternar tema">
+        <span class="icon sun" aria-hidden="true">☀️</span>
+        <span class="icon moon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- Header：保留（CSS 已整体隐藏，不占位），可后续再用 -->
+  <header class="container header">
+    <h1 class="logo-wrapper">
+      <a href="index.html" class="logo-link">
+        <img src="assets/icons/daymi-3.png" alt="DAYMI Logo" class="logo-img logo-anim" />
+      </a>
+    </h1>
+    <div class="header-actions">
+      <button id="toggleTheme" class="btn icon-toggle" aria-label="Alternar tema">
+        <span class="icon sun" aria-hidden="true">☀️</span>
+        <span class="icon moon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 🔎 搜索/筛选区 -->
+  <section class="filters container" role="search" aria-label="Pesquisa e filtros">
+    <div class="filters-row">
+      <div class="search-wrapper">
+        <input id="searchInput" type="search" placeholder="Pesquisa por nome, código, código de barras ou referência"
+          aria-label="Pesquisar produtos" autocomplete="off" />
+        <button id="clearInputBtn" class="btn" aria-label="Apagar texto">×</button>
+      </div>
+
+      <select id="categorySelect" aria-label="Filtrar por categoria">
+        <option value="">Todas as categorias</option>
+      </select>
+
+      <button id="searchBtn" class="btn" aria-label="Limpar pesquisa">Limpar</button>
+    </div>
+  </section>
+
+  <!-- 详情主体 -->
+  <main class="detail-wrapper" id="app" aria-live="polite">
+    <p class="detail-breadcrumb">
+      <a class="back" href="index.html">← Voltar</a>
+    </p>
+
+    <section class="detail-layout">
+      <div class="detail-gallery">
+        <img id="mainImage" class="detail-main" src="" alt="">
+        <video id="mainVideo" class="detail-main" controls playsinline style="display:none"></video>
+        <div id="thumbs" class="thumbs" aria-label="Miniaturas do produto"></div>
+      </div>
+
+      <article class="detail-info">
+        <h1 id="title">Carregando…</h1>
+        <div class="detail-meta">
+          <span id="category" class="badge"></span>
+        </div>
+        <p id="desc" class="muted"></p>
+        <table class="specs" id="specsTable" aria-label="Especificações"></table>
+        <div id="extraMeta" style="margin-top:.6rem;"></div>
+      </article>
+    </section>
+
+    <!-- 页内搜索结果（当你在详情页里搜索/筛选时显示） -->
+    <section id="searchContainer" style="margin-top:2rem; display:none;">
+      <div class="search-header">
+        <h2 class="search-title">Resultados da pesquisa</h2>
+        <div id="searchCount" class="product-count" aria-live="polite"></div>
+      </div>
+
+      <section id="grid" class="grid" aria-live="polite"></section>
+      <nav id="pagination" class="pagination" aria-label="Paginação"></nav>
+    </section>
+
+  </main>
+
+  <!-- 联系方式（与首页一致） -->
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="contact-title">Dúvidas? Entre em contato com o vendedor</h2>
+
+      <div class="contact-info">
+        <img src="assets/icons/daymi-1.png" alt="Logo da empresa" class="contact-logo" />
+        <div class="contact-lines">
+          <p class="contact-name"><strong>Minha Empresa LTDA</strong></p>
+
+          <p>
+            <a href="mailto:contato@empresa.com" target="_blank" rel="noopener">
+              <img src="assets/icons/email.png" alt="Email" class="icon-inline" />
+            </a>
+            Email:
+            <a href="mailto:contato@empresa.com">contato@empresa.com</a>
+          </p>
+
+          <p>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">
+              <img src="assets/icons/whatsapp.png" alt="WhatsApp" class="icon-inline" />
+            </a>
+            WhatsApp:
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">+55 (11) 99999-9999</a>
+          </p>
+
+          <p>
+            <a href="tel:+551133334444">
+              <img src="assets/icons/telephone.png" alt="Telefone" class="icon-inline" />
+            </a>
+            Telefone:
+            <a href="tel:+551133334444">+55 (11) 3333-4444</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="social">
+        <p class="social-title">Redes Sociais</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/suaempresa" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="assets/icons/Facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://instagram.com/suaempresa" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/icons/Instagram.png" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container footer">
+    <div class="footer-row">
+      <small>© <span id="year"></span> DAYMI</small>
+    </div>
+  </footer>
+</body>
+
+</html>
