@@ -23,9 +23,20 @@ const debouncedSearch = debounce(() => applyFilters(), 250);
 
 // 主题：加载 & 切换（统一时序动效）
 function loadTheme() {
-  const saved = localStorage.getItem('theme') || 'dark';
-  if (saved === 'light') document.documentElement.classList.add('light');
+  const saved = localStorage.getItem('theme') || 'light'; // 默认亮色
+  if (saved === 'light') {
+    document.documentElement.classList.add('light');
+  } else {
+    document.documentElement.classList.remove('light');
+  }
 }
+
+// 确保初次访问时默认是亮色主题
+if (!localStorage.getItem('theme')) {
+  localStorage.setItem('theme', 'light');
+}
+
+
 function switchTheme() {
   // 切换 light / dark
   document.documentElement.classList.toggle('light');

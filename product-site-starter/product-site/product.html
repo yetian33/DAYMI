@@ -14,7 +14,7 @@
   <script>
     (function preloadTheme() {
       try {
-        const saved = localStorage.getItem('theme') || 'dark';
+        const saved = localStorage.getItem('theme') || 'light';
         if (saved === 'light') document.documentElement.classList.add('light');
       } catch (_) { }
     })();

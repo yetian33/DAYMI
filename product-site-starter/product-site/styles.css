@@ -1492,13 +1492,6 @@ input[type="search"]::-webkit-search-cancel-button {
   }
 }
 
-.hero-cta {
-  position: absolute;
-  bottom: 1.5rem;
-  /* 距离底部 */
-  right: 1.5rem;
-  /* 距离右边 */
-}
 
 .hero {
   position: relative;
@@ -1788,7 +1781,87 @@ img, video{ max-width: 100%; height: auto; }
   }
 }
 
+/* —— 手机端：把 CTA 固定到 Hero 右下角（不影响箭头与圆点位置）—— */
+@media (max-width: 768px) {
+  /* 让 hero 整个区域作为定位参照 */
+  .hero {
+    position: relative;
+  }
 
+  /* 保持 hero-content 内的文字居中，只去掉多余的底部间距 */
+  .hero-content {
+    padding: 1rem 0 2.5rem;
+    position: relative; /* 保持相对定位，供内部文字用 */
+  }
 
+  /* 固定 CTA 按钮到右下角 */
+  .hero .hero-cta {
+    position: absolute;
+    right: clamp(8px, 2vw, 16px);
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    z-index: 3;
+    margin: 0;
+  }
 
+  /* 移动端按钮视觉优化 */
+  .hero .btn-cta {
+    padding: .55rem .9rem;
+    border-radius: .65rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,.28);
+    backdrop-filter: saturate(140%) blur(6px);
+  }
 
+  /* 控制圆点与箭头的布局保持底部居中 */
+  .hero-controls {
+    position: absolute;
+    bottom: clamp(8px, 2vw, 16px);
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    z-index: 2;
+    transform: none; /* 取消任何 translate */
+    padding-bottom: 0; /* 不再需要额外间距 */
+  }
+}
+
+@media (max-width: 640px){
+  .hero-cta{ bottom: 2.4rem !important; } /* 想更高就再加大数值 */
+}
+
+/* 调整 Hero 里 CTA（“Verifique os detalhes”）按钮的垂直位置：数值越大越往上 */
+.hero .hero-cta {
+  bottom: 0.7rem !important; /* 试 1.6rem ~ 3.2rem 之间，找到你满意的高度 */
+}
+
+/* === 手机端 Hero 区域位置微调 === */
+@media (max-width: 768px) {
+
+  /* 1️⃣ 让箭头 + 小圆点往上移动一点 */
+  .hero-controls {
+    bottom: 0.7rem !important;  /* 数值越大越往上，比如原本是 0.9rem 左右 */
+  }
+
+  /* 2️⃣ 让“Verifique os detalhes”按钮往下移动一点 */
+  .hero .hero-cta {
+    bottom: 0.3rem !important;  /* 数值越小越靠下，比如原本是 0.9rem */
+  }
+}
+
+/* === 手机端：缩小 Hero CTA 按钮和文字（强覆盖版）=== */
+@media (max-width: 768px) {
+  /* 缩小按钮文字 + 内边距（数值可按需再调） */
+  :root .hero .hero-cta .btn-cta {
+    font-size: 0.85rem !important;     /* 文字更小 */
+    padding: 0.52rem 0.85rem !important;/* 按钮更紧凑 */
+    border-radius: 0.6rem !important;
+  }
+
+  /* 进一步整体缩小一点（可选） */
+  :root .hero .hero-cta {
+    transform: scale(0.60) !important;
+    transform-origin: right bottom !important;
+  }
+}
