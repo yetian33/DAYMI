@@ -1690,7 +1690,7 @@ html.light {
 /* —— Hero 按钮固定在轮播区域右下角 —— */
 .hero-cta {
   position: absolute;
-  right: 190px;
+  right: 210px;
   bottom: 4px;
   z-index: 2;
   /* 确保盖在图片上方 */
@@ -1700,22 +1700,95 @@ html.light {
   /* 容器内对齐到右侧 */
 }
 
-/* 小屏可居中（可选） */
-@media (max-width: 640px) {
-  .hero-cta {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    bottom: 12px;
-    text-align: center;
+
+/* 强化优先级：让 Hero 里的 CTA 随屏幕缩放 */
+.hero .hero-content .btn-cta{
+  font-size: clamp(.60rem, 2.0vw, .95rem) !important;
+  padding: .40em .3em !important;   /* 用 em，随字号同比例缩放 */
+  border-radius: .55em !important;
+  line-height: 1.05 !important;
+}
+
+
+/* 小屏位移微调，避免遮挡主体图像 */
+@media (max-width: 640px){
+  .hero-cta{ right: .9rem !important; bottom: .9rem !important; }
+}
+
+/* 极小屏再收一档 */
+@media (max-width: 360px){
+  .hero .hero-content .btn-cta{ font-size: .68rem !important; }
+}
+
+/* 1) 手机强制单列，并允许子项缩小 */
+@media (max-width: 860px){
+  .detail-layout{ grid-template-columns: 1fr !important; }
+  .detail-gallery, .detail-info{ min-width: 0 !important; }
+}
+
+/* 2) 媒体元素在手机上彻底自适应，不再强行正方形 */
+@media (max-width: 860px){
+  .detail-main{
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;   /* 取消 1:1，按原图比例展示 */
+    object-fit: contain !important;
+    max-height: min(70vh, 92vw) !important; /* 既不超屏也不遮挡 */
   }
 }
 
-/* 调整 Hero 区域的 CTA 按钮位置 */
-.hero .btn-cta {
-  position: relative;
-  left: -40px;
-  /* 往左移动 40px，可自行调整 */
-  top: -20px;
-  /* 往上移动 20px，可自行调整 */
+/* 3) 任意超长内容（例如 XWL0043 的“Dimensões”）都可换行，避免把页面撑宽 */
+.specs th, .specs td{
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
+
+/* 4) 兜底：所有 img/video 在任何屏幕都不超过容器宽度 */
+img, video{ max-width: 100%; height: auto; }
+
+/* === 手机端：把 CTA 固定到 Hero 右下角，略离边 === */
+@media (max-width: 640px){
+  .hero { position: relative !important; }            /* 以 .hero 为定位参照 */
+  .hero .hero-content { position: static !important; }/* 避免 .hero-content 成为参照 */
+
+  /* 关键：覆盖所有旧的居中/位移规则 */
+  .hero .hero-content .hero-cta{
+    position: absolute !important;
+    inset: auto .75rem .90rem auto !important;  /* right=12px, bottom≈14px */
+    transform: none !important;                 /* 取消 translateX(-50%) */
+    left: auto !important;                      /* 取消 left:50% */
+    right: .001rem !important;
+    bottom: 1.1rem !important;
+    margin: 0 !important;
+    text-align: right !important;
+    z-index: 5 !important;
+  }
+
+  /* 取消按钮自身的相对位移（有一段给了 left:-40px; top:-20px;） */
+  .hero .hero-content .btn-cta{
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+  }
+}
+
+/* ==== Mobile-only: make the hero CTA smaller and move it to the right ==== */
+@media (max-width: 820px) {
+  /* 让容器变成 flex 并靠右对齐，彻底生效 */
+  .hero-cta {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* 缩小按钮尺寸（只影响手机端） */
+  .hero-cta .btn-cta {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
