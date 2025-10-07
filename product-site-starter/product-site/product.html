@@ -14,11 +14,16 @@
   <script>
     (function preloadTheme() {
       try {
-        const saved = localStorage.getItem('theme') || 'light';
-        if (saved === 'light') document.documentElement.classList.add('light');
+        const saved = localStorage.getItem('theme') || 'light'; // 默认改为亮色
+        if (saved === 'light') {
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.remove('light');
+        }
       } catch (_) { }
     })();
   </script>
+
 
   <!-- 通用逻辑 + 详情逻辑 -->
   <script src="script.js" defer></script>

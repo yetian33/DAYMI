@@ -1865,3 +1865,31 @@ img, video{ max-width: 100%; height: auto; }
     transform-origin: right bottom !important;
   }
 }
+
+/* 桌面端（>=1024px）微调 Hero 按钮与控件位置 */
+@media (min-width: 1024px) {
+  .hero { position: relative; }
+
+  /* ① 按钮：数值越大越“往上”；越小越靠底部 */
+  .hero .hero-cta {
+    position: absolute;
+    right: 13rem;
+    bottom: 2rem;           /* ← 调这个高度 */
+    z-index: 3;
+    transform: none;        /* 若之前为手机端做过 scale，这里复位 */
+  }
+
+  /* ② 箭头+圆点：整体在底部居中；bottom 越大越“往上” */
+  .hero-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1rem;           /* ← 调这个高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    z-index: 2;
+    transform: none;
+  }
+}
