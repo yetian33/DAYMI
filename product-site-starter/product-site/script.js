@@ -683,6 +683,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// 顶栏高度 → 动态写入 CSS 变量，正文自动避让
+function updateTopbarHeight() {
+  const topBar = document.querySelector('.top-bar');
+  if (!topBar) return;
+  const h = topBar.offsetHeight || 44; // 兜底
+  document.documentElement.style.setProperty('--topbar-height', h + 'px');
+}
+window.addEventListener('load', updateTopbarHeight, { once: true });
+window.addEventListener('resize', updateTopbarHeight);
+updateTopbarHeight();
+
+
 // === Top Bar 滚动显隐逻辑 ===
 let lastScrollY = window.scrollY;
 window.addEventListener('scroll', () => {

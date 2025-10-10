@@ -202,7 +202,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .8rem 0;
+  padding: .4rem 0;
 }
 
 .top-bar .container {
@@ -211,13 +211,13 @@ body {
 }
 
 .top-logo {
-  height: 48px;
+  height: 32px;
   width: auto;
 }
 
 .top-bar .icon-toggle {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
 }
 
@@ -1893,3 +1893,33 @@ img, video{ max-width: 100%; height: auto; }
     transform: none;
   }
 }
+
+/* ==== 顶栏尺寸调整（Logo 更大、更醒目） ==== */
+.top-logo { 
+  height: 40px;    /* ✅ 原 32 → 40px，更显眼 */
+  width: auto;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0; /* 从 0.4rem 调整到 1rem */
+}
+
+
+.top-bar .icon-toggle {
+  width: 36px;   /* 跟 logo 尺寸相衬 */
+  height: 36px;
+}
+
+/* 顶栏出现/隐藏动画保持顺滑 */
+.top-bar {
+  transition: transform .25s ease;
+}
+
+.top-bar.hide {
+  transform: translateY(-100%);
+}
+
+

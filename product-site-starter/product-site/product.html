@@ -24,6 +24,11 @@
     })();
   </script>
 
+  <!-- 页面标识：详情页且禁用顶栏自动隐藏 -->
+<script>
+  document.documentElement.classList.add('detail-page', 'no-autohide');
+</script>
+
 
   <!-- 通用逻辑 + 详情逻辑 -->
   <script src="script.js" defer></script>
@@ -45,7 +50,7 @@
 
     .detail-layout {
       display: grid;
-      grid-template-columns: 1.35fr 1fr;
+      grid-template-columns: 1.1fr 1fr;
       gap: 1.25rem;
     }
 
@@ -107,8 +112,11 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: .5rem;
+      display: block;
+      overflow-x: auto;
     }
 
+    /* --- 产品规格表格 --- */
     .specs th,
     .specs td {
       border-bottom: 1px dashed var(--border);
@@ -116,6 +124,19 @@
       text-align: left;
       vertical-align: top;
     }
+
+    /* ✅ 字段名不换行（Código、Dimensões、Material） */
+    .specs th {
+      white-space: nowrap;
+      word-break: keep-all;
+    }
+
+    /* ✅ 右侧内容可自动换行（多个尺寸或长文字） */
+    .specs td {
+      white-space: normal;
+      word-break: break-word;
+    }
+
 
     .badge {
       display: inline-block;
