@@ -38,6 +38,196 @@
   const category = document.getElementById('category');
   const specsTable = document.getElementById('specsTable');
   const extraMeta = document.getElementById('extraMeta');
+  const downloadBtn = document.getElementById('downloadPdfBtn');
+
+  let productData = null;
+  let specsForPdf = [];
+  let currentImageForPdf = null;
+
+  if (downloadBtn) {
+    downloadBtn.disabled = true;
+  }
+
+  async function resolveImageData(src) {
+    if (!src) return null;
+
+    try {
+      if (src.startsWith('data:')) {
+        const dimensionsFromDataUrl = await new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve({ width: img.naturalWidth || img.width, height: img.naturalHeight || img.height });
+          img.onerror = reject;
+          img.src = src;
+        });
+        return { dataUrl: src, ...dimensionsFromDataUrl };
+      }
+
+      const response = await fetch(src);
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      const blob = await response.blob();
+
+      const dataUrl = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+
+      const dimensions = await new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve({ width: img.naturalWidth || img.width, height: img.naturalHeight || img.height });
+        img.onerror = reject;
+        img.src = dataUrl;
+      });
+
+      return { dataUrl, ...dimensions };
+    } catch (err) {
+      console.warn('Não foi possível preparar a imagem para o PDF', err);
+      return null;
+    }
+  }
+
+  function slugify(text) {
+    return (text || 'produto')
+      .toString()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-zA-Z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .toLowerCase() || 'produto';
+  }
+
+  async function downloadProductPdf() {
+    if (!downloadBtn) return;
+    if (!productData) {
+      alert('Aguarde o carregamento do produto para gerar o PDF.');
+      return;
+    }
+
+    const pdfLib = window.jspdf;
+    const jsPDF = pdfLib && pdfLib.jsPDF;
+    if (!jsPDF) {
+      alert('Biblioteca de PDF não carregada. Recarregue a página e tente novamente.');
+      return;
+    }
+
+    const textSpan = downloadBtn ? downloadBtn.querySelector('span:last-child') : null;
+    const originalText = textSpan ? textSpan.textContent : '';
+    const originalAria = downloadBtn ? downloadBtn.getAttribute('aria-busy') : null;
+
+    if (downloadBtn) {
+      downloadBtn.setAttribute('aria-busy', 'true');
+      downloadBtn.disabled = true;
+      if (textSpan) textSpan.textContent = 'Gerando PDF…';
+    }
+
+    try {
+      const doc = new jsPDF({ orientation: 'landscape', unit: 'pt', format: 'a4' });
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      const margin = 40;
+
+      const titleText = productData.title || productData.id || 'Produto';
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(22);
+      doc.text(titleText, margin, margin + 20);
+
+      const columnsTop = margin + 36;
+      const imageColumnWidth = (pageWidth - margin * 2) * 0.42;
+      const textColumnX = margin + imageColumnWidth + 30;
+      const textColumnWidth = pageWidth - margin - textColumnX;
+      const columnHeight = pageHeight - margin - columnsTop;
+
+      const infoLineHeight = 16;
+      let textCursorY = columnsTop;
+
+      const imageData = await resolveImageData(currentImageForPdf);
+      if (imageData) {
+        const { dataUrl, width, height } = imageData;
+        const ratio = Math.min(imageColumnWidth / width, columnHeight / height, 1);
+        const drawWidth = width * ratio;
+        const drawHeight = height * ratio;
+        const offsetX = margin + (imageColumnWidth - drawWidth) / 2;
+        const imageY = columnsTop + (columnHeight - drawHeight) / 2;
+        let format = 'JPEG';
+        if (/image\/png/i.test(dataUrl)) format = 'PNG';
+        else if (/image\/webp/i.test(dataUrl)) format = 'WEBP';
+        doc.addImage(dataUrl, format, offsetX, imageY, drawWidth, drawHeight);
+      } else {
+        doc.setDrawColor(180);
+        doc.setLineWidth(1);
+        doc.roundedRect(margin, columnsTop, imageColumnWidth, columnHeight, 8, 8, 'D');
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(12);
+        doc.text('Imagem não disponível', margin + imageColumnWidth / 2, columnsTop + columnHeight / 2, { align: 'center' });
+      }
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+      doc.text('Informações', textColumnX, textCursorY);
+      textCursorY += infoLineHeight + 2;
+
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(12);
+      const metaLines = [
+        `Categoria: ${productData.category || '—'}`,
+        productData.code ? `Código: ${productData.code}` : null,
+        productData.barcode ? `Código de barras: ${productData.barcode}` : null,
+        productData.reference ? `Referência: ${productData.reference}` : null
+      ].filter(Boolean);
+
+      metaLines.forEach(line => {
+        doc.text(line, textColumnX, textCursorY);
+        textCursorY += infoLineHeight;
+      });
+
+      if (metaLines.length) textCursorY += 4;
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+      doc.text('Descrição', textColumnX, textCursorY);
+      textCursorY += infoLineHeight + 2;
+
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(12);
+      const descriptionText = (productData.description && productData.description.trim()) ? productData.description : '—';
+      const descLines = doc.splitTextToSize(descriptionText, textColumnWidth);
+      doc.text(descLines, textColumnX, textCursorY);
+      textCursorY += descLines.length * infoLineHeight;
+      textCursorY += 6;
+
+      if (specsForPdf.length) {
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(14);
+        doc.text('Especificações', textColumnX, textCursorY);
+        textCursorY += infoLineHeight + 2;
+
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(12);
+        specsForPdf.forEach(([k, v]) => {
+          const specLines = doc.splitTextToSize(`${k}: ${v}`, textColumnWidth);
+          doc.text(specLines, textColumnX, textCursorY);
+          textCursorY += specLines.length * infoLineHeight;
+        });
+      }
+
+      const filename = `${slugify(titleText)}.pdf`;
+      doc.save(filename);
+    } catch (err) {
+      console.error('Erro ao gerar PDF do produto', err);
+      alert('Não foi possível gerar o PDF. Tente novamente.');
+    } finally {
+      if (downloadBtn) {
+        if (textSpan) textSpan.textContent = originalText;
+        if (originalAria === null) downloadBtn.removeAttribute('aria-busy');
+        else downloadBtn.setAttribute('aria-busy', originalAria);
+        downloadBtn.disabled = false;
+      }
+    }
+  }
+
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', downloadProductPdf);
+  }
 
   if (!pid) {
     if (title) title.textContent = 'ID do produto não informado';
@@ -83,6 +273,7 @@
           mainImage.src = src;
           mainImage.style.display = 'block';
         }
+        currentImageForPdf = src;
       }
 
       function showVideo(src, poster) {
@@ -101,10 +292,13 @@
       }
 
       if (!media.length) {
+        currentImageForPdf = null;
         if (mainImage) mainImage.alt = 'Sem imagem';
       } else {
         // 默认优先显示图片；没有图片时显示第一个视频
         const first = media[0].type === 'img' ? media[0] : (media.find(m => m.type === 'img') || media[0]);
+        const firstImg = media.find(m => m.type === 'img');
+        currentImageForPdf = firstImg ? firstImg.src : (first.type === 'img' ? first.src : null);
         if (first.type === 'img') {
           showImage(first.src);
           if (title && mainImage) mainImage.alt = title.textContent || 'Imagem';
@@ -158,6 +352,7 @@
             thumbEl.addEventListener('click', () => {
               if (m.type === 'img') {
                 showImage(m.src);
+                currentImageForPdf = m.src;
               } else {
                 showVideo(m.src, m.poster);
               }
@@ -213,10 +408,23 @@
       if (p.code) metaBits.push(`<span class="badge">Código: ${p.code}</span>`);
       if (p.reference) metaBits.push(`<span class="badge">Referência: ${p.reference}</span>`);
       if (extraMeta) extraMeta.innerHTML = metaBits.join(' ');
+
+      productData = p;
+      specsForPdf = rows.map(([k, v]) => [k, String(v)]);
+      if (downloadBtn) {
+        downloadBtn.disabled = false;
+        downloadBtn.removeAttribute('aria-busy');
+      }
     })
     .catch(err => {
       if (title) title.textContent = 'Falha ao carregar';
       if (desc) desc.textContent = 'Não foi possível ler products.json.';
+      productData = null;
+      specsForPdf = [];
+      if (downloadBtn) {
+        downloadBtn.disabled = true;
+        downloadBtn.removeAttribute('aria-busy');
+      }
       console.error(err);
     });
 })();
