@@ -31,6 +31,7 @@
 
 
   <!-- 通用逻辑 + 详情逻辑 -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" defer></script>
   <script src="script.js" defer></script>
   <script src="detail.js" defer></script>
 
@@ -96,6 +97,31 @@
       border: 1px solid var(--border);
       border-radius: 1rem;
       padding: 1rem;
+    }
+
+    .detail-actions {
+      margin: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+    }
+
+    .detail-download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      font-weight: 600;
+      letter-spacing: .01em;
+    }
+
+    .detail-download-btn:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+
+    .detail-download-btn[aria-busy="true"] {
+      opacity: .7;
+      cursor: wait;
     }
 
     .detail-info h1 {
@@ -234,6 +260,12 @@
         <h1 id="title">Carregando…</h1>
         <div class="detail-meta">
           <span id="category" class="badge"></span>
+        </div>
+        <div class="detail-actions">
+          <button id="downloadPdfBtn" class="btn-cta detail-download-btn" type="button">
+            <span aria-hidden="true">⬇️</span>
+            <span>Baixar PDF</span>
+          </button>
         </div>
         <p id="desc" class="muted"></p>
         <table class="specs" id="specsTable" aria-label="Especificações"></table>
