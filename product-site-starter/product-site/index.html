@@ -78,10 +78,12 @@
   <section class="hero">
     <div class="hero-media" id="heroMedia" aria-hidden="true"></div>
     <div class="hero-content container">
+      <span class="hero-eyebrow">Coleção assinatura 2024</span>
       <h2 class="hero-title" id="heroTitle">DA YMI 新品 · 设计花器</h2>
-      <p class="hero-sub">O diálogo entre modernidade e natureza ilumina o aconchego do espaço</p>
+      <p class="hero-sub">O diálogo entre modernidade e natureza ilumina o aconchego do espaço com peças criadas para durar.</p>
       <div class="hero-cta">
-        <a id="heroLink" href="product.html" class="btn-cta">Verifique Os Detalhes</a>
+        <a id="heroLink" href="product.html" class="btn-cta">Verifique os detalhes</a>
+        <a href="#catalogo" class="btn-ghost">Explorar catálogo</a>
       </div>
     </div>
     <!-- 轮播控件 -->
@@ -92,8 +94,55 @@
     </div>
   </section>
 
+  <section class="experience" aria-label="Destaques da experiência DAYMI">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">EXPERIÊNCIA CURADA</span>
+        <h2>Design pensado para inspirar espaços sofisticados</h2>
+        <p>Cuidamos de cada coleção com um olhar atento à arquitetura de interiores, selecionando materiais nobres e acabamentos impecáveis.</p>
+      </div>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <span class="experience-icon" aria-hidden="true">🪴</span>
+          <h3>Curadoria autoral</h3>
+          <p>Linhas assinadas por designers brasileiros e internacionais que celebram formas orgânicas e texturas surpreendentes.</p>
+        </article>
+        <article class="experience-card">
+          <span class="experience-icon" aria-hidden="true">✨</span>
+          <h3>Acabamentos premium</h3>
+          <p>Processos híbridos unem técnicas artesanais e tecnologia para entregar brilho e resistência superiores.</p>
+        </article>
+        <article class="experience-card">
+          <span class="experience-icon" aria-hidden="true">🤝</span>
+          <h3>Atendimento consultivo</h3>
+          <p>Equipe especializada para indicar combinações, montar composições e personalizar pedidos para projetos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="collection-highlight" aria-labelledby="collectionTitle">
+    <div class="container highlight-inner">
+      <div class="highlight-copy">
+        <span class="tag">LANÇAMENTO LIMITADO</span>
+        <h2 id="collectionTitle">Coleção Aurora em edição exclusiva</h2>
+        <p>Uma fusão de relevos esculturais e esmaltação translúcida que cria reflexos delicados em qualquer ambiente. Ideal para recepções, lounges e vitrines que pedem impacto visual.</p>
+        <ul>
+          <li>Peças numeradas com certificado de autenticidade.</li>
+          <li>Disponível em três tonalidades inspiradas em amanheceres tropicais.</li>
+          <li>Entrega expressa e suporte dedicado para projetos corporativos.</li>
+        </ul>
+        <div class="highlight-actions">
+          <a href="product.html" class="btn-cta">Descobrir a linha</a>
+          <a href="#contato" class="btn-ghost">Conversar com especialista</a>
+        </div>
+      </div>
+      <div class="highlight-media" role="presentation" aria-hidden="true"></div>
+    </div>
+  </section>
+
   <!-- 🔎 搜索/筛选区 -->
-  <section class="filters container" role="search" aria-label="Pesquisa e filtros">
+  <section id="catalogo" class="filters container" role="search" aria-label="Pesquisa e filtros">
     <div class="filters-row">
       <div class="search-wrapper">
         <input id="searchInput" type="search" placeholder="Pesquisa por nome, código, código de barras ou referência"
@@ -121,7 +170,60 @@
   </main>
 
   <!-- 联系方式 -->
-  <section class="contact-section">
+  <section class="testimonials" aria-label="O que nossos parceiros dizem">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">RELAÇÕES DURADOURAS</span>
+        <h2>Parceiros que transformam ideias em espaços memoráveis</h2>
+      </div>
+      <div class="testimonial-grid">
+        <figure class="testimonial-card">
+          <blockquote>
+            “A DAYMI entrega um nível de cuidado raro. Do catálogo à consultoria, cada detalhe reflete compromisso com o design.”
+          </blockquote>
+          <figcaption>
+            <strong>Studio Vila 33</strong>
+            <span>Arquitetura residencial</span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <blockquote>
+            “O time nos ajudou a montar vitrines que contam histórias. As peças chegam impecáveis e prontas para encantar.”
+          </blockquote>
+          <figcaption>
+            <strong>Casa Onírica</strong>
+            <span>Concept store</span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <blockquote>
+            “Ter um fornecedor com curadoria tão criteriosa faz diferença em cada projeto corporativo que assinamos.”
+          </blockquote>
+          <figcaption>
+            <strong>Arq. Luiza Mendonça</strong>
+            <span>Design de interiores</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter" aria-labelledby="newsletterTitle">
+    <div class="container newsletter-inner">
+      <div class="newsletter-copy">
+        <span class="tag">INSPIRE-SE PRIMEIRO</span>
+        <h2 id="newsletterTitle">Receba lançamentos e guias exclusivos</h2>
+        <p>Assine nossa newsletter para acessar catálogos digitais, moodboards trimestrais e convites para experiências presenciais.</p>
+      </div>
+      <form class="newsletter-form" aria-label="Assinar newsletter">
+        <label for="newsletterEmail" class="sr-only">Email</label>
+        <input id="newsletterEmail" type="email" name="email" placeholder="Seu melhor email" required>
+        <button type="submit" class="btn-cta">Quero receber novidades</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contato" class="contact-section">
     <div class="container">
       <h2 class="contact-title">Dúvidas? Entre em contato com o vendedor</h2>
 
