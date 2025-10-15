@@ -810,9 +810,9 @@ document.addEventListener('DOMContentLoaded', () => {
   loadProducts();
 
 
-  // —— 只在首页触发 Logo 掉落动画 ——
+  // —— 只在首页绑定 Logo 动画 ——
   if (location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname === '') {
-    setupLogoDrop();
+    setupLogoSlide();
   }
 });
 
@@ -861,30 +861,28 @@ window.addEventListener('scroll', () => {
   window.addEventListener('resize', positionLogo, { passive: true });
 })();
 
-// === Logo 掉落动画触发（新增的稳定实现） ===
-function setupLogoDrop() {
+// === Logo 点击滑落动画 ===
+function setupLogoSlide() {
   try {
     const logoWrappers = document.querySelectorAll('.logo-anim');
     if (!logoWrappers.length) return;
 
-    const playDrop = (node) => {
-      node.classList.remove('logo-drop');
+    const playSlide = (node) => {
+      node.classList.remove('logo-slide');
       // 强制重排以保证动画每次都重新开始
       void node.offsetWidth;
-      node.classList.add('logo-drop');
+      node.classList.add('logo-slide');
     };
 
-    // 页面加载：播放一次（移除 -> 重排 -> 再添加）
-    logoWrappers.forEach(playDrop);
-
-    // 点击/键盘激活时重新触发一次掉落效果
+    // 点击/键盘激活时触发滑落效果
     logoWrappers.forEach((wrapper) => {
       const link = wrapper.closest('a');
       if (!link) return;
 
-      const trigger = () => playDrop(wrapper);
+      const trigger = () => playSlide(wrapper);
 
       link.addEventListener('pointerdown', trigger);
+      link.addEventListener('click', trigger);
       link.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' || event.key === ' ') {
           trigger();
