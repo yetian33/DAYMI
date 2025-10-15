@@ -417,6 +417,12 @@ body::before {
   transform: rotate(180deg);
 }
 
+.nav-item.has-dropdown.is-closing > .nav-link .nav-arrow,
+.nav-item.has-dropdown.is-closing:hover > .nav-link .nav-arrow,
+.nav-item.has-dropdown.is-closing:focus-within > .nav-link .nav-arrow {
+  transform: rotate(0);
+}
+
 .nav-link:focus-visible,
 .dropdown-link:focus-visible {
   outline: none;
@@ -430,6 +436,14 @@ body::before {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+.nav-item.has-dropdown.is-closing > .dropdown,
+.nav-item.has-dropdown.is-closing:hover > .dropdown,
+.nav-item.has-dropdown.is-closing:focus-within > .dropdown {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
 }
 
 .dropdown {
