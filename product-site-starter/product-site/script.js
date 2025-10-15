@@ -191,21 +191,6 @@ function setupProductMenuLinks() {
   });
 }
 
-function setupDownloadButton() {
-  const btn = document.getElementById('downloadJson');
-  if (!btn) return;
-  bindButtonFX(btn);
-  btn.addEventListener('click', () => {
-    const url = btn.dataset.download || 'products.json';
-    const anchor = document.createElement('a');
-    anchor.href = url;
-    anchor.download = url.split('/').pop() || 'produtos.json';
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
-  });
-}
-
 function updateUrlParams() {
   const { grid, searchInput, categorySelect } = els();
   if (!grid) return;
@@ -433,7 +418,7 @@ function renderHero() {
     { image: 'assets/16-9/2.png', title: 'Banner 2', sub: '描述2', alt: 'Banner 2', link: 'product.html?id=XWL0044' },
     { image: 'assets/16-9/3.png', title: 'Banner 3', sub: '描述3', alt: 'Banner 3', link: 'product.html?id=XWL0045' },
     { image: 'assets/16-9/4.png', title: 'Banner 4', sub: '描述4', alt: 'Banner 4', link: 'product.html?id=XWL0042' },
-    { image: 'assets/16-9/5.png', title: 'Banner 4', sub: '描述4', alt: 'Banner 4', link: 'product.html?id=XWL0006-B' },
+    { image: 'assets/16-9/5.png', title: 'Banner 5', sub: '描述4', alt: 'Banner 5', link: 'product.html?id=XWL0006-B' },
 
   ].filter(s => !!s.image);
 
@@ -727,7 +712,6 @@ function bindEvents() {
 
   setupTopSearchForm();
   setupProductMenuLinks();
-  setupDownloadButton();
 }
 
 // DOMContentLoaded
