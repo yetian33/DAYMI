@@ -191,6 +191,72 @@ function setupProductMenuLinks() {
   });
 }
 
+function setupNavDropdowns() {
+  const navItems = document.querySelectorAll('.nav-item.has-dropdown');
+  if (!navItems.length) return;
+
+  const closeItem = (item) => {
+    item.classList.remove('is-open');
+    const trigger = item.querySelector('.nav-link');
+    if (trigger && trigger.tagName === 'BUTTON') {
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    if (trigger && typeof trigger.blur === 'function') {
+      trigger.blur();
+    }
+  };
+
+  const closeOthers = (current) => {
+    navItems.forEach((item) => {
+      if (item !== current) closeItem(item);
+    });
+  };
+
+  navItems.forEach((item) => {
+    const trigger = item.querySelector('.nav-link');
+    const dropdownLinks = item.querySelectorAll('.dropdown-link');
+
+    if (trigger && trigger.tagName === 'BUTTON') {
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        const shouldOpen = !item.classList.contains('is-open');
+        closeOthers(item);
+        if (shouldOpen) {
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+        } else {
+          closeItem(item);
+        }
+      });
+    } else if (trigger) {
+      trigger.addEventListener('focus', () => closeOthers(item));
+    }
+
+    dropdownLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        closeItem(item);
+        requestAnimationFrame(() => {
+          if (typeof link.blur === 'function') link.blur();
+        });
+      });
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    navItems.forEach((item) => {
+      if (!item.contains(target)) closeItem(item);
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      navItems.forEach((item) => closeItem(item));
+    }
+  });
+}
+
 function updateUrlParams() {
   const { grid, searchInput, categorySelect } = els();
   if (!grid) return;
@@ -712,6 +778,7 @@ function bindEvents() {
 
   setupTopSearchForm();
   setupProductMenuLinks();
+  setupNavDropdowns();
 }
 
 // DOMContentLoaded

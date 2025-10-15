@@ -412,7 +412,8 @@ body::before {
 }
 
 .nav-item.has-dropdown:hover > .nav-link .nav-arrow,
-.nav-item.has-dropdown:focus-within > .nav-link .nav-arrow {
+.nav-item.has-dropdown:focus-within > .nav-link .nav-arrow,
+.nav-item.has-dropdown.is-open > .nav-link .nav-arrow {
   transform: rotate(180deg);
 }
 
@@ -424,7 +425,8 @@ body::before {
 }
 
 .nav-item.has-dropdown:hover > .dropdown,
-.nav-item.has-dropdown:focus-within > .dropdown {
+.nav-item.has-dropdown:focus-within > .dropdown,
+.nav-item.has-dropdown.is-open > .dropdown {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
@@ -501,7 +503,7 @@ body::before {
   font-weight: 600;
   justify-content: center;
   text-align: center;
-  color: var(--brand-200);
+  color: var(--topbar-fg);
 }
 
 .dropdown-link-highlight:hover {
