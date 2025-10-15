@@ -864,23 +864,31 @@ window.addEventListener('scroll', () => {
 // === Logo 掉落动画触发（新增的稳定实现） ===
 function setupLogoDrop() {
   try {
-    const logos = document.querySelectorAll('.top-logo');
-    if (!logos.length) return;
+    const logoWrappers = document.querySelectorAll('.logo-anim');
+    if (!logoWrappers.length) return;
 
-    // 页面加载：播放一次（移除->强制重排->再添加）
-    logos.forEach(logo => {
-      logo.classList.remove('logo-drop');
-      // 强制重排以保证每次进入页面都会重新播放动画
-      void logo.offsetWidth;
-      logo.classList.add('logo-drop');
-    });
+    const playDrop = (node) => {
+      node.classList.remove('logo-drop');
+      // 强制重排以保证动画每次都重新开始
+      void node.offsetWidth;
+      node.classList.add('logo-drop');
+    };
 
-    // 点击 logo 跳首页：在离开当前页前移除动画类，等到首页加载后再由上面的逻辑播放
-    logos.forEach(logo => {
-      const a = logo.closest('a');
-      if (!a) return;
-      a.addEventListener('click', () => {
-        logo.classList.remove('logo-drop');
+    // 页面加载：播放一次（移除 -> 重排 -> 再添加）
+    logoWrappers.forEach(playDrop);
+
+    // 点击/键盘激活时重新触发一次掉落效果
+    logoWrappers.forEach((wrapper) => {
+      const link = wrapper.closest('a');
+      if (!link) return;
+
+      const trigger = () => playDrop(wrapper);
+
+      link.addEventListener('pointerdown', trigger);
+      link.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          trigger();
+        }
       });
     });
   } catch (e) {
