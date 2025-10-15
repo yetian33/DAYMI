@@ -165,6 +165,62 @@ function renderCategoryOptions() {
   }
 }
 
+function setupTopSearchForm() {
+  const form = document.querySelector('.top-search');
+  if (!form) return;
+  form.addEventListener('submit', (event) => {
+    const { grid } = els();
+    if (!grid) return;
+    event.preventDefault();
+    applyFilters();
+  });
+}
+
+function setupProductMenuLinks() {
+  const links = document.querySelectorAll('[data-cat-target]');
+  if (!links.length) return;
+  links.forEach(link => {
+    link.addEventListener('click', (event) => {
+      const { categorySelect, grid } = els();
+      if (!grid || !categorySelect) return;
+      event.preventDefault();
+      const value = link.getAttribute('data-cat-target') || '';
+      categorySelect.value = value;
+      applyFilters();
+    });
+  });
+}
+
+function setupDownloadButton() {
+  const btn = document.getElementById('downloadJson');
+  if (!btn) return;
+  bindButtonFX(btn);
+  btn.addEventListener('click', () => {
+    const url = btn.dataset.download || 'products.json';
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = url.split('/').pop() || 'produtos.json';
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  });
+}
+
+function updateUrlParams() {
+  const { grid, searchInput, categorySelect } = els();
+  if (!grid) return;
+  if (typeof history === 'undefined' || typeof history.replaceState !== 'function') return;
+  const params = new URLSearchParams();
+  const q = searchInput ? searchInput.value.trim() : '';
+  const cat = categorySelect ? categorySelect.value : '';
+  if (q) params.set('search', q);
+  if (cat) params.set('cat', cat);
+  if (currentPage > 1) params.set('page', String(currentPage));
+  const query = params.toString();
+  const newUrl = query ? `${location.pathname}?${query}` : location.pathname;
+  history.replaceState({}, '', newUrl);
+}
+
 // 首页/详情共用网格渲染
 function renderGrid(items) {
   const { grid, dialog, dialogImage, dialogTitle, dialogDesc, dialogCategory } = els();
@@ -283,6 +339,7 @@ function renderPage() {
   const pageItems = FILTERED.slice(start, end);
   renderGrid(pageItems);
   renderPagination(FILTERED.length);
+  updateUrlParams();
 }
 
 // Normalização simples
@@ -303,7 +360,7 @@ function applyFilters(firstLoad = false) {
   const q = norm(searchInput ? searchInput.value : '');
   const cat = categorySelect ? categorySelect.value : '';
 
-  if (clearInputBtn) clearInputBtn.style.display = q ? 'block' : 'none';
+  if (clearInputBtn) clearInputBtn.style.display = q ? 'inline-flex' : 'none';
 
   FILTERED = PRODUCTS.filter(p => {
     const specsText = p.specs && typeof p.specs === 'object'
@@ -668,6 +725,9 @@ function bindEvents() {
     }
   });
 
+  setupTopSearchForm();
+  setupProductMenuLinks();
+  setupDownloadButton();
 }
 
 // DOMContentLoaded
