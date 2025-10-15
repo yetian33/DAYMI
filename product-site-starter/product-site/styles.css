@@ -196,7 +196,7 @@ body::before {
 
 .logo-anim.logo-slide .logo-img,
 .logo-anim.logo-slide .top-logo {
-  animation: logoSlideDown 0.45s cubic-bezier(0.2, 0.75, 0.3, 1.05) forwards;
+  animation: logoSlideDown 0.75s cubic-bezier(0.2, 0.75, 0.3, 1.05) forwards;
 }
 
 @keyframes logoSlideDown {
@@ -287,6 +287,7 @@ body::before {
   display: inline-flex;
   align-items: center;
   gap: .35rem;
+  text-decoration: none;
 }
 
 .nav-link .nav-arrow {

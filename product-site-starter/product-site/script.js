@@ -21,6 +21,8 @@ function debounce(fn, delay = 250) {
 }
 const debouncedSearch = debounce(() => applyFilters(), 250);
 
+const LOGO_REPLAY_KEY = 'daymiLogoReplay';
+
 // 主题：加载 & 切换（统一时序动效）
 function loadTheme() {
   const saved = localStorage.getItem('theme') || 'light'; // 默认亮色
@@ -798,6 +800,7 @@ function bindEvents() {
     }
   });
 
+  setupLogoReturnFlag();
   setupTopSearchForm();
   setupProductMenuLinks();
   setupNavDropdowns();
@@ -809,11 +812,9 @@ document.addEventListener('DOMContentLoaded', () => {
   bindEvents();
   loadProducts();
 
-
-  // —— 只在首页绑定 Logo 动画 ——
-  if (location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname === '') {
-    setupLogoSlide();
-  }
+  const isHome = location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname === '';
+  const shouldReplayLogo = isHome && consumeLogoReplayFlag();
+  setupLogoSlide({ playOnLoad: shouldReplayLogo });
 });
 
 // 顶栏高度 → 动态写入 CSS 变量，正文自动避让
@@ -862,7 +863,8 @@ window.addEventListener('scroll', () => {
 })();
 
 // === Logo 点击滑落动画 ===
-function setupLogoSlide() {
+function setupLogoSlide(options = {}) {
+  const { playOnLoad = false } = options;
   try {
     const logoWrappers = document.querySelectorAll('.logo-anim');
     if (!logoWrappers.length) return;
@@ -889,7 +891,56 @@ function setupLogoSlide() {
         }
       });
     });
+
+    if (playOnLoad) {
+      requestAnimationFrame(() => {
+        logoWrappers.forEach((wrapper) => playSlide(wrapper));
+      });
+    }
   } catch (e) {
     console.warn('Logo 动画未应用（不影响其它功能）:', e);
+  }
+}
+
+function setupLogoReturnFlag() {
+  const isHome = location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname === '';
+  if (isHome) return;
+
+  try {
+    const logoLinks = document.querySelectorAll('a[href$="index.html"], a[href="/"], a[href="./"]');
+    if (!logoLinks.length) return;
+
+    const markReplay = () => {
+      try {
+        sessionStorage.setItem(LOGO_REPLAY_KEY, '1');
+      } catch (_) {
+        /* 忽略隐私模式下的异常 */
+      }
+    };
+
+    logoLinks.forEach((link) => {
+      if (!link.querySelector('.logo-anim')) return;
+
+      link.addEventListener('pointerdown', markReplay);
+      link.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          markReplay();
+        }
+      });
+    });
+  } catch (err) {
+    console.warn('Logo 返回动画标记失败:', err);
+  }
+}
+
+function consumeLogoReplayFlag() {
+  try {
+    const shouldReplay = sessionStorage.getItem(LOGO_REPLAY_KEY) === '1';
+    if (shouldReplay) {
+      sessionStorage.removeItem(LOGO_REPLAY_KEY);
+    }
+    return shouldReplay;
+  } catch (_) {
+    return false;
   }
 }
