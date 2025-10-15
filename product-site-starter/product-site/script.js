@@ -861,17 +861,23 @@ window.addEventListener('scroll', () => {
   window.addEventListener('resize', positionLogo, { passive: true });
 })();
 
-// === Logo 掉落动画触发（新增的稳定实现） ===
+// === Logo 掉落 + 时空隧道动画触发（新增的稳定实现） ===
 function setupLogoDrop() {
   try {
+    const wrappers = document.querySelectorAll('.logo-anim');
+    wrappers.forEach(wrapper => {
+      wrapper.classList.remove('logo-portal-active');
+      void wrapper.offsetWidth;
+      wrapper.classList.add('logo-portal-active');
+    });
+
     const logos = document.querySelectorAll('.top-logo');
     if (!logos.length) return;
 
     // 页面加载：播放一次（移除->强制重排->再添加）
     logos.forEach(logo => {
       logo.classList.remove('logo-drop');
-      // 强制重排以保证每次进入页面都会重新播放动画
-      void logo.offsetWidth;
+      void logo.offsetWidth; // 强制重排以保证每次进入页面都会重新播放动画
       logo.classList.add('logo-drop');
     });
 
@@ -881,6 +887,10 @@ function setupLogoDrop() {
       if (!a) return;
       a.addEventListener('click', () => {
         logo.classList.remove('logo-drop');
+        const wrapper = logo.closest('.logo-anim');
+        if (wrapper) {
+          wrapper.classList.remove('logo-portal-active');
+        }
       });
     });
   } catch (e) {
