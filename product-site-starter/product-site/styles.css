@@ -172,12 +172,15 @@ body::before {
    ========================= */
 .logo-anim {
   --logo-color: #ff7a00;
+  --logo-warp-duration: 1.15s;
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: clamp(2px, 0.6vw, 6px);
   overflow: visible;
+  perspective: 1100px;
+  transform-style: preserve-3d;
 }
 
 .logo-anim .logo-img,
@@ -208,18 +211,23 @@ body::before {
     background: var(--logo-color);
     mask: url("assets/icons/daymi-3.png") center/contain no-repeat;
     -webkit-mask: url("assets/icons/daymi-3.png") center/contain no-repeat;
+    opacity: 1;
+    transform-origin: center;
   }
 
   .logo-anim::after {
     content: "";
     position: absolute;
-    top: -140%;
-    bottom: 35%;
+    top: -220%;
+    bottom: 45%;
     left: 50%;
-    width: clamp(24%, 3vw, 32%);
-    background: linear-gradient(180deg, var(--logo-color) 0%, transparent 100%);
+    width: clamp(28%, 4vw, 42%);
+    background:
+      radial-gradient(circle at 50% 20%, rgba(255, 196, 140, 0.6) 0%, rgba(255, 150, 72, 0.3) 35%, transparent 70%);
     opacity: 0;
-    transform: translateX(-50%) scaleY(0.4);
+    transform: translateX(-50%) scaleX(0.55) scaleY(0.2);
+    transform-origin: top center;
+    filter: blur(0);
     pointer-events: none;
   }
 
@@ -230,26 +238,53 @@ body::before {
 }
 
 .logo-anim.logo-drop {
-  animation: logoDrop .75s cubic-bezier(0.2, 0.95, 0.25, 1.1) forwards;
-  animation-delay: .18s;
+  animation: logoWarp var(--logo-warp-duration) cubic-bezier(0.19, 0.75, 0.23, 1.05) forwards;
   will-change: transform, filter, opacity;
 }
 
-.logo-anim.logo-drop::after {
-  animation: logoTrail .75s ease-out forwards;
+.logo-anim.logo-drop::before {
+  animation: logoPulse var(--logo-warp-duration) ease-out forwards;
 }
 
-@keyframes logoDrop {
+.logo-anim.logo-drop::after {
+  animation: logoTunnel var(--logo-warp-duration) cubic-bezier(0.4, 0.18, 0.25, 1) forwards;
+}
+
+@keyframes logoWarp {
   0% {
-    transform: translateY(-80px) scale(0.72);
-    opacity: 0;
-    filter: blur(12px) brightness(1.3);
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    filter: none;
   }
 
-  55% {
-    transform: translateY(6px) scale(1.05);
+  22% {
+    transform: translateY(-28px) scale(0.78);
+    opacity: 0.35;
+    filter: blur(6px) brightness(1.08);
+  }
+
+  34% {
+    transform: translateY(-180px) scale(0.32);
+    opacity: 0;
+    filter: blur(16px) brightness(1.25);
+  }
+
+  60% {
+    transform: translateY(-150px) scale(0.42);
+    opacity: 0;
+    filter: blur(24px) brightness(1.2);
+  }
+
+  78% {
+    transform: translateY(18px) scale(1.08);
+    opacity: 0.85;
+    filter: blur(6px) brightness(1.05);
+  }
+
+  90% {
+    transform: translateY(-6px) scale(0.98);
     opacity: 1;
-    filter: blur(3px) brightness(1.05);
+    filter: blur(2px);
   }
 
   100% {
@@ -259,20 +294,62 @@ body::before {
   }
 }
 
-@keyframes logoTrail {
+@keyframes logoTunnel {
   0% {
-    opacity: .65;
-    transform: translate(-50%, -60%) scaleY(0.3);
+    opacity: 0;
+    transform: translate3d(-50%, -30%, 0) scaleX(0.45) scaleY(0.18);
+    filter: blur(4px);
   }
 
-  60% {
-    opacity: .35;
-    transform: translate(-50%, 40%) scaleY(1.05);
+  30% {
+    opacity: .8;
+    transform: translate3d(-50%, -120%, 120px) scaleX(0.25) scaleY(0.32);
+    filter: blur(12px);
+  }
+
+  55% {
+    opacity: .6;
+    transform: translate3d(-50%, -40%, -60px) scaleX(0.32) scaleY(0.46);
+    filter: blur(18px);
+  }
+
+  82% {
+    opacity: .3;
+    transform: translate3d(-50%, 65%, -120px) scaleX(0.85) scaleY(1.08);
+    filter: blur(10px);
   }
 
   100% {
     opacity: 0;
-    transform: translate(-50%, 120%) scaleY(1.35);
+    transform: translate3d(-50%, 128%, -220px) scaleX(1.1) scaleY(1.45);
+    filter: blur(18px);
+  }
+}
+
+@keyframes logoPulse {
+  0% {
+    opacity: 1;
+    filter: drop-shadow(0 0 0 rgba(255, 168, 82, 0.45));
+  }
+
+  28% {
+    opacity: 0;
+    filter: drop-shadow(0 0 22px rgba(255, 180, 110, 0.8));
+  }
+
+  58% {
+    opacity: 0;
+    filter: drop-shadow(0 0 32px rgba(255, 180, 110, 0.7));
+  }
+
+  86% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(255, 160, 90, 0.45));
+  }
+
+  100% {
+    opacity: 1;
+    filter: none;
   }
 }
 
