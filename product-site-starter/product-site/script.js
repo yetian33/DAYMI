@@ -195,8 +195,25 @@ function setupNavDropdowns() {
   const navItems = document.querySelectorAll('.nav-item.has-dropdown');
   if (!navItems.length) return;
 
+  const closingTimers = new WeakMap();
+
   const closeItem = (item) => {
+    if (!item) return;
+
     item.classList.remove('is-open');
+    item.classList.add('is-closing');
+
+    if (closingTimers.has(item)) {
+      clearTimeout(closingTimers.get(item));
+    }
+
+    const timer = setTimeout(() => {
+      item.classList.remove('is-closing');
+      closingTimers.delete(item);
+    }, 220);
+
+    closingTimers.set(item, timer);
+
     const trigger = item.querySelector('.nav-link');
     if (trigger && trigger.tagName === 'BUTTON') {
       trigger.setAttribute('aria-expanded', 'false');
@@ -223,6 +240,11 @@ function setupNavDropdowns() {
         const shouldOpen = !item.classList.contains('is-open');
         closeOthers(item);
         if (shouldOpen) {
+          if (closingTimers.has(item)) {
+            clearTimeout(closingTimers.get(item));
+            closingTimers.delete(item);
+          }
+          item.classList.remove('is-closing');
           item.classList.add('is-open');
           trigger.setAttribute('aria-expanded', 'true');
         } else {

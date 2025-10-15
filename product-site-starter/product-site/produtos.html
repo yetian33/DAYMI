@@ -49,27 +49,29 @@
             </div>
           </li>
           <li class="nav-item has-dropdown">
-            <a class="nav-link" href="produtos.html">
+            <a class="nav-link nav-link-dropdown" href="produtos.html" aria-haspopup="true">
               PRODUTOS
               <span class="nav-arrow" aria-hidden="true"></span>
             </a>
-            <div class="dropdown dropdown-wide" role="menu">
+            <div class="dropdown dropdown-wide" role="menu" aria-label="Categorias de produtos">
               <div class="dropdown-column">
-                <a href="produtos.html" data-cat-target="" class="dropdown-link">Todas as categorias</a>
-                <a href="produtos.html?cat=group:VASOS" data-cat-target="group:VASOS" class="dropdown-link">VASOS — todas</a>
-                <a href="produtos.html?cat=group:ENFEITES" data-cat-target="group:ENFEITES" class="dropdown-link">ENFEITES — todas</a>
+                <span class="dropdown-heading">VASOS</span>
+                <a href="produtos.html?cat=sub:VASOS|MODERNO" data-cat-target="sub:VASOS|MODERNO" class="dropdown-link">Moderno</a>
+                <a href="produtos.html?cat=sub:VASOS|DESIGN%20ESPECIAL" data-cat-target="sub:VASOS|DESIGN ESPECIAL" class="dropdown-link">Design especial</a>
+                <a href="produtos.html?cat=group:VASOS" data-cat-target="group:VASOS" class="dropdown-link dropdown-link-all">Ver todos os vasos</a>
+              </div>
+              <div class="dropdown-column dropdown-column-enfeites">
+                <span class="dropdown-heading">ENFEITES</span>
+                <a href="produtos.html?cat=sub:ENFEITES|ANIMAL" data-cat-target="sub:ENFEITES|ANIMAL" class="dropdown-link">Animal</a>
+                <a href="produtos.html?cat=sub:ENFEITES|BAILARINA" data-cat-target="sub:ENFEITES|BAILARINA" class="dropdown-link">Bailarina</a>
+                <a href="produtos.html?cat=sub:ENFEITES|PERSONAGEM" data-cat-target="sub:ENFEITES|PERSONAGEM" class="dropdown-link">Personagem</a>
+                <a href="produtos.html?cat=sub:ENFEITES|FUNCIONAL" data-cat-target="sub:ENFEITES|FUNCIONAL" class="dropdown-link">Funcional</a>
+                <a href="produtos.html?cat=sub:ENFEITES|ABSTRATAS" data-cat-target="sub:ENFEITES|ABSTRATAS" class="dropdown-link">Abstratas</a>
+                <a href="produtos.html?cat=group:ENFEITES" data-cat-target="group:ENFEITES" class="dropdown-link dropdown-link-all">Ver todos os enfeites</a>
               </div>
               <div class="dropdown-column">
-                <a href="produtos.html?cat=sub:VASOS|MODERNO" data-cat-target="sub:VASOS|MODERNO" class="dropdown-link">VASOS MODERNO</a>
-                <a href="produtos.html?cat=sub:VASOS|DESIGN%20ESPECIAL" data-cat-target="sub:VASOS|DESIGN ESPECIAL" class="dropdown-link">DESIGN ESPECIAL</a>
-              </div>
-              <div class="dropdown-column">
-                <a href="produtos.html?cat=group:ENFEITES" data-cat-target="group:ENFEITES" class="dropdown-link">ENFEITES</a>
-                <a href="produtos.html?cat=sub:ENFEITES|ANIMAL" data-cat-target="sub:ENFEITES|ANIMAL" class="dropdown-link">ANIMAL</a>
-                <a href="produtos.html?cat=sub:ENFEITES|BAILARINA" data-cat-target="sub:ENFEITES|BAILARINA" class="dropdown-link">BAILARINA</a>
-                <a href="produtos.html?cat=sub:ENFEITES|PERSONAGEM" data-cat-target="sub:ENFEITES|PERSONAGEM" class="dropdown-link">PERSONAGEM</a>
-                <a href="produtos.html?cat=sub:ENFEITES|FUNCIONAL" data-cat-target="sub:ENFEITES|FUNCIONAL" class="dropdown-link">FUNCIONAL</a>
-                <a href="produtos.html?cat=sub:ENFEITES|ABSTRATAS" data-cat-target="sub:ENFEITES|ABSTRATAS" class="dropdown-link">ABSTRATAS</a>
+                <span class="dropdown-heading">CATÁLOGO</span>
+                <a href="produtos.html" data-cat-target="" class="dropdown-link dropdown-link-highlight">Todos os produtos</a>
               </div>
             </div>
           </li>
@@ -80,7 +82,6 @@
             </button>
             <div class="dropdown" role="menu">
               <a href="index.html#catalogos" class="dropdown-link">Coleções digitais</a>
-              <a href="products.json" class="dropdown-link" target="_blank" rel="noopener">Lista de produtos (JSON)</a>
               <a href="index.html#newsletter" class="dropdown-link">Receber novidades</a>
             </div>
           </li>
