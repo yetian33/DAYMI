@@ -540,11 +540,11 @@ function renderHero() {
   // 你的素材列表：可混合不同比例（示例）
   // script.js -> renderHero() 里
   const slides = [
-    { image: 'assets/16-9/1.png', title: 'Banner 1', sub: '描述1', alt: 'Banner 1', link: 'product.html?id=XWL0065' },
-    { image: 'assets/16-9/2.png', title: 'Banner 2', sub: '描述2', alt: 'Banner 2', link: 'product.html?id=XWL0044' },
-    { image: 'assets/16-9/3.png', title: 'Banner 3', sub: '描述3', alt: 'Banner 3', link: 'product.html?id=XWL0045' },
-    { image: 'assets/16-9/4.png', title: 'Banner 4', sub: '描述4', alt: 'Banner 4', link: 'product.html?id=XWL0042' },
-    { image: 'assets/16-9/5.png', title: 'Banner 5', sub: '描述4', alt: 'Banner 5', link: 'product.html?id=XWL0006-B' },
+    { image: 'assets/16-9/1.png', title: 'Banner 1', sub: '描述1', alt: 'Banner 1', link: '/product.html?id=XWL0065' },
+    { image: 'assets/16-9/2.png', title: 'Banner 2', sub: '描述2', alt: 'Banner 2', link: '/product.html?id=XWL0044' },
+    { image: 'assets/16-9/3.png', title: 'Banner 3', sub: '描述3', alt: 'Banner 3', link: '/product.html?id=XWL0045' },
+    { image: 'assets/16-9/4.png', title: 'Banner 4', sub: '描述4', alt: 'Banner 4', link: '/product.html?id=XWL0042' },
+    { image: 'assets/16-9/5.png', title: 'Banner 5', sub: '描述4', alt: 'Banner 5', link: '/product.html?id=XWL0006-B' },
 
   ]
     .filter(s => !!s.image)
