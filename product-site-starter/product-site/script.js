@@ -931,9 +931,6 @@ function setupLogoSlide(options = {}) {
 }
 
 function setupLogoReturnFlag() {
-  const isHome = location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname === '';
-  if (isHome) return;
-
   try {
     const logoLinks = document.querySelectorAll('a[href$="index.html"], a[href="/"], a[href="./"]');
     if (!logoLinks.length) return;
