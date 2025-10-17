@@ -883,24 +883,36 @@ function setupLogoSlide(options = {}) {
 
       const trigger = () => playSlide(wrapper);
       let pointerActive = false;
+      let pointerTriggered = false;
       let keyboardTriggered = false;
 
       if (window.PointerEvent) {
-        const resetPointerFlag = () => {
+        const resetPointerState = () => {
           pointerActive = false;
+          pointerTriggered = false;
         };
 
         link.addEventListener('pointerdown', (event) => {
           if (event.button !== 0) return;
           pointerActive = true;
+          pointerTriggered = false;
+        });
+        link.addEventListener('pointerup', (event) => {
+          if (event.button !== 0) return;
+          if (!pointerActive) return;
+          pointerActive = false;
+          pointerTriggered = true;
           trigger();
         });
-        link.addEventListener('pointerup', resetPointerFlag);
-        link.addEventListener('pointercancel', resetPointerFlag);
-        link.addEventListener('pointerleave', resetPointerFlag);
+        link.addEventListener('pointercancel', resetPointerState);
+        link.addEventListener('pointerleave', resetPointerState);
       }
 
       link.addEventListener('click', () => {
+        if (pointerTriggered) {
+          pointerTriggered = false;
+          return;
+        }
         if (pointerActive) {
           pointerActive = false;
           return;
