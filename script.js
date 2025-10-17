@@ -104,7 +104,7 @@ function parseCategory(p) {
 async function loadProducts() {
   const { grid, searchInput } = els();
   try {
-    const res = await fetch('products.json');
+    const res = await fetch('/products.json');
     const data = await res.json();
     PRODUCTS = (data && Array.isArray(data.products)) ? data.products : [];
 

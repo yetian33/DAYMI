@@ -236,7 +236,7 @@
     return;
   }
 
-  fetch('products.json')
+  fetch('/products.json')
     .then(res => res.json())
     .then(data => {
       const list = data.products || [];
