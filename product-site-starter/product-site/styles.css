@@ -177,6 +177,20 @@ body::before {
   justify-content: center;
   padding: 0;
   overflow: hidden;
+  --logo-duration: 1.28s;
+  --logo-delay: 0s;
+  --logo-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.logo-anim::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 60%);
+  opacity: 0;
+  transform: translateY(-120%);
+  pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 .logo-anim .logo-img,
@@ -185,6 +199,10 @@ body::before {
   height: clamp(24px, 5vw, 52px);
   width: auto;
   transform: translateY(0);
+  clip-path: inset(0 0 0 0);
+  filter: none;
+  opacity: 1;
+  will-change: transform, opacity, clip-path, filter;
 }
 
 @media (max-width: 600px) {
@@ -194,20 +212,53 @@ body::before {
   }
 }
 
+.logo-anim.logo-slide::after {
+  animation: logoSweep calc(var(--logo-duration) * 0.85) ease-out var(--logo-delay) forwards;
+}
+
 .logo-anim.logo-slide .logo-img,
 .logo-anim.logo-slide .top-logo {
-  animation: logoSlideDown 0.75s cubic-bezier(0.2, 0.75, 0.3, 1.05) forwards;
+  animation: logoSlideDown var(--logo-duration) var(--logo-ease) var(--logo-delay) forwards;
 }
 
 @keyframes logoSlideDown {
   0% {
-    transform: translateY(-120%);
+    transform: translateY(-45%);
     opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    filter: blur(12px) saturate(1.2);
+  }
+
+  55% {
+    clip-path: inset(0 0 0 0);
+    filter: blur(0) saturate(1.05);
+  }
+
+  72% {
+    transform: translateY(6%);
   }
 
   100% {
     transform: translateY(0);
     opacity: 1;
+    clip-path: inset(0 0 0 0);
+    filter: none;
+  }
+}
+
+@keyframes logoSweep {
+  0% {
+    opacity: 0;
+    transform: translateY(-120%);
+  }
+
+  35% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(120%);
   }
 }
 
