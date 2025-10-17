@@ -5,10 +5,46 @@
   const params = new URLSearchParams(location.search);
   const pid = params.get('id');
 
+  function resolveAssetPath(path) {
+    if (!path) return path;
+    if (/^(?:[a-z]+:|\/\/|\/)/i.test(path)) return path;
+    return `/${path.replace(/^\/+/, '')}`;
+  }
+
+  function normalizeProductAssets(entry) {
+    if (!entry || typeof entry !== 'object') return entry;
+    const normalized = { ...entry };
+
+    ['image', 'videoPoster', 'thumbnail', 'poster', 'brochure', 'pdf', 'download']
+      .forEach((key) => {
+        if (typeof normalized[key] === 'string') {
+          normalized[key] = resolveAssetPath(normalized[key]);
+        }
+      });
+
+    if (Array.isArray(normalized.images)) {
+      normalized.images = normalized.images.map(resolveAssetPath);
+    }
+
+    if (Array.isArray(normalized.videos)) {
+      normalized.videos = normalized.videos.map(resolveAssetPath);
+    }
+
+    if (Array.isArray(normalized.videoPosters)) {
+      normalized.videoPosters = normalized.videoPosters.map(resolveAssetPath);
+    }
+
+    if (Array.isArray(normalized.assets)) {
+      normalized.assets = normalized.assets.map(resolveAssetPath);
+    }
+
+    return normalized;
+  }
+
   const backLink = document.querySelector('.back');
   if (backLink) {
     // 用当前详情页 URL 里带过来的 search/cat/page 拼一个“带参首页”
-    const fallback = new URL('index.html', location.href);
+    const fallback = new URL('/produtos/', window.location.origin);
     ['search', 'cat', 'page'].forEach(k => {
       const v = params.get(k);
       if (v) fallback.searchParams.set(k, v);
@@ -25,7 +61,7 @@
         // 否则再尝试纯 history.back()
         history.back();
       } else {
-        window.location.href = 'index.html';
+        window.location.href = '/produtos/';
       }
     });
   }
@@ -236,10 +272,12 @@
     return;
   }
 
-  fetch('products.json')
+  fetch('/products.json')
     .then(res => res.json())
     .then(data => {
-      const list = data.products || [];
+      const list = Array.isArray(data.products)
+        ? data.products.map(normalizeProductAssets)
+        : [];
       const p = list.find(x => x.id === pid);
       if (!p) {
         if (title) title.textContent = 'Produto não encontrado';
