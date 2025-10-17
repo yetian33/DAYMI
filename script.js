@@ -100,13 +100,51 @@ function parseCategory(p) {
   return { major: a || '', minor: b || '' };
 }
 
+function resolveAssetPath(path) {
+  if (!path) return path;
+  if (/^(?:[a-z]+:|\/\/|\/)/i.test(path)) return path;
+  return `/${path.replace(/^\/+/, '')}`;
+}
+
+function normalizeProductAssets(entry) {
+  if (!entry || typeof entry !== 'object') return entry;
+  const normalized = { ...entry };
+
+  ['image', 'videoPoster', 'thumbnail', 'poster', 'brochure', 'pdf', 'download']
+    .forEach((key) => {
+      if (typeof normalized[key] === 'string') {
+        normalized[key] = resolveAssetPath(normalized[key]);
+      }
+    });
+
+  if (Array.isArray(normalized.images)) {
+    normalized.images = normalized.images.map(resolveAssetPath);
+  }
+
+  if (Array.isArray(normalized.videos)) {
+    normalized.videos = normalized.videos.map(resolveAssetPath);
+  }
+
+  if (Array.isArray(normalized.videoPosters)) {
+    normalized.videoPosters = normalized.videoPosters.map(resolveAssetPath);
+  }
+
+  if (Array.isArray(normalized.assets)) {
+    normalized.assets = normalized.assets.map(resolveAssetPath);
+  }
+
+  return normalized;
+}
+
 // 加载产品
 async function loadProducts() {
   const { grid, searchInput } = els();
   try {
-    const res = await fetch('products.json');
+    const res = await fetch('/products.json');
     const data = await res.json();
-    PRODUCTS = (data && Array.isArray(data.products)) ? data.products : [];
+    PRODUCTS = (data && Array.isArray(data.products))
+      ? data.products.map(normalizeProductAssets)
+      : [];
 
     renderCategoryOptions();
 
@@ -321,22 +359,20 @@ function renderGrid(items) {
     bindPressFX(card);
 
     // 点击 -> 详情页（忽略文字选择复制）
-   card.addEventListener('click', (e) => {
-  const selection = window.getSelection();
-  if (selection && selection.toString().length > 0) return;
+    card.addEventListener('click', (e) => {
+      const selection = window.getSelection();
+      if (selection && selection.toString().length > 0) return;
 
-  const { searchInput, categorySelect } = els();
-  const q = searchInput ? searchInput.value : '';
-  const cat = categorySelect ? categorySelect.value : '';
-  const url = new URL('product.html', location.href);
-  url.searchParams.set('id', p.id);
-  if (q)   url.searchParams.set('search', q);
-  if (cat) url.searchParams.set('cat', cat);
-  url.searchParams.set('page', String(currentPage)); // 关键：带上当前页
-  window.location.href = url.toString();
-});
-
-
+      const { searchInput, categorySelect } = els();
+      const q = searchInput ? searchInput.value : '';
+      const cat = categorySelect ? categorySelect.value : '';
+      const url = new URL('/product.html', window.location.origin);
+      url.searchParams.set('id', p.id);
+      if (q) url.searchParams.set('search', q);
+      if (cat) url.searchParams.set('cat', cat);
+      url.searchParams.set('page', String(currentPage)); // 关键：带上当前页
+      window.location.href = url.toString();
+    });
 
     // Alt + 点击 -> 预览对话框
     card.addEventListener('click', (e) => {
@@ -504,13 +540,19 @@ function renderHero() {
   // 你的素材列表：可混合不同比例（示例）
   // script.js -> renderHero() 里
   const slides = [
-    { image: 'assets/16-9/1.png', title: 'Banner 1', sub: '描述1', alt: 'Banner 1', link: 'product.html?id=XWL0065' },
-    { image: 'assets/16-9/2.png', title: 'Banner 2', sub: '描述2', alt: 'Banner 2', link: 'product.html?id=XWL0044' },
-    { image: 'assets/16-9/3.png', title: 'Banner 3', sub: '描述3', alt: 'Banner 3', link: 'product.html?id=XWL0045' },
-    { image: 'assets/16-9/4.png', title: 'Banner 4', sub: '描述4', alt: 'Banner 4', link: 'product.html?id=XWL0042' },
-    { image: 'assets/16-9/5.png', title: 'Banner 5', sub: '描述4', alt: 'Banner 5', link: 'product.html?id=XWL0006-B' },
+    { image: 'assets/16-9/1.png', title: 'Banner 1', sub: '描述1', alt: 'Banner 1', link: '/product.html?id=XWL0065' },
+    { image: 'assets/16-9/2.png', title: 'Banner 2', sub: '描述2', alt: 'Banner 2', link: '/product.html?id=XWL0044' },
+    { image: 'assets/16-9/3.png', title: 'Banner 3', sub: '描述3', alt: 'Banner 3', link: '/product.html?id=XWL0045' },
+    { image: 'assets/16-9/4.png', title: 'Banner 4', sub: '描述4', alt: 'Banner 4', link: '/product.html?id=XWL0042' },
+    { image: 'assets/16-9/5.png', title: 'Banner 5', sub: '描述4', alt: 'Banner 5', link: '/product.html?id=XWL0006-B' },
 
-  ].filter(s => !!s.image);
+  ]
+    .filter(s => !!s.image)
+    .map((slide) => ({
+      ...slide,
+      image: resolveAssetPath(slide.image),
+      link: slide.link ? resolveAssetPath(slide.link) : '#',
+    }));
 
 
   if (!slides.length) return;
@@ -882,27 +924,38 @@ function setupLogoSlide(options = {}) {
       if (!link) return;
 
       const trigger = () => playSlide(wrapper);
-      let pointerActive = false;
+      let pointerPending = false;
+      let pointerTriggered = false;
       let keyboardTriggered = false;
 
       if (window.PointerEvent) {
         const resetPointerFlag = () => {
-          pointerActive = false;
+          pointerPending = false;
         };
 
         link.addEventListener('pointerdown', (event) => {
           if (event.button !== 0) return;
-          pointerActive = true;
+          pointerTriggered = false;
+          pointerPending = true;
+        });
+        link.addEventListener('pointerup', (event) => {
+          if (!pointerPending) return;
+          pointerPending = false;
+          if (event.button !== 0) return;
+          pointerTriggered = true;
           trigger();
         });
-        link.addEventListener('pointerup', resetPointerFlag);
         link.addEventListener('pointercancel', resetPointerFlag);
         link.addEventListener('pointerleave', resetPointerFlag);
       }
 
       link.addEventListener('click', () => {
-        if (pointerActive) {
-          pointerActive = false;
+        if (pointerPending) {
+          pointerPending = false;
+          return;
+        }
+        if (pointerTriggered) {
+          pointerTriggered = false;
           return;
         }
         if (keyboardTriggered) {

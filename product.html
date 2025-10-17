@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DAYMI | Detalhe do Produto</title>
   <meta name="description" content="DAYMI — página de detalhes com galeria e especificações" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -32,8 +32,8 @@
 
   <!-- 通用逻辑 + 详情逻辑 -->
   <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" defer></script>
-  <script src="script.js" defer></script>
-  <script src="detail.js" defer></script>
+  <script src="/script.js" defer></script>
+  <script src="/detail.js" defer></script>
 
   <!-- 仅详情页使用的少量内联样式（其余都在 styles.css） -->
   <style>
@@ -199,9 +199,9 @@
   <!-- 顶部区域：整条纯白（全宽） -->
   <section class="top-bar" aria-label="Topo">
     <div class="container top-bar-inner">
-      <a href="./" aria-label="Voltar para a Início" class="brand-link">
+      <a href="/" aria-label="Voltar para a Início" class="brand-link">
         <span class="logo-anim" aria-hidden="true">
-          <img src="assets/icons/daymi-3.png" alt="" class="top-logo" />
+          <img src="/assets/icons/daymi-3.png" alt="" class="top-logo" />
         </span>
         <span class="sr-only">DAYMI</span>
       </a>
@@ -217,9 +217,9 @@
   <!-- Header：保留（CSS 已整体隐藏，不占位），可后续再用 -->
   <header class="container header">
     <h1 class="logo-wrapper">
-      <a href="./" class="logo-link">
+      <a href="/" class="logo-link">
         <span class="logo-anim" aria-hidden="true">
-          <img src="assets/icons/daymi-3.png" alt="" class="logo-img" />
+          <img src="/assets/icons/daymi-3.png" alt="" class="logo-img" />
         </span>
         <span class="sr-only">DAYMI Logo</span>
       </a>
@@ -251,7 +251,7 @@
   <!-- 详情主体 -->
   <main class="detail-wrapper" id="app" aria-live="polite">
     <p class="detail-breadcrumb">
-      <a class="back" href="./">← Voltar</a>
+      <a class="back" href="/produtos/">← Voltar</a>
     </p>
 
     <section class="detail-layout">
@@ -297,13 +297,13 @@
       <h2 class="contact-title">Dúvidas? Entre em contato com o vendedor</h2>
 
       <div class="contact-info">
-        <img src="assets/icons/daymi-1.png" alt="Logo da empresa" class="contact-logo" />
+        <img src="/assets/icons/daymi-1.png" alt="Logo da empresa" class="contact-logo" />
         <div class="contact-lines">
           <p class="contact-name"><strong>Minha Empresa LTDA</strong></p>
 
           <p>
             <a href="mailto:contato@empresa.com" target="_blank" rel="noopener">
-              <img src="assets/icons/email.png" alt="Email" class="icon-inline" />
+              <img src="/assets/icons/email.png" alt="Email" class="icon-inline" />
             </a>
             Email:
             <a href="mailto:contato@empresa.com">contato@empresa.com</a>
@@ -311,7 +311,7 @@
 
           <p>
             <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">
-              <img src="assets/icons/whatsapp.png" alt="WhatsApp" class="icon-inline" />
+              <img src="/assets/icons/whatsapp.png" alt="WhatsApp" class="icon-inline" />
             </a>
             WhatsApp:
             <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">+55 (11) 99999-9999</a>
@@ -319,7 +319,7 @@
 
           <p>
             <a href="tel:+551133334444">
-              <img src="assets/icons/telephone.png" alt="Telefone" class="icon-inline" />
+              <img src="/assets/icons/telephone.png" alt="Telefone" class="icon-inline" />
             </a>
             Telefone:
             <a href="tel:+551133334444">+55 (11) 3333-4444</a>
@@ -331,10 +331,10 @@
         <p class="social-title">Redes Sociais</p>
         <div class="social-icons">
           <a href="https://facebook.com/suaempresa" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="assets/icons/Facebook.png" alt="Facebook" />
+            <img src="/assets/icons/Facebook.png" alt="Facebook" />
           </a>
           <a href="https://instagram.com/suaempresa" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="assets/icons/Instagram.png" alt="Instagram" />
+            <img src="/assets/icons/Instagram.png" alt="Instagram" />
           </a>
         </div>
       </div>
