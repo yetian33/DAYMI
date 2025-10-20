@@ -43,6 +43,8 @@
   let productData = null;
   let specsForPdf = [];
   let currentImageForPdf = null;
+  let productImagesForPdf = [];
+  const imageDataCache = new Map();
 
   if (downloadBtn) {
     downloadBtn.disabled = true;
@@ -121,53 +123,85 @@
     }
 
     try {
-      const doc = new jsPDF({ orientation: 'landscape', unit: 'pt', format: 'a4' });
+      const getImageData = async (src) => {
+        if (!src) return null;
+        if (imageDataCache.has(src)) {
+          return imageDataCache.get(src);
+        }
+        const data = await resolveImageData(src);
+        imageDataCache.set(src, data);
+        return data;
+      };
+
+      const doc = new jsPDF({ orientation: 'portrait', unit: 'pt', format: 'a4' });
       const pageWidth = doc.internal.pageSize.getWidth();
       const pageHeight = doc.internal.pageSize.getHeight();
-      const margin = 40;
+      const marginX = 48;
+      const marginY = 56;
+      const bodyLineHeight = 18;
 
       const titleText = productData.title || productData.id || 'Produto';
+      const uniqueImages = Array.from(new Set((productImagesForPdf || []).filter(Boolean)));
+      if (currentImageForPdf) {
+        const existingIndex = uniqueImages.indexOf(currentImageForPdf);
+        if (existingIndex > 0) {
+          uniqueImages.splice(existingIndex, 1);
+          uniqueImages.unshift(currentImageForPdf);
+        } else if (existingIndex === -1) {
+          uniqueImages.unshift(currentImageForPdf);
+        }
+      }
+
+      const heroImageSrc = uniqueImages[0] || null;
+      const galleryImages = uniqueImages.slice(1, 5);
+
       doc.setFont('helvetica', 'bold');
-      doc.setFontSize(22);
-      doc.text(titleText, margin, margin + 20);
+      doc.setFontSize(26);
+      doc.text(titleText, marginX, marginY);
 
-      const columnsTop = margin + 36;
-      const imageColumnWidth = (pageWidth - margin * 2) * 0.42;
-      const textColumnX = margin + imageColumnWidth + 30;
-      const textColumnWidth = pageWidth - margin - textColumnX;
-      const columnHeight = pageHeight - margin - columnsTop;
+      let cursorY = marginY + 30;
 
-      const infoLineHeight = 16;
-      let textCursorY = columnsTop;
+      if (productData.category) {
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(14);
+        doc.setTextColor(110);
+        doc.text(productData.category, marginX, cursorY);
+        doc.setTextColor(0);
+        cursorY += 24;
+      }
 
-      const imageData = await resolveImageData(currentImageForPdf);
-      if (imageData) {
-        const { dataUrl, width, height } = imageData;
-        const ratio = Math.min(imageColumnWidth / width, columnHeight / height, 1);
+      const heroMaxWidth = pageWidth - marginX * 2;
+      const heroMaxHeight = pageHeight * 0.42;
+      const heroTop = cursorY;
+      let heroHeightDrawn = 0;
+
+      const heroImageData = await getImageData(heroImageSrc);
+      if (heroImageData) {
+        const { dataUrl, width, height } = heroImageData;
+        const ratio = Math.min(heroMaxWidth / width, heroMaxHeight / height, 1);
         const drawWidth = width * ratio;
         const drawHeight = height * ratio;
-        const offsetX = margin + (imageColumnWidth - drawWidth) / 2;
-        const imageY = columnsTop + (columnHeight - drawHeight) / 2;
+        const imageX = marginX + (heroMaxWidth - drawWidth) / 2;
+        const imageY = heroTop;
         let format = 'JPEG';
         if (/image\/png/i.test(dataUrl)) format = 'PNG';
         else if (/image\/webp/i.test(dataUrl)) format = 'WEBP';
-        doc.addImage(dataUrl, format, offsetX, imageY, drawWidth, drawHeight);
+        doc.addImage(dataUrl, format, imageX, imageY, drawWidth, drawHeight);
+        heroHeightDrawn = drawHeight;
       } else {
+        const placeholderHeight = heroMaxHeight * 0.6;
         doc.setDrawColor(180);
         doc.setLineWidth(1);
-        doc.roundedRect(margin, columnsTop, imageColumnWidth, columnHeight, 8, 8, 'D');
+        doc.roundedRect(marginX, heroTop, heroMaxWidth, placeholderHeight, 10, 10, 'D');
         doc.setFont('helvetica', 'normal');
         doc.setFontSize(12);
-        doc.text('Imagem não disponível', margin + imageColumnWidth / 2, columnsTop + columnHeight / 2, { align: 'center' });
+        doc.text('Imagem não disponível', marginX + heroMaxWidth / 2, heroTop + placeholderHeight / 2, { align: 'center' });
+        heroHeightDrawn = placeholderHeight;
       }
 
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(14);
-      doc.text('Informações', textColumnX, textCursorY);
-      textCursorY += infoLineHeight + 2;
+      cursorY = heroTop + heroHeightDrawn + 32;
 
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(12);
+      const textWidth = pageWidth - marginX * 2;
       const metaLines = [
         `Categoria: ${productData.category || '—'}`,
         productData.code ? `Código: ${productData.code}` : null,
@@ -175,39 +209,108 @@
         productData.reference ? `Referência: ${productData.reference}` : null
       ].filter(Boolean);
 
-      metaLines.forEach(line => {
-        doc.text(line, textColumnX, textCursorY);
-        textCursorY += infoLineHeight;
-      });
+      if (metaLines.length) {
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(16);
+        doc.text('Informações', marginX, cursorY);
+        cursorY += 24;
 
-      if (metaLines.length) textCursorY += 4;
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(12);
+        metaLines.forEach(line => {
+          doc.text(line, marginX, cursorY);
+          cursorY += bodyLineHeight;
+        });
 
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(14);
-      doc.text('Descrição', textColumnX, textCursorY);
-      textCursorY += infoLineHeight + 2;
+        cursorY += 10;
+      }
 
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(12);
       const descriptionText = (productData.description && productData.description.trim()) ? productData.description : '—';
-      const descLines = doc.splitTextToSize(descriptionText, textColumnWidth);
-      doc.text(descLines, textColumnX, textCursorY);
-      textCursorY += descLines.length * infoLineHeight;
-      textCursorY += 6;
+      if (descriptionText) {
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(16);
+        doc.text('Descrição', marginX, cursorY);
+        cursorY += 24;
+
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(12);
+        const descLines = doc.splitTextToSize(descriptionText, textWidth);
+        descLines.forEach(line => {
+          doc.text(line, marginX, cursorY);
+          cursorY += bodyLineHeight;
+        });
+
+        cursorY += 10;
+      }
 
       if (specsForPdf.length) {
         doc.setFont('helvetica', 'bold');
-        doc.setFontSize(14);
-        doc.text('Especificações', textColumnX, textCursorY);
-        textCursorY += infoLineHeight + 2;
+        doc.setFontSize(16);
+        doc.text('Especificações', marginX, cursorY);
+        cursorY += 24;
 
         doc.setFont('helvetica', 'normal');
         doc.setFontSize(12);
         specsForPdf.forEach(([k, v]) => {
-          const specLines = doc.splitTextToSize(`${k}: ${v}`, textColumnWidth);
-          doc.text(specLines, textColumnX, textCursorY);
-          textCursorY += specLines.length * infoLineHeight;
+          const specLines = doc.splitTextToSize(`${k}: ${v}`, textWidth);
+          specLines.forEach(line => {
+            doc.text(line, marginX, cursorY);
+            cursorY += bodyLineHeight;
+          });
+          cursorY += 4;
         });
+      }
+
+      doc.addPage();
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(22);
+      doc.text(titleText, marginX, marginY);
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(14);
+      doc.setTextColor(110);
+      doc.text('Galeria complementar', marginX, marginY + 26);
+      doc.setTextColor(0);
+
+      const galleryStartY = marginY + 44;
+      const availableWidth = pageWidth - marginX * 2;
+      const availableHeight = pageHeight - galleryStartY - marginY;
+      const columns = 2;
+      const gap = 24;
+      const rows = Math.max(1, Math.ceil((galleryImages.length || 4) / columns));
+      const cellWidth = (availableWidth - gap * (columns - 1)) / columns;
+      const cellHeight = (availableHeight - gap * (rows - 1)) / rows;
+
+      if (!galleryImages.length) {
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(12);
+        doc.text('Imagens adicionais não disponíveis.', marginX, galleryStartY);
+      } else {
+        for (let i = 0; i < galleryImages.length; i++) {
+          const src = galleryImages[i];
+          const row = Math.floor(i / columns);
+          const col = i % columns;
+          const cellX = marginX + col * (cellWidth + gap);
+          const cellY = galleryStartY + row * (cellHeight + gap);
+
+          const imgData = await getImageData(src);
+          if (imgData) {
+            const { dataUrl, width, height } = imgData;
+            const ratio = Math.min(cellWidth / width, cellHeight / height, 1);
+            const drawWidth = width * ratio;
+            const drawHeight = height * ratio;
+            const offsetX = cellX + (cellWidth - drawWidth) / 2;
+            const offsetY = cellY + (cellHeight - drawHeight) / 2;
+            let format = 'JPEG';
+            if (/image\/png/i.test(dataUrl)) format = 'PNG';
+            else if (/image\/webp/i.test(dataUrl)) format = 'WEBP';
+            doc.addImage(dataUrl, format, offsetX, offsetY, drawWidth, drawHeight);
+          } else {
+            doc.setDrawColor(200);
+            doc.setLineWidth(1);
+            doc.rect(cellX, cellY, cellWidth, cellHeight, 'D');
+          }
+        }
       }
 
       const filename = `${slugify(titleText)}.pdf`;
@@ -261,6 +364,8 @@
         ...imgs.map((src) => ({ type: 'img', src })),
         ...vids.map((src, i) => ({ type: 'video', src, poster: posters[i] || posters[0] }))
       ];
+
+      productImagesForPdf = Array.from(new Set(imgs.filter(Boolean)));
 
       const mainVideo = document.getElementById('mainVideo');
 
@@ -421,6 +526,7 @@
       if (desc) desc.textContent = 'Não foi possível ler products.json.';
       productData = null;
       specsForPdf = [];
+      productImagesForPdf = [];
       if (downloadBtn) {
         downloadBtn.disabled = true;
         downloadBtn.removeAttribute('aria-busy');
