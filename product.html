@@ -99,19 +99,31 @@
       padding: 1rem;
     }
 
-    .detail-actions {
-      margin: 1rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: .6rem;
-    }
-
     .detail-download-btn {
       display: inline-flex;
       align-items: center;
       gap: .45rem;
       font-weight: 600;
       letter-spacing: .01em;
+    }
+
+    .detail-specs-header {
+      margin: 1.2rem 0 .6rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .detail-specs-header h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .detail-specs-header .detail-download-btn {
+      margin-left: auto;
     }
 
     .detail-download-btn:disabled {
@@ -266,14 +278,15 @@
         <div class="detail-meta">
           <span id="category" class="badge"></span>
         </div>
-        <div class="detail-actions">
+        <p id="desc" class="muted"></p>
+        <div class="detail-specs-header">
+          <h2 id="specsHeading">Especificações</h2>
           <button id="downloadPdfBtn" class="btn-cta detail-download-btn" type="button">
             <span aria-hidden="true">⬇️</span>
             <span>Baixar PDF</span>
           </button>
         </div>
-        <p id="desc" class="muted"></p>
-        <table class="specs" id="specsTable" aria-label="Especificações"></table>
+        <table class="specs" id="specsTable" aria-labelledby="specsHeading"></table>
         <div id="extraMeta" style="margin-top:.6rem;"></div>
       </article>
     </section>
