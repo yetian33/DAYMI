@@ -285,7 +285,11 @@ function updateUrlParams() {
   const { grid, searchInput, categorySelect } = els();
   if (!grid) return;
   if (typeof history === 'undefined' || typeof history.replaceState !== 'function') return;
-  const params = new URLSearchParams();
+  const params = new URLSearchParams(location.search);
+  // 保留其他（例如详情页的 id），只更新搜索相关参数
+  params.delete('search');
+  params.delete('cat');
+  params.delete('page');
   const q = searchInput ? searchInput.value.trim() : '';
   const cat = categorySelect ? categorySelect.value : '';
   if (q) params.set('search', q);
