@@ -157,9 +157,13 @@
 
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(26);
-      doc.text(titleText, marginX, marginY);
+      const titleMaxWidth = pageWidth - marginX * 2;
+      const titleLines = doc.splitTextToSize(titleText, titleMaxWidth);
+      doc.text(titleLines, marginX, marginY);
 
-      let cursorY = marginY + 30;
+      const titleLineHeight = doc.getLineHeightFactor() * doc.internal.getFontSize();
+      const titleBlockHeight = titleLineHeight * titleLines.length;
+      let cursorY = marginY + titleBlockHeight + 18;
 
       if (productData.category) {
         doc.setFont('helvetica', 'normal');
@@ -265,14 +269,18 @@
 
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(22);
-      doc.text(titleText, marginX, marginY);
+      const secondTitleLines = doc.splitTextToSize(titleText, titleMaxWidth);
+      doc.text(secondTitleLines, marginX, marginY);
+      const secondTitleLineHeight = doc.getLineHeightFactor() * doc.internal.getFontSize();
+      const secondTitleBlockHeight = secondTitleLineHeight * secondTitleLines.length;
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(14);
       doc.setTextColor(110);
-      doc.text('Galeria complementar', marginX, marginY + 26);
+      const galleryHeadingY = marginY + secondTitleBlockHeight + 18;
+      doc.text('Galeria complementar', marginX, galleryHeadingY);
       doc.setTextColor(0);
 
-      const galleryStartY = marginY + 44;
+      const galleryStartY = galleryHeadingY + 18;
       const availableWidth = pageWidth - marginX * 2;
       const availableHeight = pageHeight - galleryStartY - marginY;
       const columns = 2;
