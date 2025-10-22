@@ -139,6 +139,7 @@
       const marginX = 48;
       const marginY = 56;
       const bodyLineHeight = 18;
+      const titleFontSize = 22;
 
       const titleText = productData.title || productData.id || 'Produto';
       const uniqueImages = Array.from(new Set((productImagesForPdf || []).filter(Boolean)));
@@ -160,10 +161,11 @@
 
       const logoSrc = 'assets/icons/daymi-3.png';
       const logoData = await getImageData(logoSrc);
+      let logoRender = null;
       if (logoData) {
         const { dataUrl: logoUrl, width: logoWidth, height: logoHeight } = logoData;
-        const logoMaxWidth = contentWidth * 0.25;
-        const logoMaxHeight = 80;
+        const logoMaxWidth = contentWidth * 0.32;
+        const logoMaxHeight = 96;
         const logoRatio = Math.min(logoMaxWidth / logoWidth, logoMaxHeight / logoHeight, 1);
         const drawLogoWidth = logoWidth * logoRatio;
         const drawLogoHeight = logoHeight * logoRatio;
@@ -171,12 +173,19 @@
         let logoFormat = 'PNG';
         if (/image\/jpeg/i.test(logoUrl)) logoFormat = 'JPEG';
         else if (/image\/webp/i.test(logoUrl)) logoFormat = 'WEBP';
-        doc.addImage(logoUrl, logoFormat, logoX, cursorY, drawLogoWidth, drawLogoHeight);
-        cursorY += drawLogoHeight + 32;
+        logoRender = {
+          url: logoUrl,
+          format: logoFormat,
+          width: drawLogoWidth,
+          height: drawLogoHeight,
+          x: logoX
+        };
+        doc.addImage(logoRender.url, logoRender.format, logoRender.x, cursorY, logoRender.width, logoRender.height);
+        cursorY += logoRender.height + 32;
       }
 
       doc.setFont('helvetica', 'bold');
-      doc.setFontSize(26);
+      doc.setFontSize(titleFontSize);
       const titleMaxWidth = contentWidth;
       const titleLines = doc.splitTextToSize(titleText, titleMaxWidth);
       doc.text(titleLines, marginX, cursorY);
@@ -287,20 +296,28 @@
 
       doc.addPage();
 
+      let secondCursorY = marginY;
+
+      if (logoRender) {
+        doc.addImage(logoRender.url, logoRender.format, logoRender.x, secondCursorY, logoRender.width, logoRender.height);
+        secondCursorY += logoRender.height + 32;
+      }
+
       doc.setFont('helvetica', 'bold');
-      doc.setFontSize(22);
+      doc.setFontSize(titleFontSize);
       const secondTitleLines = doc.splitTextToSize(titleText, titleMaxWidth);
-      doc.text(secondTitleLines, marginX, marginY);
+      doc.text(secondTitleLines, marginX, secondCursorY);
       const secondTitleLineHeight = doc.getLineHeightFactor() * doc.internal.getFontSize();
       const secondTitleBlockHeight = secondTitleLineHeight * secondTitleLines.length;
+      secondCursorY += secondTitleBlockHeight + 18;
+
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(14);
       doc.setTextColor(110);
-      const galleryHeadingY = marginY + secondTitleBlockHeight + 18;
-      doc.text('Galeria complementar', marginX, galleryHeadingY);
+      doc.text('Galeria complementar', marginX, secondCursorY);
       doc.setTextColor(0);
 
-      const galleryStartY = galleryHeadingY + 18;
+      const galleryStartY = secondCursorY + 18;
       const availableWidth = pageWidth - marginX * 2;
       const availableHeight = pageHeight - galleryStartY - marginY;
       const columns = 2;
