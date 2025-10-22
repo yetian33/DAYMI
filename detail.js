@@ -155,15 +155,35 @@
       const heroImageSrc = uniqueImages[0] || null;
       const galleryImages = uniqueImages.slice(1, 5);
 
+      const contentWidth = pageWidth - marginX * 2;
+      let cursorY = marginY;
+
+      const logoSrc = 'assets/icons/daymi-3.png';
+      const logoData = await getImageData(logoSrc);
+      if (logoData) {
+        const { dataUrl: logoUrl, width: logoWidth, height: logoHeight } = logoData;
+        const logoMaxWidth = contentWidth * 0.25;
+        const logoMaxHeight = 80;
+        const logoRatio = Math.min(logoMaxWidth / logoWidth, logoMaxHeight / logoHeight, 1);
+        const drawLogoWidth = logoWidth * logoRatio;
+        const drawLogoHeight = logoHeight * logoRatio;
+        const logoX = marginX + (contentWidth - drawLogoWidth) / 2;
+        let logoFormat = 'PNG';
+        if (/image\/jpeg/i.test(logoUrl)) logoFormat = 'JPEG';
+        else if (/image\/webp/i.test(logoUrl)) logoFormat = 'WEBP';
+        doc.addImage(logoUrl, logoFormat, logoX, cursorY, drawLogoWidth, drawLogoHeight);
+        cursorY += drawLogoHeight + 32;
+      }
+
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(26);
-      const titleMaxWidth = pageWidth - marginX * 2;
+      const titleMaxWidth = contentWidth;
       const titleLines = doc.splitTextToSize(titleText, titleMaxWidth);
-      doc.text(titleLines, marginX, marginY);
+      doc.text(titleLines, marginX, cursorY);
 
       const titleLineHeight = doc.getLineHeightFactor() * doc.internal.getFontSize();
       const titleBlockHeight = titleLineHeight * titleLines.length;
-      let cursorY = marginY + titleBlockHeight + 18;
+      cursorY += titleBlockHeight + 18;
 
       if (productData.category) {
         doc.setFont('helvetica', 'normal');
@@ -174,7 +194,7 @@
         cursorY += 24;
       }
 
-      const heroMaxWidth = pageWidth - marginX * 2;
+      const heroMaxWidth = contentWidth;
       const heroMaxHeight = pageHeight * 0.42;
       const heroTop = cursorY;
       let heroHeightDrawn = 0;
