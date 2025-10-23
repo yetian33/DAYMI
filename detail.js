@@ -1,14 +1,50 @@
 // detail.js — lógica da página de detalhes + tema
 (function () {
 
+  const resolveAssetPath = (() => {
+    if (typeof window.__DAYMI_RESOLVE_ASSET__ === 'function') {
+      return window.__DAYMI_RESOLVE_ASSET__;
+    }
+    const { pathname } = window.location;
+    let base = '';
+    if (/\/produtos\//.test(pathname)) {
+      base = '../';
+    } else if (/\/product\//.test(pathname)) {
+      const segments = pathname.split('/').filter(Boolean);
+      const productIndex = segments.indexOf('product');
+      if (productIndex !== -1) {
+        const extra = segments.length - productIndex - 1;
+        base = '../'.repeat(extra + 1);
+      } else {
+        base = '../';
+      }
+    }
+    return (path = '') => {
+      if (!path) return path;
+      if (/^(?:[a-z]+:)?\/\//i.test(path) || path.startsWith('data:')) return path;
+      let clean = path.trim();
+      if (clean.startsWith('/')) clean = clean.slice(1);
+      if (!clean) return base;
+      return `${base}${clean}`;
+    };
+  })();
+
   // Dados
   const params = new URLSearchParams(location.search);
-  const pid = params.get('id');
+  let pid = params.get('id');
+
+  if (!pid) {
+    const segments = location.pathname.split('/').filter(Boolean);
+    const productIndex = segments.indexOf('product');
+    if (productIndex !== -1 && segments[productIndex + 1]) {
+      pid = decodeURIComponent(segments[productIndex + 1]);
+    }
+  }
 
   const backLink = document.querySelector('.back');
   if (backLink) {
     // 用当前详情页 URL 里带过来的 search/cat/page 拼一个“带参首页”
-    const fallback = new URL('index.html', location.href);
+    const fallback = new URL(resolveAssetPath('produtos/'), window.location.href);
     ['search', 'cat', 'page'].forEach(k => {
       const v = params.get(k);
       if (v) fallback.searchParams.set(k, v);
@@ -25,7 +61,7 @@
         // 否则再尝试纯 history.back()
         history.back();
       } else {
-        window.location.href = 'index.html';
+        window.location.href = resolveAssetPath('produtos/');
       }
     });
   }
@@ -159,7 +195,7 @@
       const contentWidth = pageWidth - marginX * 2;
       let cursorY = marginY;
 
-      const logoSrc = 'assets/icons/daymi-3.png';
+      const logoSrc = resolveAssetPath('assets/icons/daymi-3.png');
       const logoData = await getImageData(logoSrc);
       let logoRender = null;
       if (logoData) {
@@ -384,7 +420,7 @@
     return;
   }
 
-  fetch('products.json')
+  fetch(resolveAssetPath('products.json'))
     .then(res => res.json())
     .then(data => {
       const list = data.products || [];
@@ -401,9 +437,12 @@
       if (category) category.textContent = p.category || '—';
 
       // Galeria（支持图片 + 视频）
-      const imgs = Array.isArray(p.images) && p.images.length ? p.images : (p.image ? [p.image] : []);
-      const vids = Array.isArray(p.videos) ? p.videos : (p.video ? [p.video] : []);
-      const posters = Array.isArray(p.videoPosters) ? p.videoPosters : (p.videoPoster ? [p.videoPoster] : []);
+      const imgs = (Array.isArray(p.images) && p.images.length ? p.images : (p.image ? [p.image] : []))
+        .map(src => resolveAssetPath(src));
+      const vids = (Array.isArray(p.videos) ? p.videos : (p.video ? [p.video] : []))
+        .map(src => resolveAssetPath(src));
+      const posters = (Array.isArray(p.videoPosters) ? p.videoPosters : (p.videoPoster ? [p.videoPoster] : []))
+        .map(src => resolveAssetPath(src));
 
       const media = [
         ...imgs.map((src) => ({ type: 'img', src })),
