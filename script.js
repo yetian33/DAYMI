@@ -3,6 +3,35 @@
 // Util
 const $ = (id) => document.getElementById(id);
 
+const BASE_PATH = (() => {
+  const { pathname } = window.location;
+  if (/\/produtos\//.test(pathname)) {
+    return '../';
+  }
+  if (/\/product\//.test(pathname)) {
+    const segments = pathname.split('/').filter(Boolean);
+    const productIndex = segments.indexOf('product');
+    if (productIndex !== -1) {
+      const extra = segments.length - productIndex - 1; // subfolders under /product/
+      return '../'.repeat(extra + 1);
+    }
+    return '../';
+  }
+  return '';
+})();
+
+function resolveAssetPath(path = '') {
+  if (!path) return path;
+  if (/^(?:[a-z]+:)?\/\//i.test(path) || path.startsWith('data:')) return path;
+  let clean = path.trim();
+  if (clean.startsWith('/')) clean = clean.slice(1);
+  if (!clean) return BASE_PATH;
+  return `${BASE_PATH}${clean}`;
+}
+
+window.__DAYMI_BASE_PATH__ = BASE_PATH;
+window.__DAYMI_RESOLVE_ASSET__ = resolveAssetPath;
+
 // Estado global
 let PRODUCTS = [];
 let FILTERED = [];
@@ -104,7 +133,7 @@ function parseCategory(p) {
 async function loadProducts() {
   const { grid, searchInput } = els();
   try {
-    const res = await fetch('products.json');
+    const res = await fetch(resolveAssetPath('products.json'));
     const data = await res.json();
     PRODUCTS = (data && Array.isArray(data.products)) ? data.products : [];
 
@@ -312,8 +341,9 @@ function renderGrid(items) {
   for (const p of items) {
     const card = document.createElement('article');
     card.className = 'card';
+    const cardImage = resolveAssetPath(p.image || '');
     card.innerHTML = `
-      <img class="thumb" src="${p.image}" alt="${p.title}" loading="lazy">
+      <img class="thumb" src="${cardImage}" alt="${p.title}" loading="lazy">
       <div class="card-body">
         <h3 class="card-title">${p.title}</h3>
         <div class="muted">Código: ${p.id}</div>
@@ -325,20 +355,21 @@ function renderGrid(items) {
     bindPressFX(card);
 
     // 点击 -> 详情页（忽略文字选择复制）
-   card.addEventListener('click', (e) => {
-  const selection = window.getSelection();
-  if (selection && selection.toString().length > 0) return;
+    card.addEventListener('click', (e) => {
+      const selection = window.getSelection();
+      if (selection && selection.toString().length > 0) return;
 
-  const { searchInput, categorySelect } = els();
-  const q = searchInput ? searchInput.value : '';
-  const cat = categorySelect ? categorySelect.value : '';
-  const url = new URL('product.html', location.href);
-  url.searchParams.set('id', p.id);
-  if (q)   url.searchParams.set('search', q);
-  if (cat) url.searchParams.set('cat', cat);
-  url.searchParams.set('page', String(currentPage)); // 关键：带上当前页
-  window.location.href = url.toString();
-});
+      const { searchInput, categorySelect } = els();
+      const q = searchInput ? searchInput.value : '';
+      const cat = categorySelect ? categorySelect.value : '';
+      const detailPath = resolveAssetPath('product/');
+      const url = new URL(detailPath, window.location.href);
+      url.searchParams.set('id', p.id);
+      if (q) url.searchParams.set('search', q);
+      if (cat) url.searchParams.set('cat', cat);
+      url.searchParams.set('page', String(currentPage)); // 关键：带上当前页
+      window.location.href = url.toString();
+    });
 
 
 
@@ -346,7 +377,7 @@ function renderGrid(items) {
     card.addEventListener('click', (e) => {
       if (e.altKey && dialog && dialogImage && dialogTitle) {
         e.preventDefault();
-        dialogImage.src = p.image;
+        dialogImage.src = cardImage;
         dialogImage.alt = p.title;
         dialogTitle.textContent = p.title;
         dialogDesc.textContent = p.description || '';
@@ -508,11 +539,11 @@ function renderHero() {
   // 你的素材列表：可混合不同比例（示例）
   // script.js -> renderHero() 里
   const slides = [
-    { image: 'assets/16-9/1.png', title: 'Banner 1', sub: '描述1', alt: 'Banner 1', link: 'product.html?id=XWL0065' },
-    { image: 'assets/16-9/2.png', title: 'Banner 2', sub: '描述2', alt: 'Banner 2', link: 'product.html?id=XWL0044' },
-    { image: 'assets/16-9/3.png', title: 'Banner 3', sub: '描述3', alt: 'Banner 3', link: 'product.html?id=XWL0045' },
-    { image: 'assets/16-9/4.png', title: 'Banner 4', sub: '描述4', alt: 'Banner 4', link: 'product.html?id=XWL0042' },
-    { image: 'assets/16-9/5.png', title: 'Banner 5', sub: '描述4', alt: 'Banner 5', link: 'product.html?id=XWL0006-B' },
+    { image: resolveAssetPath('assets/16-9/1.png'), title: 'Banner 1', sub: '描述1', alt: 'Banner 1', link: resolveAssetPath('product/?id=XWL0065') },
+    { image: resolveAssetPath('assets/16-9/2.png'), title: 'Banner 2', sub: '描述2', alt: 'Banner 2', link: resolveAssetPath('product/?id=XWL0044') },
+    { image: resolveAssetPath('assets/16-9/3.png'), title: 'Banner 3', sub: '描述3', alt: 'Banner 3', link: resolveAssetPath('product/?id=XWL0045') },
+    { image: resolveAssetPath('assets/16-9/4.png'), title: 'Banner 4', sub: '描述4', alt: 'Banner 4', link: resolveAssetPath('product/?id=XWL0042') },
+    { image: resolveAssetPath('assets/16-9/5.png'), title: 'Banner 5', sub: '描述4', alt: 'Banner 5', link: resolveAssetPath('product/?id=XWL0006-B') },
 
   ].filter(s => !!s.image);
 
@@ -948,7 +979,7 @@ function setupLogoSlide(options = {}) {
 
 function setupLogoReturnFlag() {
   try {
-    const logoLinks = document.querySelectorAll('a[href$="index.html"], a[href="/"], a[href="./"]');
+    const logoLinks = document.querySelectorAll('a[href$="index.html"], a[href="/"], a[href="./"], a[href="../"]');
     if (!logoLinks.length) return;
 
     const markReplay = () => {
