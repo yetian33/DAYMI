@@ -3,34 +3,99 @@
 // Util
 const $ = (id) => document.getElementById(id);
 
-const BASE_PATH = (() => {
-  const { pathname } = window.location;
-  if (/\/produtos\//.test(pathname)) {
-    return '../';
-  }
-  if (/\/product\//.test(pathname)) {
-    const segments = pathname.split('/').filter(Boolean);
-    const productIndex = segments.indexOf('product');
-    if (productIndex !== -1) {
-      const extra = segments.length - productIndex - 1; // subfolders under /product/
-      return '../'.repeat(extra + 1);
+const BASE_URL = (() => {
+  try {
+    const current = document.currentScript || document.querySelector('script[src*="script.js"]');
+    if (current && current.src) {
+      return new URL('.', current.src);
     }
-    return '../';
+  } catch (_) { }
+  try {
+    return new URL('.', window.location.href);
+  } catch (_) {
+    return new URL('.', window.location.origin || '/');
   }
-  return '';
 })();
 
+const BASE_PATH = BASE_URL.toString();
+
 function resolveAssetPath(path = '') {
-  if (!path) return path;
+  if (!path) return BASE_PATH;
   if (/^(?:[a-z]+:)?\/\//i.test(path) || path.startsWith('data:')) return path;
-  let clean = path.trim();
-  if (clean.startsWith('/')) clean = clean.slice(1);
-  if (!clean) return BASE_PATH;
-  return `${BASE_PATH}${clean}`;
+  const clean = path.trim();
+  try {
+    return new URL(clean, BASE_URL).toString();
+  } catch (_) {
+    return clean;
+  }
 }
 
 window.__DAYMI_BASE_PATH__ = BASE_PATH;
 window.__DAYMI_RESOLVE_ASSET__ = resolveAssetPath;
+
+const CATEGORY_SLUGS = {
+  'sub:VASOS|MODERNO': 'vaso-moderno',
+};
+
+const SLUG_TO_CATEGORY = Object.entries(CATEGORY_SLUGS).reduce((acc, [cat, slug]) => {
+  acc[slug] = cat;
+  return acc;
+}, {});
+
+const PRODUTOS_BASE_URL = (() => {
+  try {
+    return new URL('./produtos/', BASE_URL);
+  } catch (_) {
+    return null;
+  }
+})();
+
+const PRODUTOS_BASE_PATHNAME = (() => {
+  if (!PRODUTOS_BASE_URL) return '/produtos/';
+  const { pathname } = PRODUTOS_BASE_URL;
+  return pathname.endsWith('/') ? pathname : `${pathname}/`;
+})();
+
+const PRODUTOS_INDEX_PATHNAME = (() => {
+  if (!PRODUTOS_BASE_URL) return '/produtos/index.html';
+  const url = new URL('./index.html', PRODUTOS_BASE_URL);
+  return url.pathname;
+})();
+
+function ensureTrailingSlash(pathname) {
+  if (!pathname.endsWith('/')) return `${pathname}/`;
+  return pathname;
+}
+
+function getProdutosBasePathname() {
+  if (window.location.pathname === PRODUTOS_INDEX_PATHNAME) {
+    return PRODUTOS_INDEX_PATHNAME;
+  }
+  return PRODUTOS_BASE_PATHNAME;
+}
+
+function buildSlugPathname(slug) {
+  if (!slug) return getProdutosBasePathname();
+  try {
+    const url = new URL(`./${slug}/`, PRODUTOS_BASE_URL || BASE_URL);
+    return ensureTrailingSlash(url.pathname);
+  } catch (_) {
+    const base = ensureTrailingSlash(getProdutosBasePathname());
+    const joined = `${base}${slug}`;
+    return ensureTrailingSlash(joined);
+  }
+}
+
+function getSlugInfoFromPath(pathname = window.location.pathname) {
+  if (!pathname) return null;
+  const normalized = pathname.replace(/index\.html$/i, '');
+  const match = normalized.toLowerCase().match(/\/produtos\/([^/]+)\/?$/);
+  if (!match) return null;
+  const slug = decodeURIComponent(match[1]);
+  const category = SLUG_TO_CATEGORY[slug];
+  if (!category) return null;
+  return { slug, category };
+}
 
 // Estado global
 let PRODUCTS = [];
@@ -140,6 +205,7 @@ async function loadProducts() {
     renderCategoryOptions();
 
 const params = new URLSearchParams(location.search);
+const slugInfo = getSlugInfoFromPath();
 
 // 1) 恢复搜索词
 const q = params.get('search') || '';
@@ -147,7 +213,10 @@ if (searchInput) searchInput.value = decodeURIComponent(q);
 
 // 2) 恢复分类和值（比如 group:/sub:）
 const { categorySelect } = els();
-const cat = params.get('cat') || '';
+let cat = params.get('cat') || '';
+if (!cat && slugInfo) {
+  cat = slugInfo.category;
+}
 if (categorySelect && cat) categorySelect.value = cat;
 
 // 3) 恢复页码
@@ -322,11 +391,16 @@ function updateUrlParams() {
   const q = searchInput ? searchInput.value.trim() : '';
   const cat = categorySelect ? categorySelect.value : '';
   if (q) params.set('search', q);
-  if (cat) params.set('cat', cat);
+  const slugForCat = CATEGORY_SLUGS[cat];
+  if (!slugForCat && cat) params.set('cat', cat);
   if (currentPage > 1) params.set('page', String(currentPage));
   const query = params.toString();
-  const newUrl = query ? `${location.pathname}?${query}` : location.pathname;
-  history.replaceState({}, '', newUrl);
+  const targetPathname = slugForCat ? buildSlugPathname(slugForCat) : getProdutosBasePathname();
+  const newUrl = query ? `${targetPathname}?${query}` : targetPathname;
+  const currentUrl = `${location.pathname}${location.search}`;
+  if (newUrl !== currentUrl) {
+    history.replaceState({}, '', newUrl);
+  }
 }
 
 // 首页/详情共用网格渲染
