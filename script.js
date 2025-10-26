@@ -34,6 +34,8 @@ window.__DAYMI_BASE_PATH__ = BASE_PATH;
 window.__DAYMI_RESOLVE_ASSET__ = resolveAssetPath;
 
 const CATEGORY_SLUGS = {
+  'group:VASOS': 'vasos',
+  'group:ENFEITES': 'enfeites',
   'sub:VASOS|MODERNO': 'vaso-moderno',
   'sub:VASOS|DESIGN ESPECIAL': 'vaso-design-especial',
   'sub:ENFEITES|ANIMAL': 'enfeites-animal',
