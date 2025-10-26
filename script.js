@@ -35,6 +35,12 @@ window.__DAYMI_RESOLVE_ASSET__ = resolveAssetPath;
 
 const CATEGORY_SLUGS = {
   'sub:VASOS|MODERNO': 'vaso-moderno',
+  'sub:VASOS|DESIGN ESPECIAL': 'vaso-design-especial',
+  'sub:ENFEITES|ANIMAL': 'enfeites-animal',
+  'sub:ENFEITES|BAILARINA': 'enfeites-bailarina',
+  'sub:ENFEITES|PERSONAGEM': 'enfeites-personagem',
+  'sub:ENFEITES|FUNCIONAL': 'enfeites-funcional',
+  'sub:ENFEITES|ABSTRATAS': 'enfeites-abstratas',
 };
 
 const SLUG_TO_CATEGORY = Object.entries(CATEGORY_SLUGS).reduce((acc, [cat, slug]) => {
