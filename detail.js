@@ -179,15 +179,6 @@
 
       const titleText = productData.title || productData.id || 'Produto';
       const uniqueImages = Array.from(new Set((productImagesForPdf || []).filter(Boolean)));
-      if (currentImageForPdf) {
-        const existingIndex = uniqueImages.indexOf(currentImageForPdf);
-        if (existingIndex > 0) {
-          uniqueImages.splice(existingIndex, 1);
-          uniqueImages.unshift(currentImageForPdf);
-        } else if (existingIndex === -1) {
-          uniqueImages.unshift(currentImageForPdf);
-        }
-      }
 
       const heroImageSrc = uniqueImages[0] || null;
       const galleryImages = uniqueImages.slice(1, 5);
