@@ -1411,6 +1411,10 @@ main.container {
   gap: 1.6rem;
 }
 
+.page-produtos .catalog-filters {
+  display: none;
+}
+
 .filters-intro {
   display: grid;
   gap: .6rem;
