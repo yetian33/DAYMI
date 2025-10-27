@@ -543,80 +543,101 @@ body::before {
 }
 
 /* =========================
-   品牌标语（Brand Banner）
+   Hero imersivo
    ========================= */
-.brand-banner {
-  background: color-mix(in srgb, var(--topbar-bg) 70%, transparent);
-  text-align: center;
-  padding: 40px 0 36px;
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
+#sobre {
+  scroll-margin-top: calc(var(--topbar-height, 72px) + 32px);
 }
 
-.brand-line {
-  margin: 0;
-  font-weight: 700;
-  font-size: clamp(1.5rem, 1rem + 2vw, 2.2rem);
-  color: var(--brandbar-title);
-  /* 跟随主题变量 */
-  letter-spacing: .08em;
-  line-height: 1.3;
-}
-
-.brand-sub {
-  margin: .8rem auto 0;
-  font-size: clamp(.9rem, .7rem + .4vw, 1.05rem);
-  color: var(--brandbar-sub);
-  /* 跟随主题变量 */
-  max-width: 680px;
-  line-height: 1.5;
-}
-
-/* =========================
-   Hero
-   ========================= */
 .hero {
   position: relative;
   display: grid;
-  align-items: center;
+  align-items: end;
   width: 100%;
-  min-height: clamp(480px, 70vh, 720px);
+  min-height: max(100vh, 720px);
+  min-height: max(100svh, 720px);
+  margin: 0;
+  padding: clamp(6rem, 14vh, 8rem) 0 clamp(5rem, 16vh, 6.5rem);
   overflow: hidden;
-  margin-top: 1rem;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -6% -10% -10% -6%;
+  background: radial-gradient(140% 120% at 18% 8%, rgba(255, 105, 1, 0.22) 0%, transparent 62%);
+  opacity: .55;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(5, 7, 11, 0.78) 20%, rgba(5, 7, 11, 0.15) 60%, rgba(5, 7, 11, 0.72) 100%);
+  background:
+    linear-gradient(180deg, rgba(5, 7, 11, .76) 0%, rgba(5, 7, 11, .38) 45%, rgba(5, 7, 11, .82) 100%),
+    linear-gradient(120deg, rgba(10, 14, 22, .75) 20%, rgba(10, 14, 22, .1) 62%, rgba(5, 7, 11, .78) 92%);
   pointer-events: none;
   z-index: 0;
 }
 
 .hero-media {
   position: absolute;
-  inset: 0;
+  inset: -2% -4% 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--topbar-bg);
-  transform: scale(1.02);
-  filter: saturate(1.05);
+  transform: scale(1.08);
+  filter: saturate(1.08) contrast(1.03);
+  transition: opacity .6s ease, transform 18s ease;
+  animation: hero-pan 26s ease-in-out infinite alternate;
+  opacity: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  text-align: left;
-  padding: clamp(3rem, 6vw, 5rem) 0;
   display: grid;
-  gap: 1.1rem;
+  gap: clamp(1.4rem, 1.05rem + 1.6vw, 2.4rem);
+  align-content: end;
+  max-width: min(1020px, 92vw);
+}
+
+.hero-brand {
+  display: grid;
+  gap: .5rem;
+  max-width: min(420px, 48ch);
+  padding: clamp(1.2rem, 1rem + 1.4vw, 1.9rem) clamp(1.4rem, 1rem + 1.8vw, 2.3rem);
+  border-radius: 1.3rem;
+  border: 1px solid color-mix(in srgb, var(--frosted-border) 88%, transparent);
+  background: color-mix(in srgb, rgba(10, 14, 22, .78) 76%, transparent);
+  backdrop-filter: blur(18px) saturate(135%);
+  box-shadow: 0 22px 48px rgba(4, 6, 12, .42);
+  margin-bottom: clamp(1.4rem, 1.2rem + 1vh, 2.2rem);
+}
+
+.hero-brand-line {
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: clamp(1.1rem, .95rem + .9vw, 1.5rem);
+  color: var(--brandbar-title);
+}
+
+.hero-brand-sub {
+  margin: 0;
+  font-size: clamp(.92rem, .82rem + .38vw, 1.08rem);
+  color: var(--brandbar-sub);
+  line-height: 1.5;
 }
 
 .hero-eyebrow {
   font-size: .85rem;
-  letter-spacing: .22em;
+  letter-spacing: .28em;
   text-transform: uppercase;
   color: var(--brand-200);
   font-weight: 600;
@@ -624,20 +645,43 @@ body::before {
 
 .hero-title {
   margin: 0;
-  font-size: clamp(2rem, 1.6rem + 2vw, 3.2rem);
+  font-size: clamp(2.8rem, 1.9rem + 3.4vw, 4.4rem);
+  letter-spacing: -.015em;
+  line-height: 1.05;
   max-width: 16ch;
 }
 
 .hero-sub {
   margin: 0;
-  color: var(--muted-strong);
-  max-width: 42ch;
+  color: color-mix(in srgb, var(--muted-strong) 88%, transparent);
+  max-width: 46ch;
+  font-size: clamp(1.02rem, .95rem + .6vw, 1.18rem);
 }
 
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
+}
+
+@keyframes hero-pan {
+  from {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: scale(1.16) translate3d(0, -2%, 0);
+  }
+}
+
+.hero-media.is-fading {
+  opacity: .4;
+  transition: opacity .32s ease;
+}
+
+:root.has-js .hero:not(.hero-ready) .hero-media {
+  opacity: 0;
 }
 
 .btn-cta {
@@ -1152,22 +1196,57 @@ main.container {
 }
 
 
+@media (max-width: 1024px) {
+  .hero {
+    padding: clamp(5rem, 12vh, 7rem) 0 clamp(3.8rem, 12vh, 5.8rem);
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 1.7rem + 3vw, 3.8rem);
+  }
+
+  .hero-brand {
+    max-width: min(460px, 52ch);
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
-    min-height: 460px;
+    min-height: max(100svh, 600px);
+    padding: clamp(4.6rem, 18vh, 6.4rem) 0 clamp(3.4rem, 20vh, 5.2rem);
   }
 
   .hero-content {
     text-align: center;
+    align-items: center;
+    justify-items: center;
+    gap: clamp(1.2rem, 2vh, 1.8rem);
   }
 
-  .hero-title,
+  .hero-brand {
+    margin-inline: auto;
+    text-align: center;
+    background: color-mix(in srgb, rgba(10, 14, 22, .82) 82%, transparent);
+    box-shadow: 0 18px 42px rgba(4, 6, 12, .36);
+  }
+
+  .hero-eyebrow,
   .hero-sub {
     margin-inline: auto;
   }
 
+  .hero-title {
+    max-width: 18ch;
+  }
+
   .hero-cta {
     justify-content: center;
+  }
+
+  .hero-controls {
+    bottom: clamp(1.4rem, 8vh, 2.4rem);
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -1944,741 +2023,116 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 /* ===== Hero 轮播控件 ===== */
+
 .hero-controls {
   position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: 56px 1fr 56px;
+  bottom: clamp(2.4rem, 7vh, 3.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
   align-items: center;
+  gap: .75rem;
   pointer-events: none;
-  /* 只让按钮可点击 */
+  z-index: 2;
 }
 
 .hero-prev,
 .hero-next {
   pointer-events: auto;
-  background: color-mix(in srgb, var(--card) 70%, transparent);
-  border: 1px solid var(--border);
-  color: var(--text);
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
   border-radius: 999px;
-  cursor: pointer;
-  margin: 0 .6rem;
+  border: 1px solid color-mix(in srgb, var(--frosted-border) 82%, transparent);
+  background: color-mix(in srgb, rgba(10, 14, 22, .78) 78%, transparent);
+  color: #fff;
   font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+  backdrop-filter: blur(14px) saturate(140%);
 }
 
 .hero-prev:hover,
-.hero-next:hover {
-  background: color-mix(in srgb, var(--card) 90%, transparent);
+.hero-next:hover,
+.hero-prev:focus-visible,
+.hero-next:focus-visible {
+  background: color-mix(in srgb, var(--brand) 38%, rgba(10, 14, 22, .86));
+  border-color: color-mix(in srgb, var(--brand) 55%, transparent);
+  transform: translateY(-2px);
+  outline: none;
 }
 
 .hero-dots {
   pointer-events: auto;
-  display: flex;
-  gap: .4rem;
-  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
 }
 
 .hero-dot {
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--text) 35%, transparent);
-  border: 1px solid var(--border);
+  border: 1px solid color-mix(in srgb, var(--text) 26%, transparent);
+  background: color-mix(in srgb, var(--text) 18%, transparent);
+  opacity: .65;
+  transition: transform .25s ease, background .25s ease, border-color .25s ease, opacity .25s ease;
   cursor: pointer;
 }
 
 .hero-dot[aria-selected="true"] {
   background: var(--brand);
   border-color: var(--brand);
-}
-
-.hero-media {
-  transition: opacity .6s ease;
   opacity: 1;
-  /* 你原来的 */
+  transform: scale(1.15);
 }
 
-.hero-media.is-fading {
-  opacity: 1;
-}
-
-/* 触摸设备上，按钮稍微大一点 */
 @media (pointer: coarse) {
-
   .hero-prev,
   .hero-next {
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .hero-controls {
+    gap: 1rem;
   }
 }
 
-/* 尊重“减少动态效果” */
 @media (prefers-reduced-motion: reduce) {
   .hero-media {
+    animation: none;
+    transition: none;
+  }
+
+  .hero-prev,
+  .hero-next,
+  .hero-dot {
     transition: none;
   }
 }
 
-/* —— Hero 轮播控件：居中到底部，悬浮在图片上 —— */
-.hero {
-  position: relative;
+:root.has-js .reveal-on-scroll {
+  --reveal-delay: 0ms;
+  --reveal-distance: 64px;
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-distance), 0);
+  transition:
+    opacity .9s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+    transform .9s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
+  will-change: opacity, transform;
 }
 
-.hero-controls {
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  /* 控件距底部的距离，可调整 */
-  transform: translateX(-50%);
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  /* 去掉背景和边框，保持干净 */
-  background: none;
-  border: none;
-  padding: 0;
+:root.has-js .reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
-/* 左右箭头按钮 */
-.hero-prev,
-.hero-next {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, .35);
-  /* 可以保留轻微透明黑圆底，保证白色箭头清晰 */
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  line-height: 1;
-}
-
-.hero-prev:hover,
-.hero-next:hover {
-  background: rgba(0, 0, 0, .55);
-}
-
-/* 中间小点容器 */
-.hero-dots {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-}
-
-/* 小点样式 */
-.hero-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, .6);
-  cursor: pointer;
-}
-
-.hero-dot[aria-selected="true"] {
-  background: #fff;
-  transform: scale(1.15);
-}
-
-@media (max-width: 600px) {
-  .hero-controls {
-    bottom: 12px;
-  }
-
-  .hero-prev,
-  .hero-next {
-    width: 32px;
-    height: 32px;
-  }
-
-  .hero-dot {
-    width: 9px;
-    height: 9px;
-  }
-}
-
-/* === 覆写 Hero 控件：一条居中、贴近底部 === */
-.hero {
-  position: relative;
-}
-
-/* 确保绝对定位参照容器是 Hero 本身 */
-
-.hero-controls {
-  /* 覆写之前的 inset:0 / grid 布局 */
-  position: absolute;
-  top: auto;
-  right: auto;
-  /* 重置，避免旧值生效 */
-  left: 50%;
-  bottom: clamp(12px, 2vh, 22px);
-  /* 距底部，按需微调 */
-  transform: translateX(-50%);
-  z-index: 2;
-
-  display: inline-flex;
-  /* 一行：左箭头 · 小点 · 右箭头 */
-  align-items: center;
-  gap: .5rem;
-
-  pointer-events: auto;
-  /* 取消旧样式里的 pointer-events:none */
-  width: auto;
-  height: auto;
-  /* 防止铺满 */
-}
-
-/* 保留你现有的按钮/小点样式（可不改）——它们已在样式表里定义 */
-
-/* === Hero 控件样式调整 === */
-/* === Hero 控件统一对齐，高度+间距优化 === */
-.hero-controls {
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  z-index: 2;
-
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  /* 箭头和小圆点之间的距离更小 */
-}
-
-/* 左右箭头：只保留箭头符号，不要任何背景 */
-.hero-prev,
-.hero-next {
-  background: none !important;
-  /* 强制去掉背景 */
-  border: none !important;
-  /* 强制去掉边框 */
-  color: #fff;
-  font-size: 1.4rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.hero-prev:hover,
-.hero-next:hover {
-  color: var(--brand);
-  /* 只变颜色，不出现圈 */
-  background: none !important;
-  /* 悬停时依旧没有背景 */
-  border: none !important;
-}
-
-/* 小圆点：小巧圆形 */
-.hero-dots {
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-}
-
-.hero-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, .6);
-  cursor: pointer;
-  padding: 0;
-}
-
-.hero-dot[aria-selected="true"] {
-  background: #fff;
-  transform: scale(1.25);
-}
-
-/* === Hero 控件：底部居中，箭头与小点对称排布 === */
-.hero-controls {
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  z-index: 2;
-
-  display: flex;
-  /* 横向排布 */
-  align-items: center;
-  justify-content: center;
-  gap: .6rem;
-  /* 箭头与点之间的统一间距 */
-}
-
-/* 左右箭头：纯符号，无背景 */
-.hero-prev,
-.hero-next {
-  all: unset;
-  /* 清除所有默认样式（解决不对称问题的关键） */
-  cursor: pointer;
-  color: #fff;
-  font-size: 1.4rem;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-}
-
-.hero-prev:hover,
-.hero-next:hover {
-  color: var(--brand);
-  /* 悬停时只变颜色 */
-}
-
-/* 小圆点：小巧圆形 */
-.hero-dots {
-  display: flex;
-  align-items: center;
-  gap: .35rem;
-  /* 点与点之间的间距 */
-}
-
-.hero-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, .6);
-  cursor: pointer;
-}
-
-.hero-dot[aria-selected="true"] {
-  background: #fff;
-  transform: scale(1.25);
-}
-
-/* 小屏：文案叠在图片上（保持原设计） */
-.hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 4rem 0;
-}
-
-/* 大屏：把文案移到图片下面，避免任何遮挡 */
-@media (min-width: 1200px) {
-  .hero {
-    margin-bottom: 1rem;
-  }
-
-  .hero-content {
-    position: static;
-    /* 不再覆盖图片 */
-    padding: 1rem 0 0;
-    /* 轻一点 */
-  }
-}
-
-
-.hero {
-  position: relative;
-  /* 作为定位参考 */
-}
-
-.hero-cta {
-  position: absolute;
-  bottom: 1.5rem;
-  /* 与底部的距离 */
-  right: 1.5rem;
-  /* 与右边的距离 */
-  margin: 0;
-}
-
-/* 1) Hero 作为定位参照 */
-.hero {
-  position: relative;
-  /* 已有则保留 */
-}
-
-/* 2) 取消 hero-content 的相对定位，避免成为绝对定位参照 */
-.hero-content {
-  position: static;
-  /* 覆盖原来的 position: relative */
-}
-
-/* 3) 按钮容器固定到 Hero 区域右下角 */
-.hero-cta {
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  margin: 0;
-  /* 避免额外偏移 */
-  text-align: right;
-  /* 可选：让容器内文本靠右 */
-  z-index: 2;
-  /* 确保在背景图上层 */
-}
-
-/* 可选：按钮本体是行内块，避免换行布局影响 */
-.hero-cta .btn-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-media {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
-  /* 左 1/10 | 中 8/10 | 右 1/10 */
-  background: #fff;
-  /* 两侧留白 */
-}
-
-.hero-media::before {
-  content: "";
-  grid-column: 2;
-  /* 中间 5/7 */
-  width: 100%;
-  height: 100%;
-  background-image: var(--hero-img, none);
-  /* ← 方案2用到的变量 */
-  background-size: contain;
-  /* 保持比例，完整显示 */
-  background-repeat: no-repeat;
-  background-position: center center;
-  /* 居中对齐 */
-}
-
-
-/* =========================
-   Hero
-   ========================= */
-.hero {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  /* 固定 16:9 比例 */
-  max-height: 80vh;
-  /* 允许占满视口高度（视需要可改 90vh/80vh） */
-  overflow: hidden;
-}
-
-/* 背景图：铺满，不留边 */
-.hero-media {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  /* ← 关键：从 contain 改为 cover */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #000;
-}
-
-/* 可选：视频占位缩略图的样式（与图片缩略图保持一致的圆角/边框） */
-.video-thumb {
-  display: grid;
-  place-items: center;
-  font-weight: 600;
-  color: #fff;
-  background: #0006;
-  border-radius: .5rem;
-  border: 2px solid transparent;
-  aspect-ratio: 1;
-}
-
-.thumbs .video-thumb.active {
-  border-color: var(--brand);
-}
-
-/* === 防止 Hero 图被裁切：始终完整显示 === */
-.hero {
-  aspect-ratio: 16 / 9;
-  /* 固定比例，防止高度忽大忽小 */
-  max-height: 80vh;
-  /* 你现在也是这个值，可按需 70~90vh */
-  overflow: hidden;
-}
-
-.hero-media {
-  position: absolute;
-  inset: 0;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain !important;
-  /* 关键：完整显示，不裁切 */
-  background-color: #fff;
-  /* 留白时有背景色，不突兀 */
-}
-
-/* 轮播控件依然贴底部居中（与你现有样式一致） */
-.hero-controls {
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
-/* === Hero 留白跟随主题：暗=黑，亮=白（最终覆盖） === */
-:root {
-  --hero-blank: var(--topbar-bg);
-}
-
-/* 默认暗主题：黑色 */
-html.light {
-  --hero-blank: var(--topbar-bg);
-}
-
-/* 把所有重复样式的影响盖掉（包含最后那段 cover/黑底） */
-.hero .hero-media {
-  background-color: var(--hero-blank) !important;
-  background-size: contain !important;
-}
-
-
-/* 2) Hero 与筛选区之间：去掉筛选卡片的边框和阴影，使其“贴合”背景 */
-.filters {
-  border: none !important;
-  box-shadow: none !important;
-  background: var(--bg) !important;
-  /* 与整页背景一致 */
-  padding-top: 0.8rem;
-  /* 上边距稍小，避免像一条横条 */
-}
-
-/* 如果你喜欢“卡片感”但不要线：用很浅的卡片色即可 */
-/* .filters { background: color-mix(in srgb, var(--bg) 92%, #fff 8%) !important; }
-
-/* 3) 联系方式区：去掉顶边线，避免在底部再出现一条线 */
-.contact-section {
-  border-top: none !important;
-}
-
-/* 4) Hero 的留白颜色仍跟随主题（之前做过），无需改。
-      但如果想让 Hero 的留白和页面完全“融为一体”，也可以这样： */
-/* :root       { --hero-blank: var(--bg); }
-   html.light  { --hero-blank: var(--bg); } */
-
-
-/* FINAL: 让顶栏与品牌标语区在任意主题下一致 */
-.brand-banner {
-  background: var(--topbar-bg) !important;
-  border-bottom: none;
-}
-
-
-/* —— Hero 按钮固定在轮播区域右下角 —— */
-.hero-cta {
-  position: absolute;
-  right: 210px;
-  bottom: 4px;
-  z-index: 2;
-  /* 确保盖在图片上方 */
-  margin: 0;
-  /* 去掉可能的外边距影响 */
-  text-align: right;
-  /* 容器内对齐到右侧 */
-}
-
-
-/* 强化优先级：让 Hero 里的 CTA 随屏幕缩放 */
-.hero .hero-content .btn-cta{
-  font-size: clamp(.60rem, 2.0vw, .95rem) !important;
-  padding: .40em .3em !important;   /* 用 em，随字号同比例缩放 */
-  border-radius: .55em !important;
-  line-height: 1.05 !important;
-}
-
-
-/* 小屏位移微调，避免遮挡主体图像 */
-@media (max-width: 640px){
-  .hero-cta{ right: .9rem !important; bottom: .9rem !important; }
-}
-
-/* 极小屏再收一档 */
-@media (max-width: 360px){
-  .hero .hero-content .btn-cta{ font-size: .68rem !important; }
-}
-
-/* 1) 手机强制单列，并允许子项缩小 */
-@media (max-width: 860px){
-  .detail-layout{ grid-template-columns: 1fr !important; }
-  .detail-gallery, .detail-info{ min-width: 0 !important; }
-}
-
-/* 2) 媒体元素在手机上彻底自适应，不再强行正方形 */
-@media (max-width: 860px){
-  .detail-main{
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: auto !important;   /* 取消 1:1，按原图比例展示 */
-    object-fit: contain !important;
-    max-height: min(70vh, 92vw) !important; /* 既不超屏也不遮挡 */
-  }
-}
-
-/* 3) 任意超长内容（例如 XWL0043 的“Dimensões”）都可换行，避免把页面撑宽 */
-.specs th, .specs td{
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-/* 4) 兜底：所有 img/video 在任何屏幕都不超过容器宽度 */
-img, video{ max-width: 100%; height: auto; }
-
-/* === 手机端：把 CTA 固定到 Hero 右下角，略离边 === */
-@media (max-width: 640px){
-  .hero { position: relative !important; }            /* 以 .hero 为定位参照 */
-  .hero .hero-content { position: static !important; }/* 避免 .hero-content 成为参照 */
-
-  /* 关键：覆盖所有旧的居中/位移规则 */
-  .hero .hero-content .hero-cta{
-    position: absolute !important;
-    inset: auto .75rem .90rem auto !important;  /* right=12px, bottom≈14px */
-    transform: none !important;                 /* 取消 translateX(-50%) */
-    left: auto !important;                      /* 取消 left:50% */
-    right: .001rem !important;
-    bottom: 1.1rem !important;
-    margin: 0 !important;
-    text-align: right !important;
-    z-index: 5 !important;
-  }
-
-  /* 取消按钮自身的相对位移（有一段给了 left:-40px; top:-20px;） */
-  .hero .hero-content .btn-cta{
-    position: static !important;
-    left: auto !important;
-    top: auto !important;
-    transform: none !important;
-  }
-}
-
-/* ==== Mobile-only: make the hero CTA smaller and move it to the right ==== */
-@media (max-width: 820px) {
-  /* 让容器变成 flex 并靠右对齐，彻底生效 */
-  .hero-cta {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  /* 缩小按钮尺寸（只影响手机端） */
-  .hero-cta .btn-cta {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* —— 手机端：把 CTA 固定到 Hero 右下角（不影响箭头与圆点位置）—— */
-@media (max-width: 768px) {
-  /* 让 hero 整个区域作为定位参照 */
-  .hero {
-    position: relative;
-  }
-
-  /* 保持 hero-content 内的文字居中，只去掉多余的底部间距 */
-  .hero-content {
-    padding: 1rem 0 2.5rem;
-    position: relative; /* 保持相对定位，供内部文字用 */
-  }
-
-  /* 固定 CTA 按钮到右下角 */
-  .hero .hero-cta {
-    position: absolute;
-    right: clamp(8px, 2vw, 16px);
-    bottom: calc(10px + env(safe-area-inset-bottom));
-    z-index: 3;
-    margin: 0;
-  }
-
-  /* 移动端按钮视觉优化 */
-  .hero .btn-cta {
-    padding: .55rem .9rem;
-    border-radius: .65rem;
-    box-shadow: 0 6px 16px rgba(0,0,0,.28);
-    backdrop-filter: saturate(140%) blur(6px);
-  }
-
-  /* 控制圆点与箭头的布局保持底部居中 */
-  .hero-controls {
-    position: absolute;
-    bottom: clamp(8px, 2vw, 16px);
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .4rem;
-    z-index: 2;
-    transform: none; /* 取消任何 translate */
-    padding-bottom: 0; /* 不再需要额外间距 */
-  }
-}
-
-@media (max-width: 640px){
-  .hero-cta{ bottom: 2.4rem !important; } /* 想更高就再加大数值 */
-}
-
-/* 调整 Hero 里 CTA（“Verifique os detalhes”）按钮的垂直位置：数值越大越往上 */
-.hero .hero-cta {
-  bottom: 0.7rem !important; /* 试 1.6rem ~ 3.2rem 之间，找到你满意的高度 */
-}
-
-/* === 手机端 Hero 区域位置微调 === */
-@media (max-width: 768px) {
-
-  /* 1️⃣ 让箭头 + 小圆点往上移动一点 */
-  .hero-controls {
-    bottom: 0.7rem !important;  /* 数值越大越往上，比如原本是 0.9rem 左右 */
-  }
-
-  /* 2️⃣ 让“Verifique os detalhes”按钮往下移动一点 */
-  .hero .hero-cta {
-    bottom: 0.3rem !important;  /* 数值越小越靠下，比如原本是 0.9rem */
-  }
-}
-
-/* === 手机端：缩小 Hero CTA 按钮和文字（强覆盖版）=== */
-@media (max-width: 768px) {
-  /* 缩小按钮文字 + 内边距（数值可按需再调） */
-  :root .hero .hero-cta .btn-cta {
-    font-size: 0.85rem !important;     /* 文字更小 */
-    padding: 0.52rem 0.85rem !important;/* 按钮更紧凑 */
-    border-radius: 0.6rem !important;
-  }
-
-  /* 进一步整体缩小一点（可选） */
-  :root .hero .hero-cta {
-    transform: scale(0.60) !important;
-    transform-origin: right bottom !important;
-  }
-}
-
-/* 桌面端（>=1024px）微调 Hero 按钮与控件位置 */
-@media (min-width: 1024px) {
-  .hero { position: relative; }
-
-  /* ① 按钮：数值越大越“往上”；越小越靠底部 */
-  .hero .hero-cta {
-    position: absolute;
-    right: 13rem;
-    bottom: 2rem;           /* ← 调这个高度 */
-    z-index: 3;
-    transform: none;        /* 若之前为手机端做过 scale，这里复位 */
-  }
-
-  /* ② 箭头+圆点：整体在底部居中；bottom 越大越“往上” */
-  .hero-controls {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 1rem;           /* ← 调这个高度 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .6rem;
-    z-index: 2;
-    transform: none;
-  }
+:root.has-js.prefers-reduced-motion .reveal-on-scroll {
+  transition: none;
+  opacity: 1;
+  transform: none;
 }
 
 /* ==== 顶栏尺寸调整（Logo 更大、更醒目） ==== */

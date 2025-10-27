@@ -33,6 +33,8 @@ function resolveAssetPath(path = '') {
 window.__DAYMI_BASE_PATH__ = BASE_PATH;
 window.__DAYMI_RESOLVE_ASSET__ = resolveAssetPath;
 
+document.documentElement.classList.add('has-js');
+
 const CATEGORY_SLUGS = {
   'group:VASOS': 'vasos',
   'group:ENFEITES': 'enfeites',
@@ -615,11 +617,17 @@ function renderHero() {
   const hero = document.querySelector('.hero');
   const heroMedia = document.getElementById('heroMedia');
   const heroTitle = document.getElementById('heroTitle');
+  const heroSub = document.querySelector('.hero-sub');
+  const heroEyebrow = document.querySelector('.hero-eyebrow');
   const heroLink = document.getElementById('heroLink');
   const dotsWrap = document.getElementById('heroDots');
   const btnPrev = document.getElementById('heroPrev');
   const btnNext = document.getElementById('heroNext');
   if (!hero || !heroMedia || !heroTitle || !heroLink || !dotsWrap) return;
+
+  const defaultTitle = heroTitle.dataset.defaultText || heroTitle.textContent || '';
+  const defaultSub = heroSub ? (heroSub.dataset.defaultText || heroSub.textContent || '') : '';
+  const defaultEyebrow = heroEyebrow ? heroEyebrow.textContent || '' : '';
 
   // 你的素材列表：可混合不同比例（示例）
   // script.js -> renderHero() 里
@@ -657,36 +665,27 @@ function renderHero() {
     });
   }
 
-  // 设置容器比例 = 当前图比例（例如 1536/1024）
-//  function setHeroRatio(w, h) {
-  //  hero.style.aspectRatio = `${w} / ${h}`;
-//    hero.style.maxHeight = '100vh'; // 防止超高（可按需调整/删除）
-  //}
-
-  // 固定使用 16:9，不再随图片天然宽高变动
-function setHeroRatio() {
-  hero.style.aspectRatio = '16 / 9';
-  hero.style.maxHeight = '80vh'; // 你也可以改 90vh/80vh
-}
- 
-
   async function renderSlide(i, withFade = true) {
     const s = slides[i];
     if (!s) return;
 
     try {
-      const meta = await loadMeta(s.image);
-      setHeroRatio(meta.w, meta.h);
-     //setHeroRatio(); // 固定 16:9
-    } catch {
-      // 回退（如果图片元信息失败，给个常见比例）
-     hero.style.aspectRatio = '16 / 9';
-    }
+      await loadMeta(s.image);
+    } catch { /* ignore metadata errors */ }
 
     if (withFade && !reduceMotion) heroMedia.classList.add('is-fading');
     heroMedia.style.backgroundImage = `url('${s.image}')`;
-    heroTitle.textContent = s.title || '';
+    hero.classList.add('hero-ready');
+
+    heroTitle.textContent = s.title || defaultTitle;
+    if (heroSub) heroSub.textContent = s.sub || defaultSub;
+    if (heroEyebrow) heroEyebrow.textContent = s.eyebrow || defaultEyebrow;
     heroLink.href = s.link || '#';
+    if (s.title) {
+      heroLink.setAttribute('aria-label', `Ver detalhes de ${s.title}`);
+    } else {
+      heroLink.removeAttribute('aria-label');
+    }
 
     // 更新圆点选中态
     dotsWrap.querySelectorAll('.hero-dot').forEach((d, di) => {
@@ -926,6 +925,47 @@ function bindEvents() {
   setupNavDropdowns();
 }
 
+function initScrollReveal() {
+  const revealEls = document.querySelectorAll('.reveal-on-scroll');
+  if (!revealEls.length) return;
+
+  const root = document.documentElement;
+  const reduceMotionQuery = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reduceMotion = !!(reduceMotionQuery && reduceMotionQuery.matches);
+  if (reduceMotion) {
+    root.classList.add('prefers-reduced-motion');
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const target = entry.target;
+      const { revealDelay, revealDistance } = target.dataset;
+      if (revealDelay) target.style.setProperty('--reveal-delay', `${revealDelay}ms`);
+      if (revealDistance) target.style.setProperty('--reveal-distance', revealDistance);
+      target.classList.add('is-visible');
+      obs.unobserve(target);
+    });
+  }, {
+    threshold: 0.2,
+    rootMargin: '0px 0px -12% 0px',
+  });
+
+  revealEls.forEach((el) => {
+    const { revealDelay, revealDistance } = el.dataset;
+    if (revealDelay) el.style.setProperty('--reveal-delay', `${revealDelay}ms`);
+    if (revealDistance) el.style.setProperty('--reveal-distance', revealDistance);
+    observer.observe(el);
+  });
+}
+
 // DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   loadTheme();
@@ -935,6 +975,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const isHome = location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname === '';
   const shouldReplayLogo = isHome && consumeLogoReplayFlag();
   setupLogoSlide({ playOnLoad: shouldReplayLogo });
+  initScrollReveal();
 });
 
 // 顶栏高度 → 动态写入 CSS 变量，正文自动避让
