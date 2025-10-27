@@ -391,6 +391,7 @@ function updateUrlParams() {
   const { grid, searchInput, categorySelect } = els();
   if (!grid) return;
   if (typeof history === 'undefined' || typeof history.replaceState !== 'function') return;
+  const isDetailPage = document.documentElement.classList.contains('detail-page');
   const params = new URLSearchParams(location.search);
   // 保留其他（例如详情页的 id），只更新搜索相关参数
   params.delete('search');
@@ -403,7 +404,9 @@ function updateUrlParams() {
   if (!slugForCat && cat) params.set('cat', cat);
   if (currentPage > 1) params.set('page', String(currentPage));
   const query = params.toString();
-  const targetPathname = slugForCat ? buildSlugPathname(slugForCat) : getProdutosBasePathname();
+  const targetPathname = isDetailPage
+    ? window.location.pathname
+    : (slugForCat ? buildSlugPathname(slugForCat) : getProdutosBasePathname());
   const newUrl = query ? `${targetPathname}?${query}` : targetPathname;
   const currentUrl = `${location.pathname}${location.search}`;
   if (newUrl !== currentUrl) {
