@@ -38,7 +38,14 @@
         <span class="sr-only">DAYMI</span>
       </a>
 
-      <nav class="main-nav" aria-label="Menu principal">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
+        <span class="sr-only">Abrir menu principal</span>
+        <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+
+      <nav id="mainNav" class="main-nav" aria-label="Menu principal">
         <ul class="nav-list">
           <li class="nav-item has-dropdown">
             <button class="nav-link" type="button">
@@ -106,6 +113,7 @@
         </button>
       </div>
     </div>
+    <div class="nav-overlay" aria-hidden="true"></div>
   </section>
 
   <header class="container header">
