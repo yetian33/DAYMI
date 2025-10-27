@@ -1405,54 +1405,8 @@ main.container {
   box-shadow: var(--shadow-md);
 }
 
-.catalog-hero {
-  margin: clamp(2.5rem, 5vw, 4rem) 0;
-}
-
-.catalog-hero-inner {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: clamp(2rem, 5vw, 3.5rem);
-  align-items: center;
-  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 3rem);
-  border-radius: 2rem;
-  border: 1px solid var(--frosted-border);
-  background: color-mix(in srgb, var(--card) 88%, rgba(255, 255, 255, 0.12) 12%);
-  box-shadow: var(--shadow-lg);
-  backdrop-filter: blur(18px);
-}
-
-.catalog-hero-copy {
-  display: grid;
-  gap: 1rem;
-}
-
-.catalog-hero-copy h1 {
-  margin: 0;
-  font-size: clamp(1.8rem, 1.4rem + 2vw, 2.6rem);
-}
-
-.catalog-hero-copy p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.catalog-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: .5rem;
-}
-
-.catalog-hero-media {
-  min-height: clamp(220px, 40vw, 320px);
-  border-radius: 1.6rem;
-  background: linear-gradient(150deg, rgba(255, 105, 1, 0.55), rgba(117, 112, 255, 0.3));
-  box-shadow: var(--shadow-md);
-}
-
 .catalog-filters {
-  margin: clamp(2rem, 4vw, 3rem) auto;
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto;
   display: grid;
   gap: 1.6rem;
 }
