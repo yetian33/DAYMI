@@ -763,8 +763,8 @@ body.nav-open .nav-toggle-bar::after {
   content: "";
   position: absolute;
   inset: -6% -10% -10% -6%;
-  background: radial-gradient(140% 120% at 18% 8%, rgba(255, 105, 1, 0.22) 0%, transparent 62%);
-  opacity: .55;
+  background: none;
+  opacity: 0;
   pointer-events: none;
   z-index: 0;
 }
@@ -773,9 +773,7 @@ body.nav-open .nav-toggle-bar::after {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(5, 7, 11, .76) 0%, rgba(5, 7, 11, .38) 45%, rgba(5, 7, 11, .82) 100%),
-    linear-gradient(120deg, rgba(10, 14, 22, .75) 20%, rgba(10, 14, 22, .1) 62%, rgba(5, 7, 11, .78) 92%);
+  background: none;
   pointer-events: none;
   z-index: 0;
 }
