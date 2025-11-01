@@ -746,11 +746,11 @@ function renderHero() {
   // 你的素材列表：可混合不同比例（示例）
   // script.js -> renderHero() 里
   const slides = [
-    { image: resolveAssetPath('assets/16-9/1.png'), title: 'Banner 1', sub: '描述1', alt: 'Banner 1', link: resolveAssetPath('product/?id=XWL0065') },
-    { image: resolveAssetPath('assets/16-9/2.png'), title: 'Banner 2', sub: '描述2', alt: 'Banner 2', link: resolveAssetPath('product/?id=XWL0044') },
-    { image: resolveAssetPath('assets/16-9/3.png'), title: 'Banner 3', sub: '描述3', alt: 'Banner 3', link: resolveAssetPath('product/?id=XWL0045') },
-    { image: resolveAssetPath('assets/16-9/4.png'), title: 'Banner 4', sub: '描述4', alt: 'Banner 4', link: resolveAssetPath('product/?id=XWL0042') },
-    { image: resolveAssetPath('assets/16-9/5.png'), title: 'Banner 5', sub: '描述4', alt: 'Banner 5', link: resolveAssetPath('product/?id=XWL0006-B') },
+    { image: resolveAssetPath('assets/16-9/1.png'), link: resolveAssetPath('product/?id=XWL0065') },
+    { image: resolveAssetPath('assets/16-9/2.png'), link: resolveAssetPath('product/?id=XWL0044') },
+    { image: resolveAssetPath('assets/16-9/3.png'), link: resolveAssetPath('product/?id=XWL0045') },
+    { image: resolveAssetPath('assets/16-9/4.png'), link: resolveAssetPath('product/?id=XWL0042') },
+    { image: resolveAssetPath('assets/16-9/5.png'), link: resolveAssetPath('product/?id=XWL0006-B') },
 
   ].filter(s => !!s.image);
 
@@ -791,9 +791,25 @@ function renderHero() {
     heroMedia.style.backgroundImage = `url('${s.image}')`;
     hero.classList.add('hero-ready');
 
-    heroTitle.textContent = s.title || defaultTitle;
-    if (heroSub) heroSub.textContent = s.sub || defaultSub;
-    if (heroEyebrow) heroEyebrow.textContent = s.eyebrow || defaultEyebrow;
+    if ('title' in s) {
+      heroTitle.textContent = s.title || '';
+    } else {
+      heroTitle.textContent = defaultTitle;
+    }
+    if (heroSub) {
+      if ('sub' in s) {
+        heroSub.textContent = s.sub || '';
+      } else {
+        heroSub.textContent = defaultSub;
+      }
+    }
+    if (heroEyebrow) {
+      if ('eyebrow' in s) {
+        heroEyebrow.textContent = s.eyebrow || '';
+      } else {
+        heroEyebrow.textContent = defaultEyebrow;
+      }
+    }
     heroLink.href = s.link || '#';
     if (s.title) {
       heroLink.setAttribute('aria-label', `Ver detalhes de ${s.title}`);
