@@ -513,6 +513,10 @@
                 thumbEl = document.createElement('div');
                 thumbEl.className = 'video-thumb';
                 thumbEl.textContent = '▶ Vídeo';
+                thumbEl.style.display = 'flex';
+                thumbEl.style.alignItems = 'center';
+                thumbEl.style.justifyContent = 'center';
+                thumbEl.style.fontWeight = '600';
               }
               // 让视频缩略图整体看起来像图片（受 .thumbs img 的样式影响）
               thumbEl.style.cursor = 'pointer';
