@@ -811,11 +811,7 @@ body.nav-open .nav-toggle-bar::after {
 }
 
 .hero-title {
-  margin: 0;
-  font-size: clamp(2.8rem, 1.9rem + 3.4vw, 4.4rem);
-  letter-spacing: -.015em;
-  line-height: 1.05;
-  max-width: 16ch;
+  display: none;
 }
 
 .hero-sub {
