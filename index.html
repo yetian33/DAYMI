@@ -1,352 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DAYMl: A Inovação Lidera o Futuro.</title>
-  <meta name="description" content="DAYMI catálogo de produtos — site estático, rápido e responsivo.">
-
-  <link rel="stylesheet" href="styles.css" />
-
-
-
+  <title>DAYMI · Neo Collection</title>
+  <meta name="description" content="DAYMI — catálogo exclusivo com design contemporâneo e artesanal." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- 预加载主题，避免闪烁 -->
-  <script>
-    (function preloadTheme() {
-      try {
-        const saved = localStorage.getItem('theme') || 'light'; // 默认改为亮色
-        if (saved === 'light') {
-          document.documentElement.classList.add('light');
-        } else {
-          document.documentElement.classList.remove('light');
-        }
-      } catch (_) { }
-    })();
-  </script>
-
-
-  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
-<body>
-  <!-- 顶部区域：整条纯白（全宽） -->
-  <section class="top-bar" aria-label="Topo">
-    <div class="container top-bar-inner">
-      <a href="/" aria-label="Voltar para a Início" class="brand-link">
-        <span class="logo-anim" aria-hidden="true">
-          <img src="assets/icons/daymi-3.png" alt="" class="top-logo" />
-        </span>
-        <span class="sr-only">DAYMI</span>
+<body class="home-skin">
+  <header class="home-topbar">
+    <div class="home-topbar__inner">
+      <a class="home-logo" href="/">
+        <span>DAYMI</span>
       </a>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
-        <span class="sr-only">Abrir menu principal</span>
-        <span class="nav-toggle-box" aria-hidden="true">
-          <span class="nav-toggle-bar"></span>
-        </span>
-      </button>
-
-      <nav id="mainNav" class="main-nav" aria-label="Menu principal">
-        <ul class="nav-list">
-          <li class="nav-item has-dropdown">
-            <button class="nav-link" type="button">
-              SOBRE
-              <span class="nav-arrow" aria-hidden="true"></span>
-            </button>
-            <div class="dropdown" role="menu">
-              <a href="./#sobre" class="dropdown-link">A marca</a>
-              <a href="./#experiencia" class="dropdown-link">Experiência DAYMI</a>
-              <a href="./#contato" class="dropdown-link">Contato</a>
-            </div>
-          </li>
-          <li class="nav-item has-dropdown">
-            <a class="nav-link nav-link-dropdown" href="produtos/" aria-haspopup="true">
-              PRODUTOS
-              <span class="nav-arrow" aria-hidden="true"></span>
-            </a>
-            <div class="dropdown dropdown-wide" role="menu" aria-label="Categorias de produtos">
-              <div class="dropdown-column">
-                <span class="dropdown-heading">VASOS</span>
-                <a href="produtos/vaso-moderno/" data-cat-target="sub:VASOS|MODERNO" class="dropdown-link">Moderno</a>
-                <a href="produtos/vaso-design-especial/" data-cat-target="sub:VASOS|DESIGN ESPECIAL" class="dropdown-link">Design especial</a>
-                <a href="produtos/vasos/" data-cat-target="group:VASOS" class="dropdown-link dropdown-link-all">Ver todos os vasos</a>
-              </div>
-              <div class="dropdown-column dropdown-column-enfeites">
-                <span class="dropdown-heading">ENFEITES</span>
-                <a href="produtos/enfeites-animal/" data-cat-target="sub:ENFEITES|ANIMAL" class="dropdown-link">Animal</a>
-                <a href="produtos/enfeites-bailarina/" data-cat-target="sub:ENFEITES|BAILARINA" class="dropdown-link">Bailarina</a>
-                <a href="produtos/enfeites-personagem/" data-cat-target="sub:ENFEITES|PERSONAGEM" class="dropdown-link">Personagem</a>
-                <a href="produtos/enfeites-funcional/" data-cat-target="sub:ENFEITES|FUNCIONAL" class="dropdown-link">Funcional</a>
-                <a href="produtos/enfeites-abstratas/" data-cat-target="sub:ENFEITES|ABSTRATAS" class="dropdown-link">Abstratas</a>
-                <a href="produtos/enfeites/" data-cat-target="group:ENFEITES" class="dropdown-link dropdown-link-all">Ver todos os enfeites</a>
-              </div>
-              <div class="dropdown-column">
-                <span class="dropdown-heading">CATÁLOGO</span>
-                <a href="produtos/" data-cat-target="" class="dropdown-link dropdown-link-highlight">Todos os produtos</a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item has-dropdown">
-            <button class="nav-link" type="button">
-              CATÁLOGOS
-              <span class="nav-arrow" aria-hidden="true"></span>
-            </button>
-            <div class="dropdown" role="menu">
-              <a href="./#catalogos" class="dropdown-link">Coleções digitais</a>
-              <a href="./#newsletter" class="dropdown-link">Receber novidades</a>
-            </div>
-          </li>
-        </ul>
+      <nav class="home-menu" aria-label="Menu principal">
+        <a class="home-menu__link is-active" href="#inicio">INÍCIO</a>
+        <a class="home-menu__link" href="#neo">NEO COLLECTION</a>
+        <a class="home-menu__link" href="produtos/">PRODUTOS</a>
+        <a class="home-menu__link" href="#cadastro">NOVO CADASTRO</a>
+        <a class="home-menu__link" href="#login">LOGIN</a>
       </nav>
-
-      <div class="top-actions">
-        <form class="top-search" action="produtos/" role="search">
-          <label class="sr-only" for="searchInput">Pesquisar produtos</label>
-          <div class="search-wrapper condensed">
-            <input id="searchInput" name="search" type="search" placeholder="O que você procura?" autocomplete="off" />
-          </div>
-          <button id="searchBtn" type="button" class="btn-ghost small" aria-label="Limpar pesquisa">Limpar</button>
-        </form>
-
-        <button id="toggleThemeTop" class="btn icon-toggle" aria-label="Alternar tema">
-          <span class="icon sun" aria-hidden="true">☀️</span>
-          <span class="icon moon" aria-hidden="true">🌙</span>
+      <div class="home-actions" aria-label="Ações do site">
+        <button type="button" class="home-action" aria-label="Buscar">
+          <span>Q</span>
+        </button>
+        <button type="button" class="home-action" aria-label="Conta">
+          <span>☺</span>
+        </button>
+        <button type="button" class="home-action" aria-label="Carrinho">
+          <span>👜</span>
         </button>
       </div>
     </div>
-    <div class="nav-overlay" aria-hidden="true"></div>
-  </section>
-
-
-  <!-- Header：保留（CSS 已整体隐藏，不占位），可后续再用 -->
-  <header class="container header">
-    <h1 class="logo-wrapper">
-      <a href="/" class="logo-link">
-        <span class="logo-anim" aria-hidden="true">
-          <img src="assets/icons/daymi-3.png" alt="" class="logo-img" />
-        </span>
-        <span class="sr-only">Logo da empresa</span>
-      </a>
-    </h1>
-
-    <div class="header-actions">
-      <button id="toggleTheme" class="btn icon-toggle" aria-label="Alternar tema">
-        <span class="icon sun" aria-hidden="true">☀️</span>
-        <span class="icon moon" aria-hidden="true">🌙</span>
-      </button>
-    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-media" id="heroMedia" aria-hidden="true"></div>
-    <div class="hero-content container">
-      <span class="hero-eyebrow reveal-on-scroll" id="sobre" data-reveal-delay="140">Coleção assinatura 2025</span>
-      <h2 class="hero-title reveal-on-scroll" id="heroTitle" data-reveal-delay="220" data-default-text="DA YMI 新品 · 设计花器">DA YMI 新品 · 设计花器</h2>
-      <p class="hero-sub reveal-on-scroll" data-reveal-delay="300" data-default-text="O diálogo entre modernidade e natureza ilumina o aconchego do espaço com peças criadas para durar.">O diálogo entre modernidade e natureza ilumina o aconchego do espaço com peças criadas para durar.</p>
-      <div class="hero-cta reveal-on-scroll" data-reveal-delay="420">
-        <a id="heroLink" href="product/" class="btn-cta">Verifique os detalhes</a>
-        <a href="produtos/" class="btn-ghost">Explorar catálogo</a>
-      </div>
-    </div>
-    <!-- 轮播控件 -->
-    <div class="hero-controls" aria-label="Controle do carrossel">
-      <button class="hero-prev" id="heroPrev" aria-label="Anterior">‹</button>
-      <div class="hero-dots" id="heroDots" role="tablist" aria-label="Slides"></div>
-      <button class="hero-next" id="heroNext" aria-label="Próximo">›</button>
-    </div>
-  </section>
-
-  <section id="experiencia" class="experience reveal-on-scroll" aria-label="Destaques da experiência DAYMI" data-reveal-distance="96px">
-    <div class="container">
-      <div class="section-heading">
-        <span class="tag">EXPERIÊNCIA CURADA</span>
-        <h2>Design pensado para inspirar espaços sofisticados</h2>
-        <p>Cuidamos de cada coleção com um olhar atento à arquitetura de interiores, selecionando materiais nobres e acabamentos impecáveis.</p>
-      </div>
-      <div class="experience-grid">
-        <article class="experience-card reveal-on-scroll" data-reveal-delay="80">
-          <span class="experience-icon" aria-hidden="true">🪴</span>
-          <h3>Curadoria autoral</h3>
-          <p>Linhas assinadas por designers brasileiros e internacionais que celebram formas orgânicas e texturas surpreendentes.</p>
-        </article>
-        <article class="experience-card reveal-on-scroll" data-reveal-delay="180">
-          <span class="experience-icon" aria-hidden="true">✨</span>
-          <h3>Acabamentos premium</h3>
-          <p>Processos híbridos unem técnicas artesanais e tecnologia para entregar brilho e resistência superiores.</p>
-        </article>
-        <article class="experience-card reveal-on-scroll" data-reveal-delay="280">
-          <span class="experience-icon" aria-hidden="true">🤝</span>
-          <h3>Atendimento consultivo</h3>
-          <p>Equipe especializada para indicar combinações, montar composições e personalizar pedidos para projetos.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="collection-highlight reveal-on-scroll" aria-labelledby="collectionTitle" data-reveal-distance="90px">
-    <div class="container highlight-inner">
-      <div class="highlight-copy reveal-on-scroll" data-reveal-delay="140">
-        <span class="tag">LANÇAMENTO LIMITADO</span>
-        <h2 id="collectionTitle">Coleção Aurora em edição exclusiva</h2>
-        <p>Uma fusão de relevos esculturais e esmaltação translúcida que cria reflexos delicados em qualquer ambiente. Ideal para recepções, lounges e vitrines que pedem impacto visual.</p>
-        <ul>
-          <li>Peças numeradas com certificado de autenticidade.</li>
-          <li>Disponível em três tonalidades inspiradas em amanheceres tropicais.</li>
-          <li>Entrega expressa e suporte dedicado para projetos corporativos.</li>
-        </ul>
-        <div class="highlight-actions">
-          <a href="product/" class="btn-cta">Descobrir a linha</a>
-          <a href="#contato" class="btn-ghost">Conversar com especialista</a>
-        </div>
-      </div>
-      <div class="highlight-media reveal-on-scroll" role="presentation" aria-hidden="true" data-reveal-delay="260"></div>
-    </div>
-  </section>
-
-  <section id="catalogos" class="catalog-highlight reveal-on-scroll" aria-label="Catálogo DAYMI" data-reveal-distance="90px">
-    <div class="container catalog-highlight-inner">
-      <div class="catalog-highlight-copy reveal-on-scroll" data-reveal-delay="140">
-        <span class="tag">PRODUTOS CURADOS</span>
-        <h2>Descubra o catálogo completo da DAYMI</h2>
-        <p>Explore cada vaso e enfeite com filtros inteligentes, detalhes técnicos e opções para download direto do nosso portfólio.
+  <main>
+    <section id="inicio" class="hero-section">
+      <div class="hero-section__content">
+        <p class="hero-eyebrow">Neo Collection 2025</p>
+        <h1 class="hero-title">Design que envolve, artesania que emociona</h1>
+        <p class="hero-description">
+          A DAYMI apresenta uma curadoria exclusiva de peças autorais com texturas orgânicas, volumes esculturais
+          e a sutileza de uma paleta terrosa. Um convite para vestir ambientes com serenidade sofisticada.
         </p>
-        <div class="catalog-highlight-actions">
-          <a href="produtos/" class="btn-cta">Ver produtos</a>
-          <a href="products.json" class="btn-ghost" target="_blank" rel="noopener">Baixar lista técnica</a>
+        <div class="hero-cta">
+          <a class="hero-button primary" href="produtos/">Explorar produtos</a>
+          <a class="hero-button secondary" href="#neo">Conhecer a coleção</a>
         </div>
       </div>
-      <div class="catalog-highlight-media reveal-on-scroll" role="presentation" aria-hidden="true" data-reveal-delay="260"></div>
-    </div>
-  </section>
-
-  <!-- 联系方式 -->
-  <section class="testimonials reveal-on-scroll" aria-label="O que nossos parceiros dizem" data-reveal-distance="90px">
-    <div class="container">
-      <div class="section-heading">
-        <span class="tag">RELAÇÕES DURADOURAS</span>
-        <h2>Parceiros que transformam ideias em espaços memoráveis</h2>
-      </div>
-      <div class="testimonial-grid">
-        <figure class="testimonial-card reveal-on-scroll" data-reveal-delay="60">
-          <blockquote>
-            “A DAYMI entrega um nível de cuidado raro. Do catálogo à consultoria, cada detalhe reflete compromisso com o design.”
-          </blockquote>
-          <figcaption>
-            <strong>Studio Vila 33</strong>
-            <span>Arquitetura residencial</span>
-          </figcaption>
+      <div class="hero-section__gallery" aria-hidden="true">
+        <figure class="hero-card hero-card--main">
+          <div class="hero-figure hero-figure--main"></div>
+          <figcaption>Escultura em cerâmica fosca</figcaption>
         </figure>
-        <figure class="testimonial-card reveal-on-scroll" data-reveal-delay="160">
-          <blockquote>
-            “O time nos ajudou a montar vitrines que contam histórias. As peças chegam impecáveis e prontas para encantar.”
-          </blockquote>
-          <figcaption>
-            <strong>Casa Onírica</strong>
-            <span>Concept store</span>
-          </figcaption>
-        </figure>
-        <figure class="testimonial-card reveal-on-scroll" data-reveal-delay="260">
-          <blockquote>
-            “Ter um fornecedor com curadoria tão criteriosa faz diferença em cada projeto corporativo que assinamos.”
-          </blockquote>
-          <figcaption>
-            <strong>Arq. Luiza Mendonça</strong>
-            <span>Design de interiores</span>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="newsletter" class="newsletter reveal-on-scroll" aria-labelledby="newsletterTitle" data-reveal-distance="90px">
-    <div class="container newsletter-inner">
-      <div class="newsletter-copy reveal-on-scroll" data-reveal-delay="120">
-        <span class="tag">INSPIRE-SE PRIMEIRO</span>
-        <h2 id="newsletterTitle">Receba lançamentos e guias exclusivos</h2>
-        <p>Assine nossa newsletter para acessar catálogos digitais, moodboards trimestrais e convites para experiências presenciais.</p>
-      </div>
-      <form class="newsletter-form reveal-on-scroll" aria-label="Assinar newsletter" data-reveal-delay="240">
-        <label for="newsletterEmail" class="sr-only">Email</label>
-        <input id="newsletterEmail" type="email" name="email" placeholder="Seu melhor email" required>
-        <button type="submit" class="btn-cta">Quero receber novidades</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="contato" class="contact-section reveal-on-scroll" data-reveal-distance="90px">
-    <div class="container">
-      <h2 class="contact-title">Dúvidas? Entre em contato com o vendedor</h2>
-
-      <div class="contact-info">
-        <img src="assets/icons/daymi-1.png" alt="Logo da empresa" class="contact-logo" />
-        <div class="contact-lines">
-          <p class="contact-name"><strong>Minha Empresa LTDA</strong></p>
-
-          <p>
-            <a href="mailto:contato@empresa.com" target="_blank" rel="noopener">
-              <img src="assets/icons/email.png" alt="Email" class="icon-inline" />
-            </a>
-            Email:
-            <a href="mailto:contato@empresa.com">contato@empresa.com</a>
-          </p>
-
-          <p>
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">
-              <img src="assets/icons/whatsapp.png" alt="WhatsApp" class="icon-inline" />
-            </a>
-            WhatsApp:
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">+55 (11) 99999-9999</a>
-          </p>
-
-          <p>
-            <a href="tel:+551133334444">
-              <img src="assets/icons/telephone.png" alt="Telefone" class="icon-inline" />
-            </a>
-            Telefone:
-            <a href="tel:+551133334444">+55 (11) 3333-4444</a>
-          </p>
+        <div class="hero-stack">
+          <figure class="hero-card">
+            <div class="hero-figure"></div>
+            <figcaption>Detalhes artesanais</figcaption>
+          </figure>
+          <figure class="hero-card">
+            <div class="hero-figure"></div>
+            <figcaption>Neo Collection</figcaption>
+          </figure>
         </div>
       </div>
+    </section>
 
-      <div class="social">
-        <p class="social-title">Redes Sociais</p>
-        <div class="social-icons">
-          <a href="https://facebook.com/suaempresa" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="assets/icons/Facebook.png" alt="Facebook" />
-          </a>
-          <a href="https://instagram.com/suaempresa" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="assets/icons/Instagram.png" alt="Instagram" />
-          </a>
+    <section id="neo" class="collection-overview">
+      <div class="collection-overview__inner">
+        <div class="collection-overview__text">
+          <p class="section-eyebrow">Coleções assinadas</p>
+          <h2>Neo Collection</h2>
+          <p>
+            A Neo Collection ressignifica a paisagem urbana em formas suaves que abraçam o olhar. Materiais naturais, pigmentos
+            exclusivos e acabamentos acetinados traduzem o equilíbrio entre tecnologia e afeto.
+          </p>
+          <a class="link-arrow" href="produtos/">Ver catálogo completo</a>
         </div>
+        <ul class="collection-list">
+          <li>
+            <span class="collection-list__title">Linhas</span>
+            <span>Atmosfera</span>
+            <span>Origem</span>
+            <span>Lume</span>
+          </li>
+          <li>
+            <span class="collection-list__title">Materiais</span>
+            <span>Cerâmica texturizada</span>
+            <span>Madeira de reuso</span>
+            <span>Vidro lapidado</span>
+          </li>
+          <li>
+            <span class="collection-list__title">Cromia</span>
+            <span>Terracota suave</span>
+            <span>Avelã queimado</span>
+            <span>Neve fosca</span>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="container footer">
-    <div class="footer-row">
-      <small>© <span id="year"></span> DAYMI</small>
+    <section class="highlight-grid">
+      <article class="highlight-card">
+        <h3>Curadoria afetiva</h3>
+        <p>Peças únicas com tiragem limitada e certificado de autenticidade.</p>
+      </article>
+      <article class="highlight-card">
+        <h3>Experiência personalizada</h3>
+        <p>Consultoria para arquitetos e decoradores em projetos residenciais ou corporativos.</p>
+      </article>
+      <article class="highlight-card">
+        <h3>Produção responsável</h3>
+        <p>Processos sustentáveis, fornecedores locais e matérias-primas rastreáveis.</p>
+      </article>
+    </section>
+
+    <section id="cadastro" class="newsletter-strip">
+      <div class="newsletter-strip__inner">
+        <div>
+          <p class="section-eyebrow">Novo cadastro</p>
+          <h2>Receba o catálogo antes do lançamento</h2>
+        </div>
+        <form class="newsletter-form">
+          <label class="sr-only" for="email">E-mail</label>
+          <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required />
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="login" class="login-invite">
+      <div class="login-invite__inner">
+        <div>
+          <h2>Já é parceiro DAYMI?</h2>
+          <p>Entre com sua conta para acessar a área exclusiva de pedidos e materiais técnicos.</p>
+        </div>
+        <a class="hero-button primary" href="login.html">Fazer login</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <div class="home-footer__inner">
+      <p>© <span id="year"></span> DAYMI · Design com poesia para espaços contemporâneos.</p>
+      <nav class="home-footer__links" aria-label="Links do rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#neo">Coleções</a>
+        <a href="produtos/">Produtos</a>
+      </nav>
     </div>
   </footer>
 
-  <!-- 预览对话框（Alt+点击卡片触发） -->
-  <dialog id="productDialog" class="dialog">
-    <button class="dialog-close" id="dialogClose" aria-label="Fechar">✕</button>
-    <div class="dialog-body">
-      <img id="dialogImage" alt="" />
-      <div class="dialog-info">
-        <h2 id="dialogTitle">—</h2>
-        <p id="dialogDesc" class="muted"></p>
-        <p class="muted"><span id="dialogCategory"></span></p>
-        <p><a class="btn-cta" id="heroLink2" href="product/">查看详情</a></p>
-      </div>
-    </div>
-  </dialog>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
