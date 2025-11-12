@@ -19,9 +19,9 @@
       <nav class="home-menu" aria-label="Menu principal">
         <a class="home-menu__link is-active" href="#inicio">INÍCIO</a>
         <a class="home-menu__link" href="#neo">NEO COLLECTION</a>
+        <a class="home-menu__link" href="#lancamentos">LANÇAMENTOS</a>
+        <a class="home-menu__link" href="#inspire">INSPIRAÇÕES</a>
         <a class="home-menu__link" href="produtos/">PRODUTOS</a>
-        <a class="home-menu__link" href="#cadastro">NOVO CADASTRO</a>
-        <a class="home-menu__link" href="#login">LOGIN</a>
       </nav>
       <div class="home-actions" aria-label="Ações do site">
         <button type="button" class="home-action" aria-label="Buscar">
@@ -38,119 +38,154 @@
   </header>
 
   <main>
-    <section id="inicio" class="hero-section">
-      <div class="hero-section__content">
-        <p class="hero-eyebrow">Neo Collection 2025</p>
-        <h1 class="hero-title">Design que envolve, artesania que emociona</h1>
-        <p class="hero-description">
-          A DAYMI apresenta uma curadoria exclusiva de peças autorais com texturas orgânicas, volumes esculturais
-          e a sutileza de uma paleta terrosa. Um convite para vestir ambientes com serenidade sofisticada.
+    <section id="inicio" class="hero-neo">
+      <div class="hero-neo__text">
+        <span class="hero-badge">Neo Collection</span>
+        <h1>Arte e natureza como linguagem</h1>
+        <p>
+          Uma curadoria que combina tonalidades terrosas, volumes orgânicos e texturas ricas em detalhes. A coleção
+          DAYMI MART transforma ambientes em refúgios de contemplação.
         </p>
-        <div class="hero-cta">
-          <a class="hero-button primary" href="produtos/">Explorar produtos</a>
-          <a class="hero-button secondary" href="#neo">Conhecer a coleção</a>
+        <a class="btn-pill" href="produtos/">ver produtos</a>
+      </div>
+      <div class="hero-neo__figure" aria-hidden="true">
+        <div class="hero-neo__image"></div>
+        <div class="hero-neo__card">
+          <p>Escultura exclusiva assinada</p>
+          <span>edição limitada</span>
         </div>
       </div>
-      <div class="hero-section__gallery" aria-hidden="true">
-        <figure class="hero-card hero-card--main">
-          <div class="hero-figure hero-figure--main"></div>
-          <figcaption>Escultura em cerâmica fosca</figcaption>
+    </section>
+
+    <section id="neo" class="categories">
+      <div class="section-header">
+        <h2>Categorias</h2>
+      </div>
+      <div class="categories-grid">
+        <article class="category-card">
+          <span>Arranjos</span>
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Arranjos florais" />
+        </article>
+        <article class="category-card">
+          <span>Objetos</span>
+          <img src="https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=800&q=80" alt="Objetos decorativos" />
+        </article>
+        <article class="category-card">
+          <span>Organização</span>
+          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Potes decorativos" />
+        </article>
+        <article class="category-card">
+          <span>Banho</span>
+          <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Acessórios de banho" />
+        </article>
+      </div>
+    </section>
+
+    <section id="lancamentos" class="launches">
+      <div class="section-header">
+        <h2>Lançamentos</h2>
+        <a href="produtos/" class="link-inline">ver todos</a>
+      </div>
+      <div class="launches-track">
+        <article class="launch-card">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600&q=80" alt="Espelho orgânico" />
+          <h3>Espelho com moldura orgânica</h3>
+          <p>madeira natural</p>
+        </article>
+        <article class="launch-card">
+          <img src="https://images.unsplash.com/photo-1522184216315-1e1c8fc7f6e3?auto=format&fit=crop&w=600&q=80" alt="Vaso texturizado" />
+          <h3>Vaso escultórico em pó de pedra</h3>
+          <p>neo branco</p>
+        </article>
+        <article class="launch-card">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Escultura branca" />
+          <h3>Escultura biomórfica artesanal</h3>
+          <p>edição limitada</p>
+        </article>
+        <article class="launch-card">
+          <img src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=600&q=80" alt="Mesas laterais" />
+          <h3>Kit mesas laterais metal + madeira</h3>
+          <p>duo artesanal</p>
+        </article>
+        <article class="launch-card">
+          <img src="https://images.unsplash.com/photo-1462219184704-54ee455845c7?auto=format&fit=crop&w=600&q=80" alt="Quadro paisagem" />
+          <h3>Quadro paisagem em canvas</h3>
+          <p>tons suaves</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="inspire" class="inspire">
+      <div class="section-header">
+        <h2>Inspire-se</h2>
+        <a href="produtos/" class="link-inline">ver todos</a>
+      </div>
+      <div class="inspire-grid">
+        <figure class="inspire-piece">
+          <img src="https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80" alt="Quadro em tons suaves" />
+          <figcaption>paisagens pintadas à mão</figcaption>
         </figure>
-        <div class="hero-stack">
-          <figure class="hero-card">
-            <div class="hero-figure"></div>
-            <figcaption>Detalhes artesanais</figcaption>
-          </figure>
-          <figure class="hero-card">
-            <div class="hero-figure"></div>
-            <figcaption>Neo Collection</figcaption>
-          </figure>
-        </div>
+        <figure class="inspire-piece">
+          <img src="https://images.unsplash.com/photo-1523419409543-0c1df022bddb?auto=format&fit=crop&w=1200&q=80" alt="Sala com vasos" />
+          <figcaption>vases com acabamento acetinado</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="neo" class="collection-overview">
-      <div class="collection-overview__inner">
-        <div class="collection-overview__text">
-          <p class="section-eyebrow">Coleções assinadas</p>
-          <h2>Neo Collection</h2>
-          <p>
-            A Neo Collection ressignifica a paisagem urbana em formas suaves que abraçam o olhar. Materiais naturais, pigmentos
-            exclusivos e acabamentos acetinados traduzem o equilíbrio entre tecnologia e afeto.
-          </p>
-          <a class="link-arrow" href="produtos/">Ver catálogo completo</a>
-        </div>
-        <ul class="collection-list">
-          <li>
-            <span class="collection-list__title">Linhas</span>
-            <span>Atmosfera</span>
-            <span>Origem</span>
-            <span>Lume</span>
-          </li>
-          <li>
-            <span class="collection-list__title">Materiais</span>
-            <span>Cerâmica texturizada</span>
-            <span>Madeira de reuso</span>
-            <span>Vidro lapidado</span>
-          </li>
-          <li>
-            <span class="collection-list__title">Cromia</span>
-            <span>Terracota suave</span>
-            <span>Avelã queimado</span>
-            <span>Neve fosca</span>
-          </li>
-        </ul>
+    <section class="inspire-gallery">
+      <div class="inspire-gallery__row">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Detalhe minimalista" />
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80" alt="Espelho orgânico" />
+        </figure>
       </div>
-    </section>
-
-    <section class="highlight-grid">
-      <article class="highlight-card">
-        <h3>Curadoria afetiva</h3>
-        <p>Peças únicas com tiragem limitada e certificado de autenticidade.</p>
-      </article>
-      <article class="highlight-card">
-        <h3>Experiência personalizada</h3>
-        <p>Consultoria para arquitetos e decoradores em projetos residenciais ou corporativos.</p>
-      </article>
-      <article class="highlight-card">
-        <h3>Produção responsável</h3>
-        <p>Processos sustentáveis, fornecedores locais e matérias-primas rastreáveis.</p>
-      </article>
-    </section>
-
-    <section id="cadastro" class="newsletter-strip">
-      <div class="newsletter-strip__inner">
-        <div>
-          <p class="section-eyebrow">Novo cadastro</p>
-          <h2>Receba o catálogo antes do lançamento</h2>
-        </div>
-        <form class="newsletter-form">
-          <label class="sr-only" for="email">E-mail</label>
-          <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required />
-          <button type="submit">Cadastrar</button>
-        </form>
-      </div>
-    </section>
-
-    <section id="login" class="login-invite">
-      <div class="login-invite__inner">
-        <div>
-          <h2>Já é parceiro DAYMI?</h2>
-          <p>Entre com sua conta para acessar a área exclusiva de pedidos e materiais técnicos.</p>
-        </div>
-        <a class="hero-button primary" href="login.html">Fazer login</a>
+      <div class="inspire-gallery__row">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Escultura" />
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80" alt="Potes" />
+        </figure>
       </div>
     </section>
   </main>
 
-  <footer class="home-footer">
-    <div class="home-footer__inner">
-      <p>© <span id="year"></span> DAYMI · Design com poesia para espaços contemporâneos.</p>
-      <nav class="home-footer__links" aria-label="Links do rodapé">
-        <a href="#inicio">Início</a>
-        <a href="#neo">Coleções</a>
-        <a href="produtos/">Produtos</a>
-      </nav>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="footer-brand">
+        <p class="footer-logo">MART</p>
+        <p>Neo Collection · peças de design e objetos afetivos.</p>
+      </div>
+      <div class="footer-columns">
+        <div>
+          <h4>Minha Mart</h4>
+          <a href="produtos/">Meus produtos</a>
+          <a href="#lancamentos">Novidades</a>
+          <a href="#inspire">Como usar</a>
+        </div>
+        <div>
+          <h4>Sobre</h4>
+          <a href="#neo">Novas coleções</a>
+          <a href="produtos/">Blog</a>
+          <a href="#inicio">Eventos</a>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <a href="#inicio">SAC</a>
+          <a href="#neo">Comercial</a>
+          <a href="mailto:contato@daymi.com">contato@daymi.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>© <span id="year"></span> DAYMI · MART collection.</p>
+      <div class="footer-socials">
+        <span>IG</span>
+        <span>PT</span>
+        <span>YT</span>
+      </div>
     </div>
   </footer>
 
